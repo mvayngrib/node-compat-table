@@ -1,5 +1,5 @@
 
-var testers = require('./.temp/testers.json');
+var testers = require('./testers.json');
 
 
 var results = {
