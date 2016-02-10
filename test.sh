@@ -9,6 +9,8 @@ git clone $ORIGIN .temp
 
 mkdir -p ./.temp/results
 cd ./.temp
+git config user.email "william.kapke@gmail.com"
+git config user.name "William Kapke"
 curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-es6.js > data-es6.js
 
 echo
