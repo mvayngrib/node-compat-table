@@ -37,6 +37,7 @@ node build.js
 
 echo
 echo 'saving the results...'
+git add ./results/*.json
 git commit -am 'Auto Update'
 git push $ORIGIN gh-pages
 
