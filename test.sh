@@ -19,8 +19,7 @@ node extract.js > ./testers.json
 echo
 echo 'running the tests on each version of node...'
 while read v; do
-  echo "Testing $v"
-  n use $v test.js > ./results/$v.json
+  n use $v test.js
 done < .versions
 
 
