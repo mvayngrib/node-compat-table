@@ -12,6 +12,7 @@ Object.keys(testers).forEach(function (name) {
 });
 
 function run(script) {
+  script = script.replace(/^\s*function.+\n/,'').replace(/\n}$/, '');
 	try{
 		return new Function(script)();
 	}
