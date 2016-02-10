@@ -24,7 +24,7 @@ while read v; do
   n use $v --es_staging test.js
 done < .versions
 
-
+git add ./results/*.json
 
 if [[ `git status -s` == '' ]]; then
   echo 'No changes';
@@ -37,7 +37,6 @@ node build.js
 
 echo
 echo 'saving the results...'
-git add ./results/*.json
 git commit -am 'Auto Update'
 git push $ORIGIN gh-pages
 
