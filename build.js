@@ -8,7 +8,7 @@ Object.keys(_testers).forEach(path=>$set(testers, path, { path:path, code:_teste
 var data = {};
 var versions = fs.readFileSync('.versions').toString().trim().split('\n');
 versions.forEach(version=>
-  data[version]=require('./results/'+version+'.json')
+  data[version]=try_require('./results/'+version+'.json')
 );
 
 
@@ -34,4 +34,11 @@ function $set(target, path, value) {
   });
 
   obj[last] = value;
+}
+function try_require(module) {
+  try{
+    return require(module);
+  }
+  catch(e){
+  }
 }
