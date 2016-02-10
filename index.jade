@@ -1,0 +1,158 @@
+doctype html
+html
+  head
+    title
+      block title
+      | Node.js ES2015/ES6 support
+    meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,700',rel='stylesheet',type='text/css')
+    style.
+      body {
+        font-family: 'Raleway', sans-serif;
+        color: #333;
+        padding: 0;
+        margin: 0;
+      }
+      header{
+        background-color: #454545;
+        color: #eee;
+        padding: 3px 10px 6px;
+        position: fixed;
+        width: 100%;
+        box-sizing: border-box;
+        top: 0;
+      }
+      header h1{
+        margin: 0;
+        font-weight: normal;
+        font-size: 1.5em;
+        font-family: monospace;
+        display: inline-block;
+      }
+      article {
+        margin-top: 42px;
+      }
+      .category {
+        background-color: #eee;
+        font-weight: bold;
+        padding: 3px;
+      }
+      .feature {
+        width: 480px;
+        min-width: 480px;
+      }
+      .result,.version {
+        color: #fff;
+        text-align: center;
+        font-size: 12px;
+        width: 65px;
+        min-width: 65px;
+      }
+      .version {
+        font-size: 16px;
+        padding: 3px 1px;
+        color: #aaa;
+      }
+      .subsub {
+        text-indent: 10px;
+        color: #aaa
+      }
+      .Yes {
+        background-color: green;
+      }
+      .No {
+        background-color: red;
+      }
+      .Error {
+        background-color: #dd0000;
+      }
+      .v5 { background-color: darkgreen; }
+      .v4 { background-color: seagreen; }
+      .v0 { background-color: palegreen; }
+      #headings {
+        position: absolute;
+        top: 16px;
+        left: 484px;
+      }
+      body.scrolled #headings {
+        position: fixed;
+        top: -2px;
+      }
+      .code {
+        font-family: monospace;
+        text-indent: 0;
+        background-color: #454545;
+        border-radius: 6px;
+        padding: 6px;
+        position: absolute;
+        display: none;
+        margin-left: 8px;
+        text-align: left;
+        color: #eee;
+      }
+      .info {
+        border-radius: 9px;
+        background-color: #eee;
+        color: #aaa;
+        float: right;
+        text-align: center;
+        font-size: 12px;
+        width: 18px;
+        height: 18px;
+        text-indent: 0;
+        line-height: 18px;
+        cursor: pointer;
+      }
+      .info:hover .code {
+        display: inline-block;
+      }
+      .credits {
+        position: absolute;
+        right: 20px;
+        top: 2px;
+        font-size: 12px;
+        margin-right: 20px;
+      }
+      header a {
+        color: #eee;
+      }
+      .subheading {
+        font-size: 10px;
+      }
+body
+    header
+      h1 Node.js ES2015 Support
+      .credits
+        | Created by&nbsp;
+        a(href='https://github.com/williamkapke') William Kapke
+      .subheading
+        a(href='https://github.com/kangax/compat-table') kangax's compat-table
+        | &nbsp;applied only to Node.js
+      table#headings
+        tr
+          each version in versions
+            th.version(class='v'+version.split('.')[0])=version
+    article
+      each obj1, category in testers
+        .category=category
+        table
+          each obj2, subcategory in obj1
+            tr
+              td.feature.sub=subcategory
+            each obj3, subsubcategory in obj2
+              tr
+                td.feature.subsub
+                  | #{subsubcategory}
+                  if obj3.code
+                    .info
+                      | ?
+                      .code !{obj3.code.trim().replace(/\n/g, '<br>').replace(/ /g, '&nbsp;')}
+                each version in versions
+                  if results[version]
+                    - result = results[version][obj3.path]
+                    - title = result===true? 'Test passed' : typeof result==='string'? result : 'Test failed'
+                    - result = result===true? 'Yes' : typeof result==='string'? 'Error' : 'No'
+                    td.result(class=result, title=title)
+                      | #{result}
+                  else
+                    td.result(class=result, title='No results yet')

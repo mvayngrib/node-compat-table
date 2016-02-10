@@ -6,7 +6,7 @@ var category;
 
 function deindent(fn) {
 	var indent = /(?:^|\n)([\t ]+)[^\n]+/.exec(fn);
-	return indent? fn.replace(new RegExp('\n' + indent[1], 'g'), '\n') : fn;
+	return indent? fn.replace(new RegExp('\n' + indent[1], 'g'), '\n  ') : fn;
 }
 
 tests.forEach(function(test) {
@@ -27,7 +27,7 @@ tests.forEach(function(test) {
 	}
 
 	function get_script(fn) {
-		return (deindent(fn+"")).match(/[^]*\/\*([^]*)\*\/\}$/)[1];
+		return deindent(fn+"").replace(/(\/\*)|( *\*\/ *)/g,'');
 	}
 });
 
