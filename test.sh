@@ -32,6 +32,10 @@ if [[ `git status -s` == '' ]]; then
 fi
 
 echo
+echo 'building webpage...'
+node build.js
+
+echo
 echo 'saving the results...'
 git commit -am 'Auto Update'
 git push $ORIGIN gh-pages
