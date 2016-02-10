@@ -325,14 +325,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;(function&nbsp;(foo,&nbsp;...args)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;args&nbsp;instanceof&nbsp;Array&nbsp;&&&nbsp;args&nbsp;+&nbsp;""&nbsp;===&nbsp;"bar,baz";<br>&nbsp;&nbsp;}("foo",&nbsp;"bar",&nbsp;"baz"));<br>}</div>
           </div>
         </td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -343,14 +343,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;function(a,&nbsp;...b){}.length&nbsp;===&nbsp;1&nbsp;&&&nbsp;function(...c){}.length&nbsp;===&nbsp;0;<br>}</div>
           </div>
         </td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -361,14 +361,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;(function&nbsp;(foo,&nbsp;...args)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;foo&nbsp;=&nbsp;"qux";<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;The&nbsp;arguments&nbsp;object&nbsp;is&nbsp;not&nbsp;mapped&nbsp;to&nbsp;the<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;parameters,&nbsp;even&nbsp;outside&nbsp;of&nbsp;strict&nbsp;mode.<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;arguments.length&nbsp;===&nbsp;3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;arguments[0]&nbsp;===&nbsp;"foo"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;arguments[1]&nbsp;===&nbsp;"bar"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;arguments[2]&nbsp;===&nbsp;"baz";<br>&nbsp;&nbsp;}("foo",&nbsp;"bar",&nbsp;"baz"));<br>}</div>
           </div>
         </td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -379,14 +379,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;(function&nbsp;(...args)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eval("({set&nbsp;e(...args){}})");<br>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch(e)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}());<br>}</div>
           </div>
         </td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -397,14 +397,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;new&nbsp;Function("a",&nbsp;"...b",<br>&nbsp;&nbsp;&nbsp;&nbsp;"return&nbsp;b&nbsp;instanceof&nbsp;Array&nbsp;&&&nbsp;a+b&nbsp;===&nbsp;'foobar,baz';"<br>&nbsp;&nbsp;)('foo','bar','baz');<br>}</div>
           </div>
         </td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -423,9 +423,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -441,9 +441,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -459,9 +459,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -477,9 +477,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -495,9 +495,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -513,9 +513,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -531,9 +531,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -549,9 +549,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -567,9 +567,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token *" class="result Error">Error</td>
         <td title="Unexpected token *" class="result Error">Error</td>
         <td title="Unexpected token *" class="result Error">Error</td>
@@ -585,9 +585,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token *" class="result Error">Error</td>
         <td title="Unexpected token *" class="result Error">Error</td>
         <td title="Unexpected token *" class="result Error">Error</td>
@@ -603,9 +603,9 @@
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -621,9 +621,9 @@
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -639,9 +639,9 @@
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -657,9 +657,9 @@
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
+        <td title="global.__createIterableObject is not a function" class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -675,9 +675,9 @@
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test passed" class="result Yes">Yes</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
-        <td title="Unexpected token ..." class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -3088,11 +3088,11 @@
             <div class="code">function&nbsp;(){<br>&nbsp;&nbsp;var&nbsp;received;<br><br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor&nbsp;(arg)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;received&nbsp;=&nbsp;arg;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor&nbsp;()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;callSuper&nbsp;=&nbsp;()&nbsp;=>&nbsp;super('foo');<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;callSuper();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C&nbsp;instanceof&nbsp;C&nbsp;&&&nbsp;received&nbsp;===&nbsp;'foo'<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3106,11 +3106,11 @@
             <div class="code">function&nbsp;(){<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;"quux";<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;baz()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;x&nbsp;=>&nbsp;super.qux();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;var&nbsp;arrow&nbsp;=&nbsp;new&nbsp;C().baz();<br>&nbsp;&nbsp;return&nbsp;arrow()&nbsp;===&nbsp;"quux";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3145,11 +3145,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;C&nbsp;===&nbsp;"function";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3163,11 +3163,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c1&nbsp;=&nbsp;C;<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;C&nbsp;{}<br>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;c2&nbsp;=&nbsp;C;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;C&nbsp;===&nbsp;c1;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3181,11 +3181,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;class&nbsp;C&nbsp;{}&nbsp;===&nbsp;"function";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3199,11 +3199,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;class&nbsp;{}&nbsp;===&nbsp;"function";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3217,11 +3217,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{&nbsp;this.x&nbsp;=&nbsp;1;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;C.prototype.constructor&nbsp;===&nbsp;C<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;new&nbsp;C().x&nbsp;===&nbsp;1;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3235,11 +3235,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;method()&nbsp;{&nbsp;return&nbsp;2;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;C.prototype.method&nbsp;===&nbsp;"function"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;new&nbsp;C().method()&nbsp;===&nbsp;2;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3253,11 +3253,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;"foo&nbsp;bar"()&nbsp;{&nbsp;return&nbsp;2;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;C.prototype["foo&nbsp;bar"]&nbsp;===&nbsp;"function"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;new&nbsp;C()["foo&nbsp;bar"]()&nbsp;===&nbsp;2;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3271,11 +3271,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;foo&nbsp;=&nbsp;"method";<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;[foo]()&nbsp;{&nbsp;return&nbsp;2;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;C.prototype.method&nbsp;===&nbsp;"function"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;new&nbsp;C().method()&nbsp;===&nbsp;2;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3289,11 +3289,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;method()&nbsp;{&nbsp;return&nbsp;3;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;C.method&nbsp;===&nbsp;"function"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;C.method()&nbsp;===&nbsp;3;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3307,11 +3307,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;foo&nbsp;=&nbsp;"method";<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;[foo]()&nbsp;{&nbsp;return&nbsp;3;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;typeof&nbsp;C.method&nbsp;===&nbsp;"function"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;C.method()&nbsp;===&nbsp;3;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3325,11 +3325,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;baz&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;foo()&nbsp;{&nbsp;return&nbsp;"foo";&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;bar(x)&nbsp;{&nbsp;baz&nbsp;=&nbsp;x;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;new&nbsp;C().bar&nbsp;=&nbsp;true;<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C().foo&nbsp;===&nbsp;"foo"&nbsp;&&&nbsp;baz;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3343,11 +3343,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;garply&nbsp;=&nbsp;"foo",&nbsp;grault&nbsp;=&nbsp;"bar",&nbsp;baz&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;get&nbsp;[garply]()&nbsp;{&nbsp;return&nbsp;"foo";&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;[grault](x)&nbsp;{&nbsp;baz&nbsp;=&nbsp;x;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;new&nbsp;C().bar&nbsp;=&nbsp;true;<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C().foo&nbsp;===&nbsp;"foo"&nbsp;&&&nbsp;baz;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3361,11 +3361,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;baz&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;get&nbsp;foo()&nbsp;{&nbsp;return&nbsp;"foo";&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;set&nbsp;bar(x)&nbsp;{&nbsp;baz&nbsp;=&nbsp;x;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;C.bar&nbsp;=&nbsp;true;<br>&nbsp;&nbsp;return&nbsp;C.foo&nbsp;===&nbsp;"foo"&nbsp;&&&nbsp;baz;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3379,11 +3379,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;garply&nbsp;=&nbsp;"foo",&nbsp;grault&nbsp;=&nbsp;"bar",&nbsp;baz&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;get&nbsp;[garply]()&nbsp;{&nbsp;return&nbsp;"foo";&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;set&nbsp;[grault](x)&nbsp;{&nbsp;baz&nbsp;=&nbsp;x;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;C.bar&nbsp;=&nbsp;true;<br>&nbsp;&nbsp;return&nbsp;C.foo&nbsp;===&nbsp;"foo"&nbsp;&&&nbsp;baz;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3397,11 +3397,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;method()&nbsp;{&nbsp;return&nbsp;typeof&nbsp;C&nbsp;===&nbsp;"function";&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;var&nbsp;M&nbsp;=&nbsp;C.prototype.method;<br>&nbsp;&nbsp;C&nbsp;=&nbsp;undefined;<br>&nbsp;&nbsp;return&nbsp;C&nbsp;===&nbsp;undefined&nbsp;&&&nbsp;M();<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3415,11 +3415,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;try&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;B&nbsp;=&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[C](){}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}&nbsp;catch(e)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;<br>&nbsp;&nbsp;}<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3433,11 +3433,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;foo()&nbsp;{}<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;bar()&nbsp;{}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;!C.prototype.propertyIsEnumerable("foo")&nbsp;&&&nbsp;!C.propertyIsEnumerable("bar");<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3451,11 +3451,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;method()&nbsp;{&nbsp;return&nbsp;this&nbsp;===&nbsp;undefined;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;(0,C.method)();<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3469,11 +3469,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{}<br>&nbsp;&nbsp;try&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;C();<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;catch(e)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;true;<br>&nbsp;&nbsp;}<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3487,11 +3487,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C()&nbsp;instanceof&nbsp;B<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;B.isPrototypeOf(C);<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3505,11 +3505,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;B;<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;(B&nbsp;=&nbsp;class&nbsp;{})&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C()&nbsp;instanceof&nbsp;B<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;B.isPrototypeOf(C);<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3523,11 +3523,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;null&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{&nbsp;return&nbsp;Object.create(null);&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;Function.prototype.isPrototypeOf(C)<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;Object.getPrototypeOf(C.prototype)&nbsp;===&nbsp;null;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3541,11 +3541,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;passed&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;new&nbsp;function&nbsp;f()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;passed&nbsp;=&nbsp;new.target&nbsp;===&nbsp;f;<br>&nbsp;&nbsp;}();<br><br>&nbsp;&nbsp;class&nbsp;A&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;passed&nbsp;&=&nbsp;new.target&nbsp;===&nbsp;B;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;B&nbsp;extends&nbsp;A&nbsp;{}<br>&nbsp;&nbsp;new&nbsp;B();<br>&nbsp;&nbsp;return&nbsp;passed;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
         <td title="Unexpected token ." class="result Error">Error</td>
@@ -3562,11 +3562,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;passed&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor(a)&nbsp;{&nbsp;passed&nbsp;=&nbsp;(a&nbsp;===&nbsp;"barbaz");&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor(a)&nbsp;{&nbsp;super("bar"&nbsp;+&nbsp;a);&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;new&nbsp;C("baz");<br>&nbsp;&nbsp;return&nbsp;passed;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3580,11 +3580,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor(a)&nbsp;{&nbsp;return&nbsp;["foo"&nbsp;+&nbsp;a];&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor(a)&nbsp;{&nbsp;return&nbsp;super("bar"&nbsp;+&nbsp;a);&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C("baz")[0]&nbsp;===&nbsp;"foobarbaz";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3598,11 +3598,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{}<br>&nbsp;&nbsp;B.prototype.qux&nbsp;=&nbsp;"foo";<br>&nbsp;&nbsp;B.prototype.corge&nbsp;=&nbsp;"baz";<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;quux(a)&nbsp;{&nbsp;return&nbsp;super.qux&nbsp;+&nbsp;a&nbsp;+&nbsp;super["corge"];&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;C.prototype.qux&nbsp;=&nbsp;"garply";<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C().quux("bar")&nbsp;===&nbsp;"foobarbaz";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3616,11 +3616,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux(a)&nbsp;{&nbsp;return&nbsp;"foo"&nbsp;+&nbsp;a;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux(a)&nbsp;{&nbsp;return&nbsp;super.qux("bar"&nbsp;+&nbsp;a);&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;new&nbsp;C().qux("baz")&nbsp;===&nbsp;"foobarbaz";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3634,11 +3634,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux(a)&nbsp;{&nbsp;return&nbsp;this.foo&nbsp;+&nbsp;a;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux(a)&nbsp;{&nbsp;return&nbsp;super.qux("bar"&nbsp;+&nbsp;a);&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;var&nbsp;obj&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;obj.foo&nbsp;=&nbsp;"foo";<br>&nbsp;&nbsp;return&nbsp;obj.qux("baz")&nbsp;===&nbsp;"foobarbaz";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3652,11 +3652,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;passed;<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{&nbsp;passed&nbsp;=&nbsp;(new.target&nbsp;===&nbsp;C);&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{&nbsp;super();&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;return&nbsp;passed;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3670,11 +3670,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux()&nbsp;{&nbsp;return&nbsp;"bar";&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux()&nbsp;{&nbsp;return&nbsp;super.qux()&nbsp;+&nbsp;this.corge;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;var&nbsp;obj&nbsp;=&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;qux:&nbsp;C.prototype.qux,<br>&nbsp;&nbsp;&nbsp;&nbsp;corge:&nbsp;"ley"<br>&nbsp;&nbsp;};<br>&nbsp;&nbsp;return&nbsp;obj.qux()&nbsp;===&nbsp;"barley";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -3688,11 +3688,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;//&nbsp;checks&nbsp;that&nbsp;super()&nbsp;is&nbsp;*not*&nbsp;a&nbsp;synonym&nbsp;of&nbsp;super.constructor()<br>&nbsp;&nbsp;var&nbsp;passed;<br>&nbsp;&nbsp;class&nbsp;B&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;passed&nbsp;=&nbsp;true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;};<br>&nbsp;&nbsp;B.prototype.constructor&nbsp;=&nbsp;function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;passed&nbsp;=&nbsp;false;<br>&nbsp;&nbsp;};<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;B&nbsp;{&nbsp;};<br>&nbsp;&nbsp;new&nbsp;C;<br>&nbsp;&nbsp;return&nbsp;passed;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -4123,11 +4123,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;generator()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;5;&nbsp;yield&nbsp;6;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;};<br>&nbsp;&nbsp;var&nbsp;iterator&nbsp;=&nbsp;new&nbsp;C().generator();<br>&nbsp;&nbsp;var&nbsp;item&nbsp;=&nbsp;iterator.next();<br>&nbsp;&nbsp;var&nbsp;passed&nbsp;=&nbsp;item.value&nbsp;===&nbsp;5&nbsp;&&&nbsp;item.done&nbsp;===&nbsp;false;<br>&nbsp;&nbsp;item&nbsp;=&nbsp;iterator.next();<br>&nbsp;&nbsp;passed&nbsp;&nbsp;&nbsp;&nbsp;&=&nbsp;item.value&nbsp;===&nbsp;6&nbsp;&&&nbsp;item.done&nbsp;===&nbsp;false;<br>&nbsp;&nbsp;item&nbsp;=&nbsp;iterator.next();<br>&nbsp;&nbsp;passed&nbsp;&nbsp;&nbsp;&nbsp;&=&nbsp;item.value&nbsp;===&nbsp;undefined&nbsp;&&&nbsp;item.done&nbsp;===&nbsp;true;<br>&nbsp;&nbsp;return&nbsp;passed;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -4141,11 +4141,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;garply&nbsp;=&nbsp;"generator";<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;[garply]&nbsp;()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yield&nbsp;5;&nbsp;yield&nbsp;6;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;var&nbsp;iterator&nbsp;=&nbsp;new&nbsp;C().generator();<br>&nbsp;&nbsp;var&nbsp;item&nbsp;=&nbsp;iterator.next();<br>&nbsp;&nbsp;var&nbsp;passed&nbsp;=&nbsp;item.value&nbsp;===&nbsp;5&nbsp;&&&nbsp;item.done&nbsp;===&nbsp;false;<br>&nbsp;&nbsp;item&nbsp;=&nbsp;iterator.next();<br>&nbsp;&nbsp;passed&nbsp;&nbsp;&nbsp;&nbsp;&=&nbsp;item.value&nbsp;===&nbsp;6&nbsp;&&&nbsp;item.done&nbsp;===&nbsp;false;<br>&nbsp;&nbsp;item&nbsp;=&nbsp;iterator.next();<br>&nbsp;&nbsp;passed&nbsp;&nbsp;&nbsp;&nbsp;&=&nbsp;item.value&nbsp;===&nbsp;undefined&nbsp;&&&nbsp;item.done&nbsp;===&nbsp;true;<br>&nbsp;&nbsp;return&nbsp;passed;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -7324,14 +7324,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;a&nbsp;=&nbsp;{};<br>&nbsp;&nbsp;a[Symbol.toStringTag]&nbsp;=&nbsp;"foo";<br>&nbsp;&nbsp;return&nbsp;(a&nbsp;+&nbsp;"")&nbsp;===&nbsp;"[object&nbsp;foo]";<br>}</div>
           </div>
         </td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test failed" class="result No">No</td>
         <td title="Test failed" class="result No">No</td>
         <td title="Test failed" class="result No">No</td>
@@ -7342,14 +7342,14 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;s&nbsp;=&nbsp;Symbol.toStringTag;<br>&nbsp;&nbsp;return&nbsp;Math[s]&nbsp;===&nbsp;"Math"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;JSON[s]&nbsp;===&nbsp;"JSON";<br>}</div>
           </div>
         </td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
-        <td title="Test failed" class="result No">No</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Test failed" class="result No">No</td>
         <td title="Test failed" class="result No">No</td>
         <td title="Test failed" class="result No">No</td>
@@ -7639,11 +7639,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;foo&nbsp;{};<br>&nbsp;&nbsp;class&nbsp;bar&nbsp;{&nbsp;static&nbsp;name()&nbsp;{}&nbsp;};<br>&nbsp;&nbsp;return&nbsp;foo.name&nbsp;===&nbsp;"foo"&nbsp;&&<br>&nbsp;&nbsp;&nbsp;&nbsp;typeof&nbsp;bar.name&nbsp;===&nbsp;"function";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -7657,11 +7657,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;return&nbsp;class&nbsp;foo&nbsp;{}.name&nbsp;===&nbsp;"foo"&nbsp;&&<br>&nbsp;&nbsp;&nbsp;&nbsp;typeof&nbsp;class&nbsp;bar&nbsp;{&nbsp;static&nbsp;name()&nbsp;{}&nbsp;}.name&nbsp;===&nbsp;"function";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -7675,11 +7675,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;foo&nbsp;=&nbsp;class&nbsp;{};<br>&nbsp;&nbsp;var&nbsp;bar&nbsp;=&nbsp;class&nbsp;baz&nbsp;{};<br>&nbsp;&nbsp;var&nbsp;qux&nbsp;=&nbsp;class&nbsp;{&nbsp;static&nbsp;name()&nbsp;{}&nbsp;};<br>&nbsp;&nbsp;return&nbsp;foo.name&nbsp;===&nbsp;"foo"&nbsp;&&<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar.name&nbsp;===&nbsp;"baz"&nbsp;&&<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;typeof&nbsp;qux.name&nbsp;===&nbsp;"function";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -7693,11 +7693,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;o&nbsp;=&nbsp;{&nbsp;foo:&nbsp;class&nbsp;{},&nbsp;bar:&nbsp;class&nbsp;baz&nbsp;{}};<br>&nbsp;&nbsp;o.qux&nbsp;=&nbsp;class&nbsp;{};<br>&nbsp;&nbsp;return&nbsp;o.foo.name&nbsp;===&nbsp;"foo"&nbsp;&&<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o.bar.name&nbsp;===&nbsp;"baz"&nbsp;&&<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o.qux.name&nbsp;===&nbsp;"";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -7711,11 +7711,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{&nbsp;foo(){}&nbsp;};<br>&nbsp;&nbsp;return&nbsp;(new&nbsp;C).foo.name&nbsp;===&nbsp;"foo";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -7729,11 +7729,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;{&nbsp;static&nbsp;foo(){}&nbsp;};<br>&nbsp;&nbsp;return&nbsp;C.foo.name&nbsp;===&nbsp;"foo";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8890,11 +8890,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;var&nbsp;len1&nbsp;=&nbsp;c.length;<br>&nbsp;&nbsp;c[2]&nbsp;=&nbsp;'foo';<br>&nbsp;&nbsp;var&nbsp;len2&nbsp;=&nbsp;c.length;<br>&nbsp;&nbsp;return&nbsp;len1&nbsp;===&nbsp;0&nbsp;&&&nbsp;len2&nbsp;===&nbsp;3;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8908,11 +8908,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;c[2]&nbsp;=&nbsp;'foo';<br>&nbsp;&nbsp;c.length&nbsp;=&nbsp;1;<br>&nbsp;&nbsp;return&nbsp;c.length&nbsp;===&nbsp;1&nbsp;&&&nbsp;!(2&nbsp;in&nbsp;c);<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8926,11 +8926,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;return&nbsp;c&nbsp;instanceof&nbsp;C&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;Array&nbsp;&&&nbsp;Object.getPrototypeOf(C)&nbsp;===&nbsp;Array;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8944,11 +8944,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;Array.isArray(new&nbsp;C());<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8962,11 +8962,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;return&nbsp;c.concat(1)&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8980,11 +8980,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;return&nbsp;c.filter(Boolean)&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -8998,11 +8998,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;return&nbsp;c.map(Boolean)&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9016,11 +9016,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;c.push(2,4,6);<br>&nbsp;&nbsp;return&nbsp;c.slice(1,2)&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9034,11 +9034,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C();<br>&nbsp;&nbsp;c.push(2,4,6);<br>&nbsp;&nbsp;return&nbsp;c.splice(1,2)&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9052,11 +9052,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;C.from({&nbsp;length:&nbsp;0&nbsp;})&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9070,11 +9070,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Array&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;C.of(0)&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9091,11 +9091,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;R&nbsp;extends&nbsp;RegExp&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;r&nbsp;=&nbsp;new&nbsp;R("baz","g");<br>&nbsp;&nbsp;return&nbsp;r.global&nbsp;&&&nbsp;r.source&nbsp;===&nbsp;"baz";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9109,11 +9109,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;R&nbsp;extends&nbsp;RegExp&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;r&nbsp;=&nbsp;new&nbsp;R("baz","g");<br>&nbsp;&nbsp;return&nbsp;r&nbsp;instanceof&nbsp;R&nbsp;&&&nbsp;r&nbsp;instanceof&nbsp;RegExp&nbsp;&&&nbsp;Object.getPrototypeOf(R)&nbsp;===&nbsp;RegExp;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9127,11 +9127,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;R&nbsp;extends&nbsp;RegExp&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;r&nbsp;=&nbsp;new&nbsp;R("baz","g");<br>&nbsp;&nbsp;return&nbsp;r.exec("foobarbaz")[0]&nbsp;===&nbsp;"baz"&nbsp;&&&nbsp;r.lastIndex&nbsp;===&nbsp;9;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9145,11 +9145,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;R&nbsp;extends&nbsp;RegExp&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;r&nbsp;=&nbsp;new&nbsp;R("baz");<br>&nbsp;&nbsp;return&nbsp;r.test("foobarbaz");<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9166,11 +9166,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Function&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("return&nbsp;'foo';");<br>&nbsp;&nbsp;return&nbsp;c()&nbsp;===&nbsp;'foo';<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9184,11 +9184,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Function&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("return&nbsp;'foo';");<br>&nbsp;&nbsp;return&nbsp;c&nbsp;instanceof&nbsp;C&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;Function&nbsp;&&&nbsp;Object.getPrototypeOf(C)&nbsp;===&nbsp;Function;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9202,11 +9202,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Function&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("this.bar&nbsp;=&nbsp;2;");<br>&nbsp;&nbsp;c.prototype.baz&nbsp;=&nbsp;3;<br>&nbsp;&nbsp;return&nbsp;new&nbsp;c().bar&nbsp;===&nbsp;2&nbsp;&&&nbsp;new&nbsp;c().baz&nbsp;===&nbsp;3;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9220,11 +9220,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Function&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("x",&nbsp;"return&nbsp;this.bar&nbsp;+&nbsp;x;");<br>&nbsp;&nbsp;return&nbsp;c.call({bar:1},&nbsp;2)&nbsp;===&nbsp;3;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9238,11 +9238,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Function&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("x",&nbsp;"return&nbsp;this.bar&nbsp;+&nbsp;x;");<br>&nbsp;&nbsp;return&nbsp;c.apply({bar:1},&nbsp;[2])&nbsp;===&nbsp;3;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9256,11 +9256,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Function&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("x",&nbsp;"y",&nbsp;"return&nbsp;this.bar&nbsp;+&nbsp;x&nbsp;+&nbsp;y;").bind({bar:1},&nbsp;2);<br>&nbsp;&nbsp;return&nbsp;c(6)&nbsp;===&nbsp;9&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;C;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9277,11 +9277,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;P&nbsp;extends&nbsp;Promise&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;p1&nbsp;=&nbsp;new&nbsp;P(function(resolve,&nbsp;reject)&nbsp;{&nbsp;resolve("foo");&nbsp;});<br>&nbsp;&nbsp;var&nbsp;p2&nbsp;=&nbsp;new&nbsp;P(function(resolve,&nbsp;reject)&nbsp;{&nbsp;reject("quux");&nbsp;});<br>&nbsp;&nbsp;var&nbsp;score&nbsp;=&nbsp;+(p1&nbsp;instanceof&nbsp;P);<br><br>&nbsp;&nbsp;function&nbsp;thenFn(result)&nbsp;&nbsp;{&nbsp;score&nbsp;+=&nbsp;(result&nbsp;===&nbsp;"foo");&nbsp;&nbsp;check();&nbsp;}<br>&nbsp;&nbsp;function&nbsp;catchFn(result)&nbsp;{&nbsp;score&nbsp;+=&nbsp;(result&nbsp;===&nbsp;"quux");&nbsp;check();&nbsp;}<br>&nbsp;&nbsp;function&nbsp;shouldNotRun(result)&nbsp;&nbsp;{&nbsp;score&nbsp;=&nbsp;-Infinity;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;p1.then(thenFn,&nbsp;shouldNotRun);<br>&nbsp;&nbsp;p2.then(shouldNotRun,&nbsp;catchFn);<br>&nbsp;&nbsp;p1.catch(shouldNotRun);<br>&nbsp;&nbsp;p2.catch(catchFn);<br><br>&nbsp;&nbsp;p1.then(function()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;P.prototype.then()&nbsp;should&nbsp;return&nbsp;a&nbsp;new&nbsp;P<br>&nbsp;&nbsp;&nbsp;&nbsp;score&nbsp;+=&nbsp;p1.then()&nbsp;instanceof&nbsp;P&nbsp;&&&nbsp;p1.then()&nbsp;!==&nbsp;p1;<br>&nbsp;&nbsp;&nbsp;&nbsp;check();<br>&nbsp;&nbsp;});<br><br>&nbsp;&nbsp;function&nbsp;check()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(score&nbsp;===&nbsp;5)&nbsp;asyncTestPassed();<br>&nbsp;&nbsp;}<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9295,11 +9295,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Promise&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C(function(resolve,&nbsp;reject)&nbsp;{&nbsp;resolve("foo");&nbsp;});<br>&nbsp;&nbsp;return&nbsp;c&nbsp;instanceof&nbsp;C&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;Promise&nbsp;&&&nbsp;Object.getPrototypeOf(C)&nbsp;===&nbsp;Promise;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9313,11 +9313,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;P&nbsp;extends&nbsp;Promise&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;fulfills&nbsp;=&nbsp;P.all([<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(resolve)&nbsp;&nbsp;&nbsp;{&nbsp;setTimeout(resolve,200,"foo");&nbsp;}),<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(resolve)&nbsp;&nbsp;&nbsp;{&nbsp;setTimeout(resolve,100,"bar");&nbsp;}),<br>&nbsp;&nbsp;]);<br>&nbsp;&nbsp;var&nbsp;rejects&nbsp;=&nbsp;P.all([<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(_,&nbsp;reject)&nbsp;{&nbsp;setTimeout(reject,&nbsp;200,"baz");&nbsp;}),<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(_,&nbsp;reject)&nbsp;{&nbsp;setTimeout(reject,&nbsp;100,"qux");&nbsp;}),<br>&nbsp;&nbsp;]);<br>&nbsp;&nbsp;var&nbsp;score&nbsp;=&nbsp;+(fulfills&nbsp;instanceof&nbsp;P);<br>&nbsp;&nbsp;fulfills.then(function(result)&nbsp;{&nbsp;score&nbsp;+=&nbsp;(result&nbsp;+&nbsp;""&nbsp;===&nbsp;"foo,bar");&nbsp;check();&nbsp;});<br>&nbsp;&nbsp;rejects.catch(function(result)&nbsp;{&nbsp;score&nbsp;+=&nbsp;(result&nbsp;===&nbsp;"qux");&nbsp;check();&nbsp;});<br><br>&nbsp;&nbsp;function&nbsp;check()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(score&nbsp;===&nbsp;3)&nbsp;asyncTestPassed();<br>&nbsp;&nbsp;}<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9331,11 +9331,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;P&nbsp;extends&nbsp;Promise&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;fulfills&nbsp;=&nbsp;P.race([<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(resolve)&nbsp;&nbsp;&nbsp;{&nbsp;setTimeout(resolve,200,"foo");&nbsp;}),<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(_,&nbsp;reject)&nbsp;{&nbsp;setTimeout(reject,&nbsp;300,"bar");&nbsp;}),<br>&nbsp;&nbsp;]);<br>&nbsp;&nbsp;var&nbsp;rejects&nbsp;=&nbsp;P.race([<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(_,&nbsp;reject)&nbsp;{&nbsp;setTimeout(reject,&nbsp;200,"baz");&nbsp;}),<br>&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;Promise(function(resolve)&nbsp;&nbsp;&nbsp;{&nbsp;setTimeout(resolve,300,"qux");&nbsp;}),<br>&nbsp;&nbsp;]);<br>&nbsp;&nbsp;var&nbsp;score&nbsp;=&nbsp;+(fulfills&nbsp;instanceof&nbsp;P);<br>&nbsp;&nbsp;fulfills.then(function(result)&nbsp;{&nbsp;score&nbsp;+=&nbsp;(result&nbsp;===&nbsp;"foo");&nbsp;check();&nbsp;});<br>&nbsp;&nbsp;rejects.catch(function(result)&nbsp;{&nbsp;score&nbsp;+=&nbsp;(result&nbsp;===&nbsp;"baz");&nbsp;check();&nbsp;});<br><br>&nbsp;&nbsp;function&nbsp;check()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(score&nbsp;===&nbsp;3)&nbsp;asyncTestPassed();<br>&nbsp;&nbsp;}<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9352,11 +9352,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Boolean&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C(true);<br>&nbsp;&nbsp;return&nbsp;c&nbsp;instanceof&nbsp;Boolean<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;C<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c&nbsp;==&nbsp;true;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9370,11 +9370,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;Number&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C(6);<br>&nbsp;&nbsp;return&nbsp;c&nbsp;instanceof&nbsp;Number<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;C<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;+c&nbsp;===&nbsp;6;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9388,11 +9388,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;String&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;c&nbsp;=&nbsp;new&nbsp;C("golly");<br>&nbsp;&nbsp;return&nbsp;c&nbsp;instanceof&nbsp;String<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c&nbsp;instanceof&nbsp;C<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c&nbsp;+&nbsp;''&nbsp;===&nbsp;"golly"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c[0]&nbsp;===&nbsp;"g"<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;c.length&nbsp;===&nbsp;5;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
+        <td title="Test failed" class="result No">No</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9406,11 +9406,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;key&nbsp;=&nbsp;{};<br>&nbsp;&nbsp;class&nbsp;M&nbsp;extends&nbsp;Map&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;map&nbsp;=&nbsp;new&nbsp;M();<br><br>&nbsp;&nbsp;map.set(key,&nbsp;123);<br><br>&nbsp;&nbsp;return&nbsp;map&nbsp;instanceof&nbsp;M&nbsp;&&&nbsp;map.has(key)&nbsp;&&&nbsp;map.get(key)&nbsp;===&nbsp;123;<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9424,11 +9424,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;var&nbsp;obj&nbsp;=&nbsp;{};<br>&nbsp;&nbsp;class&nbsp;S&nbsp;extends&nbsp;Set&nbsp;{}<br>&nbsp;&nbsp;var&nbsp;set&nbsp;=&nbsp;new&nbsp;S();<br><br>&nbsp;&nbsp;set.add(123);<br>&nbsp;&nbsp;set.add(123);<br><br>&nbsp;&nbsp;return&nbsp;set&nbsp;instanceof&nbsp;S&nbsp;&&&nbsp;set.has(123);<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9502,11 +9502,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;function&nbsp;correctProtoBound(proto)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;C&nbsp;{}<br>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(Object.setPrototypeOf)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object.setPrototypeOf(C,&nbsp;proto);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C.__proto__&nbsp;=&nbsp;proto;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;boundF&nbsp;=&nbsp;Function.prototype.bind.call(C,&nbsp;null);<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Object.getPrototypeOf(boundF)&nbsp;===&nbsp;proto;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;correctProtoBound(Function.prototype)<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;correctProtoBound({})<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;correctProtoBound(null);<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9520,11 +9520,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;function&nbsp;correctProtoBound(superclass)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;superclass&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constructor()&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Object.create(null);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;boundF&nbsp;=&nbsp;Function.prototype.bind.call(C,&nbsp;null);<br>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;Object.getPrototypeOf(boundF)&nbsp;===&nbsp;Object.getPrototypeOf(C);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return&nbsp;correctProtoBound(function(){})<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;correctProtoBound(Array)<br>&nbsp;&nbsp;&nbsp;&nbsp;&&&nbsp;correctProtoBound(null);<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
+        <td title="Test passed" class="result Yes">Yes</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
@@ -9631,11 +9631,11 @@
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;//&nbsp;ClassDefinitionEvaluation&nbsp;->&nbsp;Get&nbsp;->&nbsp;[[Get]]<br>&nbsp;&nbsp;var&nbsp;get&nbsp;=&nbsp;[];<br>&nbsp;&nbsp;var&nbsp;p&nbsp;=&nbsp;new&nbsp;Proxy(Function(),&nbsp;{&nbsp;get:&nbsp;function(o,&nbsp;k)&nbsp;{&nbsp;get.push(k);&nbsp;return&nbsp;o[k];&nbsp;}});<br>&nbsp;&nbsp;class&nbsp;C&nbsp;extends&nbsp;p&nbsp;{}<br>&nbsp;&nbsp;return&nbsp;get&nbsp;+&nbsp;''&nbsp;===&nbsp;"prototype";<br>}</div>
           </div>
         </td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
-        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
         <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">Error</td>
