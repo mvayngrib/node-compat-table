@@ -134,10 +134,12 @@ html
       }
       header a {
         color: #eee;
+        text-decoration: underline;
       }
       .subheading {
         font-size: 10px;
       }
+
       table.results {
         margin-bottom: 20px;
       }
@@ -145,15 +147,23 @@ html
         position: absolute;
         margin-top: -46px;
       }
+      header iframe {
+        margin-top: 8px;
+        margin-left: 120px;
+      }
 body
     header
-      h1 Node.js ES2015 Support
+      div(style="float:left")
+        h1 Node.js ES2015 Support
+        .subheading
+          a(href='https://github.com/kangax/compat-table') kangax's compat-table
+          | &nbsp;applied only to Node.js
       .credits
         | Created by&nbsp;
         a(href='https://github.com/williamkapke') William Kapke
-      .subheading
-        a(href='https://github.com/kangax/compat-table') kangax's compat-table
-        | &nbsp;applied only to Node.js
+        | &nbsp;&nbsp; This data is updated daily.&nbsp;&nbsp;
+        a(href='https://github.com/williamkapke/node-compat-table') Learn more
+      iframe(src="https://ghbtns.com/github-btn.html?user=williamkapke&repo=node-compat-table&type=fork&count=true", frameborder="0", scrolling="0", width="170px", height="20px")
       table#headings
         tr
           each version in versions

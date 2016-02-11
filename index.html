@@ -134,10 +134,12 @@
       }
       header a {
         color: #eee;
+        text-decoration: underline;
       }
       .subheading {
         font-size: 10px;
       }
+      
       table.results {
         margin-bottom: 20px;
       }
@@ -145,14 +147,21 @@
         position: absolute;
         margin-top: -46px;
       }
+      header iframe {
+        margin-top: 8px;
+        margin-left: 120px;
+      }
     </style>
   </head>
 </html>
 <body>
   <header>
-    <h1>Node.js ES2015 Support</h1>
-    <div class="credits">Created by&nbsp;<a href="https://github.com/williamkapke">William Kapke</a></div>
-    <div class="subheading"><a href="https://github.com/kangax/compat-table">kangax's compat-table</a>&nbsp;applied only to Node.js</div>
+    <div style="float:left">
+      <h1>Node.js ES2015 Support</h1>
+      <div class="subheading"><a href="https://github.com/kangax/compat-table">kangax's compat-table</a>&nbsp;applied only to Node.js</div>
+    </div>
+    <div class="credits">Created by&nbsp;<a href="https://github.com/williamkapke">William Kapke</a>&nbsp;&nbsp; This data is updated daily.&nbsp;&nbsp;<a href="https://github.com/williamkapke/node-compat-table">Learn more</a></div>
+    <iframe src="https://ghbtns.com/github-btn.html?user=williamkapke&amp;repo=node-compat-table&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
     <table id="headings">
       <tr>
         <th class="version v5">5.6.0</th>
