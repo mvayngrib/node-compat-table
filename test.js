@@ -4,6 +4,30 @@ const fs = require('fs');
 const version = process.versions.node;
 console.log('Testing '+version);
 
+// This function is needed to run the tests and was extracted from:
+// https://github.com/kangax/compat-table/blob/gh-pages/node.js
+global.__createIterableObject = function (arr, methods) {
+  methods = methods || {};
+  if (typeof Symbol !== 'function' || !Symbol.iterator)
+    return {};
+
+  arr.length++;
+  var iterator = {
+    next: function() {
+      return {
+        value: arr.shift(),
+        done: arr.length <= 0
+      };
+    },
+    'return': methods['return'],
+    'throw': methods['throw']
+  };
+  var iterable = {};
+  iterable[Symbol.iterator] = function(){ return iterator; }
+
+  return iterable;
+};
+
 var results = {
 	_version: version
 };
