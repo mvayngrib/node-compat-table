@@ -18,6 +18,9 @@ html
         padding: 0;
         margin: 0;
       }
+      h1,h2,h3 { margin:0; padding:0; font-size:inherit; }
+      a { text-decoration:none; color:inherit; }
+      a:hover { text-decoration:underline; }
       header{
         background-color: #454545;
         color: #eee;
@@ -38,9 +41,13 @@ html
         margin-top: 42px;
       }
       .category {
-        background-color: #eee;
-        font-weight: bold;
+        background-color: #efefef;
         padding: 3px;
+        margin: 2px 0;
+        color: #191970;
+        text-indent: 10px;
+        text-align: left;
+        font-size: 22px;
       }
       .feature {
         width: 480px;
@@ -57,6 +64,13 @@ html
         font-size: 16px;
         padding: 3px 1px;
         color: #aaa;
+      }
+      .sub {
+        text-indent: 10px;
+        font-weight: bold;
+        color: #191970;
+        border-bottom: solid 1px;
+        padding-top: 10px;
       }
       .subsub {
         text-indent: 10px;
@@ -124,6 +138,13 @@ html
       .subheading {
         font-size: 10px;
       }
+      table.results {
+        margin-bottom: 20px;
+      }
+      .hash {
+        position: absolute;
+        margin-top: -46px;
+      }
 body
     header
       h1 Node.js ES2015 Support
@@ -139,11 +160,17 @@ body
             th.version(class='v'+version.split('.')[0])=version
     article
       each obj1, category in testers
-        .category=category
-        table
+        table.results
+          caption
+            h2.category
+              .hash(id=category.replace(/\W/g, '-'))
+              a(href='#'+category.replace(/\W/g, '-'))=category
           each obj2, subcategory in obj1
             tr
-              td.feature.sub=subcategory
+              td.feature.sub(colspan=versions.length+1)
+                h3
+                  .hash(id=subcategory.replace(/\W/g, '-'))
+                  a(href='#'+subcategory.replace(/\W/g, '-'))=subcategory
             each obj3, subsubcategory in obj2
               tr
                 td.feature.subsub

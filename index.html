@@ -18,6 +18,9 @@
         padding: 0;
         margin: 0;
       }
+      h1,h2,h3 { margin:0; padding:0; font-size:inherit; }
+      a { text-decoration:none; color:inherit; }
+      a:hover { text-decoration:underline; }
       header{
         background-color: #454545;
         color: #eee;
@@ -38,9 +41,13 @@
         margin-top: 42px;
       }
       .category {
-        background-color: #eee;
-        font-weight: bold;
+        background-color: #efefef;
         padding: 3px;
+        margin: 2px 0;
+        color: #191970;
+        text-indent: 10px;
+        text-align: left;
+        font-size: 22px;
       }
       .feature {
         width: 480px;
@@ -57,6 +64,13 @@
         font-size: 16px;
         padding: 3px 1px;
         color: #aaa;
+      }
+      .sub {
+        text-indent: 10px;
+        font-weight: bold;
+        color: #191970;
+        border-bottom: solid 1px;
+        padding-top: 10px;
       }
       .subsub {
         text-indent: 10px;
@@ -124,6 +138,13 @@
       .subheading {
         font-size: 10px;
       }
+      table.results {
+        margin-bottom: 20px;
+      }
+      .hash {
+        position: absolute;
+        margin-top: -46px;
+      }
     </style>
   </head>
 </html>
@@ -149,10 +170,18 @@
     </table>
   </header>
   <article>
-    <div class="category">optimisation</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="optimisation" class="hash"></div><a href="#optimisation">optimisation</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">proper tail calls (tail call optimisation)</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="proper-tail-calls--tail-call-optimisation-" class="hash"></div><a href="#proper-tail-calls--tail-call-optimisation-">proper tail calls (tail call optimisation)</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">direct recursion
@@ -191,10 +220,18 @@
         <td title="Maximum call stack size exceeded" class="result Error">Error</td>
       </tr>
     </table>
-    <div class="category">syntax</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="syntax" class="hash"></div><a href="#syntax">syntax</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">default function parameters</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="default-function-parameters" class="hash"></div><a href="#default-function-parameters">default function parameters</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -323,7 +360,11 @@
         <td title="Unexpected token =" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">rest parameters</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="rest-parameters" class="hash"></div><a href="#rest-parameters">rest parameters</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -416,7 +457,11 @@
         <td title="Unexpected token ." class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">spread (...) operator</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="spread-------operator" class="hash"></div><a href="#spread-------operator">spread (...) operator</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">with arrays, in function calls
@@ -689,7 +734,11 @@
         <td title="Unexpected token ." class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">object literal extensions</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="object-literal-extensions" class="hash"></div><a href="#object-literal-extensions">object literal extensions</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">computed properties
@@ -800,7 +849,11 @@
         <td title="Unexpected token [" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">for..of loops</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="for--of-loops" class="hash"></div><a href="#for--of-loops">for..of loops</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">with arrays
@@ -965,7 +1018,11 @@
         <td title="__createIterableObject is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">octal and binary literals</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="octal-and-binary-literals" class="hash"></div><a href="#octal-and-binary-literals">octal and binary literals</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">octal literals
@@ -1040,7 +1097,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">template strings</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="template-strings" class="hash"></div><a href="#template-strings">template strings</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -1133,7 +1194,11 @@
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">RegExp &quot;y&quot; and &quot;u&quot; flags</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="RegExp--y--and--u--flags" class="hash"></div><a href="#RegExp--y--and--u--flags">RegExp &quot;y&quot; and &quot;u&quot; flags</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">&quot;y&quot; flag
@@ -1208,7 +1273,11 @@
         <td title="Invalid flags supplied to RegExp constructor 'u'" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">destructuring, declarations</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="destructuring--declarations" class="hash"></div><a href="#destructuring--declarations">destructuring, declarations</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">with arrays
@@ -1607,7 +1676,11 @@
         <td title="Unexpected token {" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">destructuring, assignment</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="destructuring--assignment" class="hash"></div><a href="#destructuring--assignment">destructuring, assignment</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">with arrays
@@ -2042,7 +2115,11 @@
         <td title="Unexpected token =" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">destructuring, parameters</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="destructuring--parameters" class="hash"></div><a href="#destructuring--parameters">destructuring, parameters</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">with arrays
@@ -2459,7 +2536,11 @@
         <td title="Unexpected token {" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Unicode code point escapes</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Unicode-code-point-escapes" class="hash"></div><a href="#Unicode-code-point-escapes">Unicode code point escapes</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">in strings
@@ -2498,7 +2579,11 @@
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">new.target</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="new-target" class="hash"></div><a href="#new-target">new.target</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">in constructors
@@ -2537,10 +2622,18 @@
         <td title="Unexpected token ." class="result Error">Error</td>
       </tr>
     </table>
-    <div class="category">bindings</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="bindings" class="hash"></div><a href="#bindings">bindings</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">const</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="const" class="hash"></div><a href="#const">const</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic support
@@ -2687,7 +2780,11 @@
         <td title="Use of const in strict mode." class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">let</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="let" class="hash"></div><a href="#let">let</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic support
@@ -2870,7 +2967,11 @@
         <td title="Unexpected strict mode reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">block-level function declaration</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="block-level-function-declaration" class="hash"></div><a href="#block-level-function-declaration">block-level function declaration</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">path
@@ -2903,10 +3004,18 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
     </table>
-    <div class="category">functions</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="functions" class="hash"></div><a href="#functions">functions</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">arrow functions</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="arrow-functions" class="hash"></div><a href="#arrow-functions">arrow functions</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">0 parameters
@@ -3143,7 +3252,11 @@
         <td title="Unexpected token =&gt;" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">class</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="class" class="hash"></div><a href="#class">class</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">class statement
@@ -3560,7 +3673,11 @@
         <td title="Unexpected token ." class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">super</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="super" class="hash"></div><a href="#super">super</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">statement in constructors
@@ -3707,7 +3824,11 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">generators</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="generators" class="hash"></div><a href="#generators">generators</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -4160,10 +4281,18 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
     </table>
-    <div class="category">built-ins</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="built-ins" class="hash"></div><a href="#built-ins">built-ins</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">typed arrays</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="typed-arrays" class="hash"></div><a href="#typed-arrays">typed arrays</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Int8Array
@@ -4994,7 +5123,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">Map</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Map" class="hash"></div><a href="#Map">Map</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -5321,7 +5454,11 @@
         <td title="Cannot use 'in' operator to search for 'get' in undefined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Set</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Set" class="hash"></div><a href="#Set">Set</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -5648,7 +5785,11 @@
         <td title="Cannot use 'in' operator to search for 'get' in undefined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">WeakMap</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="WeakMap" class="hash"></div><a href="#WeakMap">WeakMap</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -5831,7 +5972,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">WeakSet</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="WeakSet" class="hash"></div><a href="#WeakSet">WeakSet</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -5996,7 +6141,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy" class="hash"></div><a href="#Proxy">Proxy</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">constructor requires new
@@ -6359,7 +6508,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Reflect</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Reflect" class="hash"></div><a href="#Reflect">Reflect</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Reflect.get
@@ -6650,7 +6803,11 @@
         <td title="Reflect is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Promise</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Promise" class="hash"></div><a href="#Promise">Promise</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -6779,7 +6936,11 @@
         <td title="Cannot use 'in' operator to search for 'get' in undefined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Symbol</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Symbol" class="hash"></div><a href="#Symbol">Symbol</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -6962,7 +7123,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">well-known symbols</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="well-known-symbols" class="hash"></div><a href="#well-known-symbols">well-known symbols</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Symbol.hasInstance
@@ -7379,10 +7544,18 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
     </table>
-    <div class="category">built-in extensions</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="built-in-extensions" class="hash"></div><a href="#built-in-extensions">built-in extensions</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">Object static methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Object-static-methods" class="hash"></div><a href="#Object-static-methods">Object static methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Object.assign
@@ -7457,7 +7630,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">function &quot;name&quot; property</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="function--name--property" class="hash"></div><a href="#function--name--property">function &quot;name&quot; property</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">function statements
@@ -7766,7 +7943,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">String static methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="String-static-methods" class="hash"></div><a href="#String-static-methods">String static methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">String.raw
@@ -7805,7 +7986,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">String.prototype methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="String-prototype-methods" class="hash"></div><a href="#String-prototype-methods">String.prototype methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">String.prototype.codePointAt
@@ -7952,7 +8137,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">RegExp.prototype properties</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="RegExp-prototype-properties" class="hash"></div><a href="#RegExp-prototype-properties">RegExp.prototype properties</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">RegExp.prototype.flags
@@ -8063,7 +8252,11 @@
         <td title="Cannot use 'in' operator to search for 'get' in undefined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Array static methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Array-static-methods" class="hash"></div><a href="#Array-static-methods">Array static methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Array.from, array-like objects
@@ -8264,7 +8457,11 @@
         <td title="Cannot use 'in' operator to search for 'get' in undefined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Array.prototype methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Array-prototype-methods" class="hash"></div><a href="#Array-prototype-methods">Array.prototype methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Array.prototype.copyWithin
@@ -8447,7 +8644,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">Number properties</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Number-properties" class="hash"></div><a href="#Number-properties">Number properties</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Number.isFinite
@@ -8576,7 +8777,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">Math methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Math-methods" class="hash"></div><a href="#Math-methods">Math methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Math.clz32
@@ -8885,10 +9090,18 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
     </table>
-    <div class="category">subclassing</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="subclassing" class="hash"></div><a href="#subclassing">subclassing</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">Array is subclassable</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Array-is-subclassable" class="hash"></div><a href="#Array-is-subclassable">Array is subclassable</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">length property (accessing)
@@ -9089,7 +9302,11 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">RegExp is subclassable</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="RegExp-is-subclassable" class="hash"></div><a href="#RegExp-is-subclassable">RegExp is subclassable</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -9164,7 +9381,11 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Function is subclassable</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Function-is-subclassable" class="hash"></div><a href="#Function-is-subclassable">Function is subclassable</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">can be called
@@ -9275,7 +9496,11 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Promise is subclassable</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Promise-is-subclassable" class="hash"></div><a href="#Promise-is-subclassable">Promise is subclassable</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functionality
@@ -9350,7 +9575,11 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">miscellaneous subclassables</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="miscellaneous-subclassables" class="hash"></div><a href="#miscellaneous-subclassables">miscellaneous subclassables</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Boolean is subclassable
@@ -9443,10 +9672,18 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
     </table>
-    <div class="category">misc</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="misc" class="hash"></div><a href="#misc">misc</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">prototype of bound functions</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="prototype-of-bound-functions" class="hash"></div><a href="#prototype-of-bound-functions">prototype of bound functions</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic functions
@@ -9539,7 +9776,11 @@
         <td title="Unexpected reserved word" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy, internal 'get' calls</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy--internal--get--calls" class="hash"></div><a href="#Proxy--internal--get--calls">Proxy, internal 'get' calls</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">ToPrimitive
@@ -10172,7 +10413,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy, internal 'set' calls</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy--internal--set--calls" class="hash"></div><a href="#Proxy--internal--set--calls">Proxy, internal 'set' calls</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Object.assign
@@ -10373,7 +10618,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy, internal 'defineProperty' calls</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy--internal--defineProperty--calls" class="hash"></div><a href="#Proxy--internal--defineProperty--calls">Proxy, internal 'defineProperty' calls</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">[[Set]]
@@ -10412,7 +10661,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy, internal 'deleteProperty' calls</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy--internal--deleteProperty--calls" class="hash"></div><a href="#Proxy--internal--deleteProperty--calls">Proxy, internal 'deleteProperty' calls</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Array.prototype.copyWithin
@@ -10523,7 +10776,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy, internal 'getOwnPropertyDescriptor' calls</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy--internal--getOwnPropertyDescriptor--calls" class="hash"></div><a href="#Proxy--internal--getOwnPropertyDescriptor--calls">Proxy, internal 'getOwnPropertyDescriptor' calls</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">[[Set]]
@@ -10598,7 +10855,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Proxy, internal 'ownKeys' calls</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Proxy--internal--ownKeys--calls" class="hash"></div><a href="#Proxy--internal--ownKeys--calls">Proxy, internal 'ownKeys' calls</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">SetIntegrityLevel
@@ -10655,7 +10916,11 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Object static methods accept primitives</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Object-static-methods-accept-primitives" class="hash"></div><a href="#Object-static-methods-accept-primitives">Object static methods accept primitives</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Object.getPrototypeOf
@@ -10838,7 +11103,11 @@
         <td title="Object.keys called on non-object" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">own property order</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="own-property-order" class="hash"></div><a href="#own-property-order">own property order</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">Object.keys
@@ -10967,7 +11236,11 @@
         <td title="Reflect is not defined" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">miscellaneous</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="miscellaneous" class="hash"></div><a href="#miscellaneous">miscellaneous</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">no escaped reserved words as identifiers
@@ -11168,10 +11441,18 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
     </table>
-    <div class="category">annex b</div>
-    <table>
+    <table class="results">
+      <caption>
+        <h2 class="category">
+          <div id="annex-b" class="hash"></div><a href="#annex-b">annex b</a>
+        </h2>
+      </caption>
       <tr>
-        <td class="feature sub">non-strict function semantics</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="non-strict-function-semantics" class="hash"></div><a href="#non-strict-function-semantics">non-strict function semantics</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">hoisted block-level function declaration
@@ -11228,7 +11509,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">__proto__ in object literals</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="__proto__-in-object-literals" class="hash"></div><a href="#__proto__-in-object-literals">__proto__ in object literals</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">basic support
@@ -11321,7 +11606,11 @@
         <td title="Unexpected token (" class="result Error">Error</td>
       </tr>
       <tr>
-        <td class="feature sub">Object.prototype.__proto__</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="Object-prototype-__proto__" class="hash"></div><a href="#Object-prototype-__proto__">Object.prototype.__proto__</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">get prototype
@@ -11432,7 +11721,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">String.prototype HTML methods</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="String-prototype-HTML-methods" class="hash"></div><a href="#String-prototype-HTML-methods">String.prototype HTML methods</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">existence
@@ -11489,7 +11782,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">RegExp.prototype.compile</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="RegExp-prototype-compile" class="hash"></div><a href="#RegExp-prototype-compile">RegExp.prototype.compile</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">path
@@ -11522,7 +11819,11 @@
         <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature sub">RegExp syntax extensions</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="RegExp-syntax-extensions" class="hash"></div><a href="#RegExp-syntax-extensions">RegExp syntax extensions</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">hyphens in character sets
@@ -11669,7 +11970,11 @@
         <td title="Test passed" class="result Yes">Yes</td>
       </tr>
       <tr>
-        <td class="feature sub">HTML-style comments</td>
+        <td colspan="12" class="feature sub">
+          <h3>
+            <div id="HTML-style-comments" class="hash"></div><a href="#HTML-style-comments">HTML-style comments</a>
+          </h3>
+        </td>
       </tr>
       <tr>
         <td class="feature subsub">path
