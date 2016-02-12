@@ -29,7 +29,8 @@ global.__createIterableObject = function (arr, methods) {
 };
 
 var results = {
-  _version: version
+  _version: version,
+  _v8: process.versions.v8
 };
 Object.keys(testers).forEach(function (name) {
   results[name] = run(testers[name]);

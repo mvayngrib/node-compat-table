@@ -151,6 +151,16 @@ html
         margin-top: 8px;
         margin-left: 120px;
       }
+      .nightly {
+        position: relative;
+      }
+      .nightly sup {
+        color: gold;
+        position: absolute;
+        top: -15px;
+        left: 0;
+        width: 100%;
+      }
 body
     header
       div(style="float:left")
@@ -166,8 +176,11 @@ body
       iframe(src="https://ghbtns.com/github-btn.html?user=williamkapke&repo=node-compat-table&type=fork&count=true", frameborder="0", scrolling="0", width="170px", height="20px")
       table#headings
         tr
+          th.version(class='nightly', title='v8: '+results.nightly._v8)=results.nightly._version.replace(/-nightly.*/,'')
+            sup Nightly!
           each version in versions
-            th.version(class='v'+version.split('.')[0])=version
+              th.version(class='v'+version.split('.')[0], title='v8: '+results[version]._v8)=version
+    - versions.unshift('nightly')
     article
       each obj1, category in testers
         table.results

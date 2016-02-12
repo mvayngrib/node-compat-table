@@ -5,17 +5,19 @@ var testers = {};
 var _testers = require('./testers.json');
 Object.keys(_testers).forEach(path=>$set(testers, path, { path:path, code:_testers[path]}));
 
-var data = {};
+var results = {
+  nightly: try_require('./results/nightly.json')
+};
 var versions = fs.readFileSync('.versions').toString().trim().split('\n');
 versions.forEach(version=>
-  data[version]=try_require('./results/'+version+'.json')
+  results[version]=try_require('./results/'+version+'.json')
 );
 
 
 var html = jade.renderFile('index.jade', {
   pretty:true,
   versions:versions,
-  results:data,
+  results:results,
   testers:testers
 });
 
