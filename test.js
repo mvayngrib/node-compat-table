@@ -1,7 +1,7 @@
 
 const testers = require('./testers.json');
 const fs = require('fs');
-const version = process.versions.node;
+var version = process.versions.node;
 console.log('Testing '+version);
 
 // This function is needed to run the tests and was extracted from:
@@ -29,21 +29,22 @@ global.__createIterableObject = function (arr, methods) {
 };
 
 var results = {
-	_version: version
+  _version: version
 };
 Object.keys(testers).forEach(function (name) {
-	results[name] = run(testers[name]);
+  results[name] = run(testers[name]);
 });
 
 function run(script) {
   script = script.replace(/^\s*function.+\n/,'').replace(/\n}$/, '');
-	try{
-		return new Function(script)();
-	}
-	catch(e){
-		return e.message;
-	}
+  try{
+    return new Function(script)();
+  }
+  catch(e){
+    return e.message;
+  }
 }
 
 var json = JSON.stringify(results, null, 2);
+if(/nightly/.test(version)) version = 'nightly';
 fs.writeFileSync(__dirname+'/results/'+version+'.json', json);
