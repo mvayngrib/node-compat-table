@@ -10620,6 +10620,25 @@
         <td title="Proxy is not defined" class="result Error">Error</td>
       </tr>
       <tr>
+        <td class="feature subsub">RegExp.prototype.toString
+          <div class="info">?
+            <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;//&nbsp;RegExp.prototype.toString&nbsp;->&nbsp;Get&nbsp;->&nbsp;[[Get]]<br>&nbsp;&nbsp;var&nbsp;get&nbsp;=&nbsp;[];<br>&nbsp;&nbsp;var&nbsp;p&nbsp;=&nbsp;new&nbsp;Proxy({},&nbsp;{&nbsp;get:&nbsp;function(o,&nbsp;k)&nbsp;{&nbsp;get.push(k);&nbsp;return&nbsp;o[k];&nbsp;}});<br>&nbsp;&nbsp;RegExp.prototype.toString.call(p);<br>&nbsp;&nbsp;return&nbsp;get&nbsp;+&nbsp;''&nbsp;===&nbsp;"source,flags";<br>}</div>
+          </div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Proxy is not defined" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
+      </tr>
+      <tr>
         <td class="feature subsub">RegExp.prototype[Symbol.match]
           <div class="info">?
             <div class="code">function&nbsp;()&nbsp;{<br>&nbsp;&nbsp;//&nbsp;RegExp.prototype[Symbol.match]&nbsp;->&nbsp;Get&nbsp;->&nbsp;[[Get]]<br>&nbsp;&nbsp;var&nbsp;get&nbsp;=&nbsp;[];<br>&nbsp;&nbsp;var&nbsp;p&nbsp;=&nbsp;new&nbsp;Proxy({&nbsp;exec:&nbsp;function()&nbsp;{&nbsp;return&nbsp;null;&nbsp;}&nbsp;},&nbsp;{&nbsp;get:&nbsp;function(o,&nbsp;k)&nbsp;{&nbsp;get.push(k);&nbsp;return&nbsp;o[k];&nbsp;}});<br>&nbsp;&nbsp;RegExp.prototype[Symbol.match].call(p);<br>&nbsp;&nbsp;p.global&nbsp;=&nbsp;true;<br>&nbsp;&nbsp;RegExp.prototype[Symbol.match].call(p);<br>&nbsp;&nbsp;return&nbsp;get&nbsp;+&nbsp;''&nbsp;===&nbsp;"global,exec,global,unicode,exec";<br>}</div>
