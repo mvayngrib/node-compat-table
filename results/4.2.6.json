@@ -592,7 +592,6 @@
   "misc›miscellaneous›RegExp.prototype.toString generic and uses \"flags\" property": "Method RegExp.prototype.toString called on incompatible receiver #<Object>",
   "misc›miscellaneous›built-in prototypes are not instances": false,
   "misc›miscellaneous›function 'length' is configurable": true,
-  "misc›miscellaneous›String.prototype case methods, Unicode support": false,
   "annex b›non-strict function semantics›hoisted block-level function declaration": 0,
   "annex b›non-strict function semantics›labeled function statements": true,
   "annex b›non-strict function semantics›function statements in if-statement clauses": true,
