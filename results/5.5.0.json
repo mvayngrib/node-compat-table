@@ -49,7 +49,7 @@
   "syntax›octal and binary literals›binary literals": true,
   "syntax›octal and binary literals›octal supported by Number()": true,
   "syntax›octal and binary literals›binary supported by Number()": true,
-  "syntax›template strings›basic functionality": false,
+  "syntax›template strings›basic functionality": true,
   "syntax›template strings›toString conversion": true,
   "syntax›template strings›tagged template strings": true,
   "syntax›template strings›passed array is frozen": true,
