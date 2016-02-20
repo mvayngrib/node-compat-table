@@ -378,6 +378,7 @@
   "built-ins›well-known symbols›Symbol.species, Array.prototype.slice": false,
   "built-ins›well-known symbols›Symbol.species, Array.prototype.splice": false,
   "built-ins›well-known symbols›Symbol.species, RegExp.prototype[Symbol.split]": false,
+  "built-ins›well-known symbols›Symbol.species, Promise.prototype.then": false,
   "built-ins›well-known symbols›Symbol.replace": false,
   "built-ins›well-known symbols›Symbol.search": false,
   "built-ins›well-known symbols›Symbol.split": false,
