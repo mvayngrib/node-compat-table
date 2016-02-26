@@ -1,4 +1,3 @@
-
 const testers = require('./testers.json');
 const fs = require('fs');
 var version = process.versions.node;
@@ -32,19 +31,45 @@ var results = {
   _version: version,
   _v8: process.versions.v8
 };
-Object.keys(testers).forEach(function (name) {
-  results[name] = run(testers[name]);
-});
+
+function errors(e){ return !!e && e.message; }
+
+Promise.all(
+  Object.keys(testers).map(function(name) {
+    var script = testers[name];
+    results[name] = null; //make SURE it makes it to the output
+
+    return run(script)
+    .catch(errors) //we don't want the `all` to catch any errors
+    .then(function(result) {
+      results[name] = result; //expected results: `e.message` or true/false
+    });
+  })
+)
+.then(function () {
+  var json = JSON.stringify(results, null, 2);
+  if(/nightly/.test(version)) version = 'nightly';
+  fs.writeFileSync(__dirname+'/results/'+version+'.json', json);
+})
+.catch(console.log);
 
 function run(script) {
-  try{
-    return new Function(script)();
+  //kangax's Promise tests reply on a asyncTestPassed
+  //function that doesn't do anything that works here.
+  // So, we'll swap it out to resolve/reject a promise when done.
+  var async = /asyncTestPassed/.test(script);
+  if(async) script = script.replace(/asyncTestPassed\(\)/, 'accept(true)') + '\nsetTimeout(reject, 500);';
+
+  try {
+    var fn = new Function("accept, reject", script);
+    return (async? new Promise(fn) : Promise.resolve(fn() || Promise.reject()))
+      //if it fails, try using strict mode...
+      .catch(function() {
+        var fn = new Function("accept, reject", '"use strict"\n' + script);
+        return async? new Promise(fn) : Promise.resolve(fn());
+      });
   }
   catch(e){
-    return e.message;
+    return Promise.resolve(e.message);
   }
 }
-
-var json = JSON.stringify(results, null, 2);
-if(/nightly/.test(version)) version = 'nightly';
-fs.writeFileSync(__dirname+'/results/'+version+'.json', json);
