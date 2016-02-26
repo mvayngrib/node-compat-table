@@ -37,12 +37,13 @@ function errors(e){ return !!e && e.message; }
 Promise.all(
   Object.keys(testers).map(function(name) {
     var script = testers[name];
-    results[name] = null; //make SURE it makes it to the output
+    results[name] = false; //make SURE it makes it to the output
 
     return run(script)
     .catch(errors) //we don't want the `all` to catch any errors
     .then(function(result) {
-      results[name] = result; //expected results: `e.message` or true/false
+      //expected results: `e.message` or true/false
+      results[name] = typeof result==='string'? result : !!result;
     });
   })
 )
