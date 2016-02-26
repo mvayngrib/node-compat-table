@@ -1,5 +1,5 @@
 {
-  "_version": "6.0.0-nightly201602102848f84332",
+  "_version": "6.0.0-nightly201602247b0a83d2b0",
   "_v8": "4.8.271.17",
   "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
   "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
