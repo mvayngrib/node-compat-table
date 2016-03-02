@@ -1291,7 +1291,7 @@ return closed;</div>}
       <tr>
         <td colspan="11" class="feature sub">
           <h3>
-            <div id="template-strings" class="hash"></div><a href="#template-strings">template strings</a>
+            <div id="template-literals" class="hash"></div><a href="#template-literals">template literals</a>
           </h3>
         </td>
       </tr>
@@ -1314,7 +1314,7 @@ ${a + "z"} ${b.toLowerCase()}` === "foo bar\nbaz qux";</div>}
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
-        <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
         <td class="feature subsub">toString conversion
@@ -1337,10 +1337,10 @@ return `${a}` === "foo";</div>}
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
-        <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
-        <td class="feature subsub">tagged template strings
+        <td class="feature subsub">tagged template literals
           <div class="info">?
             <div class="fn">function(){
               <div class="code">var called = false;
@@ -1367,7 +1367,7 @@ return fn `foo${123}bar\n${456}` && called;</div>}
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
-        <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
         <td class="feature subsub">passed array is frozen
@@ -1388,7 +1388,7 @@ return fn `foo${123}bar\n${456}` && called;</div>}
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
-        <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
         <td class="feature subsub">line break normalisation
@@ -1412,7 +1412,7 @@ return cr.length === 3 && lf.length === 3 && crlf.length === 3
         <td title="Test passed" class="result Yes">Yes</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
         <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
-        <td title="Unexpected token ILLEGAL" class="result Error">Error</td>
+        <td title="Test failed" class="result No">No</td>
       </tr>
       <tr>
         <td colspan="11" class="feature sub">
