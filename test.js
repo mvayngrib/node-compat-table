@@ -51,8 +51,10 @@ Promise.all(
 )
 .then(function () {
   var json = JSON.stringify(results, null, 2);
-  if(/nightly/.test(version)) version = 'nightly';
-  if(es_staging) version+='--es_staging';
+  if(/nightly/.test(version)) {
+    version = 'nightly';
+    if(es_staging) version+='--es_staging';
+  }
   fs.writeFileSync(__dirname+'/results/'+version+'.json', json);
 })
 .catch(console.log);
