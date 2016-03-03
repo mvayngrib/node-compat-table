@@ -1,6 +1,8 @@
 const testers = require('./testers.json');
 const fs = require('fs');
 var version = process.versions.node;
+var es_staging = /--es_staging/.test(process.execArgv)? '--es_staging' : '';
+if(es_staging) version+='--es_staging';
 console.log('Testing '+version);
 
 // This function is needed to run the tests and was extracted from:
@@ -22,7 +24,7 @@ global.__createIterableObject = function (arr, methods) {
     'throw': methods['throw']
   };
   var iterable = {};
-  iterable[Symbol.iterator] = function(){ return iterator; }
+  iterable[Symbol.iterator] = function(){ return iterator; };
 
   return iterable;
 };
@@ -50,6 +52,7 @@ Promise.all(
 .then(function () {
   var json = JSON.stringify(results, null, 2);
   if(/nightly/.test(version)) version = 'nightly';
+  if(es_staging) version+='--es_staging';
   fs.writeFileSync(__dirname+'/results/'+version+'.json', json);
 })
 .catch(console.log);
