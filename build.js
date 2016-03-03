@@ -8,17 +8,26 @@ Object.keys(_testers).forEach(path=>$set(testers, path, { path:path, code:_teste
 var results = {
   nightly: try_require('./results/nightly.json')
 };
+var es_staging = {
+  nightly: try_require('./results/nightly--es_staging.json')
+};
+
 var versions = fs.readFileSync('.versions').toString().trim().split('\n');
-versions.forEach(version=>
-  results[version]=try_require('./results/'+version+'.json')
-);
+versions.forEach(version=> {
+  results[version] = try_require('./results/' +version+ '.json');
+  es_staging[version] = try_require('./results/' +version+ '--es_staging.json');
+});
 
 
 var html = jade.renderFile('index.jade', {
   pretty:true,
   versions:versions,
   results:results,
-  testers:testers
+  testers:testers,
+  es_staging: es_staging,
+  requires_flag: function(version, path){
+    return es_staging[version] && results[version] && es_staging[version][path]===true && results[version][path]!==true;
+  }
 });
 
 //console.log(data);
