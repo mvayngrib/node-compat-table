@@ -51,5 +51,6 @@ function try_require(module) {
     return require(module);
   }
   catch(e){
+    console.log("couldn't find:", module);
   }
 }

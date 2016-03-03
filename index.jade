@@ -191,7 +191,7 @@ body
           th.version(class='nightly', title='v8: '+es_staging.nightly._v8)=es_staging.nightly._version.replace(/-nightly.*/,'')
             sup Nightly!
           each version in versions
-              th.version(class='v'+version.split('.')[0], title='v8: '+es_staging[version]._v8)=version
+              th.version(class='v'+version.split('.')[0], title='v8: '+ (es_staging[version] && es_staging[version]._v8))=version
     - versions.unshift('nightly')
     article
       each obj1, category in testers
