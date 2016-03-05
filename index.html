@@ -4659,6 +4659,41 @@ return bar === 123;</div>}
         </td>
       </tr>
       <tr>
+        <td class="feature subsub">cannot be in statements
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">const bar = 1;
+try {
+  Function(&quot;if(true) const baz = 1;&quot;)();
+} catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Use of const in strict mode." class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
         <td class="feature subsub">redefining a const is an error
           <div class="info">?
             <div class="fn">function(){
@@ -4793,6 +4828,42 @@ return bar === 123;</div>}
         </td>
       </tr>
       <tr>
+        <td class="feature subsub">cannot be in statements (strict mode)
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">'use strict';
+const bar = 1;
+try {
+  Function(&quot;if(true) const baz = 1;&quot;)();
+} catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Test failed" class="result No">
+          <div>No</div>
+        </td>
+        <td title="Use of const in strict mode." class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
         <td class="feature subsub">redefining a const (strict mode)
           <div class="info">?
             <div class="fn">function(){
@@ -4908,6 +4979,41 @@ return (foo === 123);</div>}
               <div class="code">let bar = 123;
 { let bar = 456; }
 return bar === 123;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Unexpected identifier" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="feature subsub">cannot be in statements
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">let bar = 1;
+try {
+  Function(&quot;if(true) let baz = 1;&quot;)();
+} catch(e) {
+  return true;
+}</div>}
             </div>
           </div>
         </td>
@@ -5080,6 +5186,42 @@ return (foo === 123);</div>}
 let bar = 123;
 { let bar = 456; }
 return bar === 123;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Unexpected strict mode reserved word" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="feature subsub">cannot be in statements (strict mode)
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">'use strict';
+let bar = 1;
+try {
+  Function(&quot;if(true) let baz = 1;&quot;)();
+} catch(e) {
+  return true;
+}</div>}
             </div>
           </div>
         </td>
