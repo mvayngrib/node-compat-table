@@ -27,6 +27,12 @@ var html = jade.renderFile('index.jade', {
   es_staging: es_staging,
   requires_flag: function(version, path){
     return es_staging[version] && results[version] && es_staging[version][path]===true && results[version][path]!==true;
+  },
+  tip: function (version) {
+    return !es_staging[version]? '' : `v8: ${es_staging[version]._v8}`
+  },
+  percent: function (version) {
+    return !es_staging[version]? '' : es_staging[version]._percent.toFixed(2).substr(-2);
   }
 });
 

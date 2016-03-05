@@ -65,6 +65,18 @@ html
         font-size: 16px;
         padding: 3px 1px;
         color: #aaa;
+        position: relative;
+        vertical-align: top;
+        line-height: 16px;
+      }
+      sub {
+        display: block;
+        font-size: 9px;
+        font-weight: normal;
+        bottom: -3px;
+        font-family: serif;
+        line-height: 8px;
+        margin-top: 3px;
       }
       .sub {
         text-indent: 10px;
@@ -176,7 +188,7 @@ html
         top: 14px;
       }
       .nightly {
-        position: relative;
+        background-color: #454545;
       }
       .nightly sup {
         color: gold;
@@ -203,10 +215,12 @@ body
           | Learn more
       table#headings
         tr
-          th.version(class='nightly', title='v8: '+es_staging.nightly._v8)=es_staging.nightly._version.replace(/-nightly.*/,'')
+          th.version(class='nightly', title=tip('nightly'))=es_staging.nightly._version.replace(/-nightly.*/,'')
             sup Nightly!
+            sub=percent('nightly')+'% complete'
           each version in versions
-              th.version(class='v'+version.split('.')[0], title='v8: '+ (es_staging[version] && es_staging[version]._v8))=version
+            th.version(class='v'+version.split('.')[0], title=tip(version))=version
+              sub=percent(version)+'% complete'
     - versions.unshift('nightly')
     article
       each obj1, category in testers
