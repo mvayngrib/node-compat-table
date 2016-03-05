@@ -35,6 +35,7 @@ fs.writeFileSync('index.html', html);
 
 function $set(target, path, value) {
   var parts = path.split('›');
+  if(parts.length===2) parts.splice(1,0,'');
 
   var obj = target;
   var last = parts.pop();
