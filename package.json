@@ -12,7 +12,6 @@
   "private": true,
   "dependencies": {
     "effd": "^1.4.5",
-    "gift": "^0.7.0",
     "jade": "^1.11.0",
     "object.assign": "^3.0.1"
   }
