@@ -481,6 +481,7 @@
   "built-in extensions›Math methods›Math.fround": "return typeof Math.fround === \"function\";",
   "built-in extensions›Math methods›Math.cbrt": "return typeof Math.cbrt === \"function\";",
   "built-in extensions›Math methods›Math.hypot": "return Math.hypot() === 0 &&\n  Math.hypot(1) === 1 &&\n  Math.hypot(9, 12, 20) === 25 &&\n  Math.hypot(27, 36, 60, 100) === 125;",
+  "built-in extensions›Date.prototype[Symbol.toPrimitive]": "var tp = Date.prototype[Symbol.toPrimitive];\nreturn tp.call(Object(2), \"number\") === 2\n  && tp.call(Object(2), \"string\") === \"2\"\n  && tp.call(Object(2), \"default\") === \"2\";",
   "subclassing›Array is subclassable›length property (accessing)": "class C extends Array {}\nvar c = new C();\nvar len1 = c.length;\nc[2] = 'foo';\nvar len2 = c.length;\nreturn len1 === 0 && len2 === 3;",
   "subclassing›Array is subclassable›length property (setting)": "class C extends Array {}\nvar c = new C();\nc[2] = 'foo';\nc.length = 1;\nreturn c.length === 1 && !(2 in c);",
   "subclassing›Array is subclassable›correct prototype chain": "class C extends Array {}\nvar c = new C();\nreturn c instanceof C && c instanceof Array && Object.getPrototypeOf(C) === Array;",

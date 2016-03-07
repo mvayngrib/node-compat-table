@@ -16994,6 +16994,46 @@ return true;</div>}
           <div>Yes</div>
         </td>
       </tr>
+      <tr>
+        <td colspan="8" class="feature sub">
+          <h3>
+            <div id="" class="hash"></div><a href="#"></a>
+          </h3>
+        </td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Date.prototype[Symbol.toPrimitive]
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var tp = Date.prototype[Symbol.toPrimitive];
+return tp.call(Object(2), &quot;number&quot;) === 2
+  &amp;&amp; tp.call(Object(2), &quot;string&quot;) === &quot;2&quot;
+  &amp;&amp; tp.call(Object(2), &quot;default&quot;) === &quot;2&quot;;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Cannot read property 'call' of undefined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Cannot read property 'call' of undefined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Cannot read property 'call' of undefined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Cannot read property 'call' of undefined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Cannot read property 'call' of undefined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Cannot read property 'call' of undefined" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
     </table>
     <table class="results">
       <caption>
