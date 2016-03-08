@@ -89,6 +89,9 @@ html
         text-indent: 10px;
         color: #aaa
       }
+      .flag {
+        color: gold;
+      }
       .Yes {
         background-color: #026e00;
       }
@@ -205,7 +208,8 @@ body
           a(href='https://github.com/kangax/compat-table') kangax's compat-table
           | &nbsp;applied only to Node.js
       .credits
-        | ⚐ = requires&nbsp;
+        span.flag ⚐
+        | &nbsp;= requires&nbsp;
         a(href='https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag') es_staging
         | &nbsp;flag.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Created by&nbsp;
         a(href='https://github.com/williamkapke') William Kapke
@@ -249,9 +253,10 @@ body
                 each version in versions
                   if es_staging[version]
                     - result = es_staging[version][obj3.path]
-                    - title = result===true? 'Test passed' : typeof result==='string'? result : 'Test failed'
+                    - flaggd = requires_flag(version, obj3.path);
+                    - title = result===true? (flaggd? 'Yes, but requires --es_staging flag' : 'Test passed') : typeof result==='string'? result : 'Test failed'
                     - result = result===true? 'Yes' : typeof result==='string'? 'Error' : 'No'
-                    - classes = result + (requires_flag(version, obj3.path)? ' flag' : '')
+                    - classes = result + (flaggd? ' flag' : '')
                     td.result(class=classes, title=title)
                       div=result
                   else
