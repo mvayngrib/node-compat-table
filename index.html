@@ -6131,6 +6131,44 @@ return typeof C.prototype.method === &quot;function&quot;
         </td>
       </tr>
       <tr>
+        <td class="feature subsub">optional semicolons
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">class C {
+  ;
+  method() { return 2; };
+  method2() { return 2; }
+  method3() { return 2; };
+}
+return typeof C.prototype.method === &quot;function&quot;
+  &amp;&amp; typeof C.prototype.method2 === &quot;function&quot;
+  &amp;&amp; typeof C.prototype.method3 === &quot;function&quot;;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Yes, but requires --es_staging flag" class="result Yes flag">
+          <div>Yes</div>
+        </td>
+        <td title="Yes, but requires --es_staging flag" class="result Yes flag">
+          <div>Yes</div>
+        </td>
+        <td title="Yes, but requires --es_staging flag" class="result Yes flag">
+          <div>Yes</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Unexpected reserved word" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
         <td class="feature subsub">static methods
           <div class="info">?
             <div class="fn">function(){
@@ -7214,6 +7252,49 @@ return passed;</div>}
         </td>
       </tr>
       <tr>
+        <td class="feature subsub">%GeneratorPrototype% prototype chain
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">function * generatorFn(){}
+var g = generatorFn();
+var ownProto = Object.getPrototypeOf(g);
+var passed = ownProto === generatorFn.prototype;
+
+var sharedProto = Object.getPrototypeOf(ownProto);
+var iterProto = Object.getPrototypeOf(sharedProto);
+
+passed &amp;= iterProto.hasOwnProperty(Symbol.iterator) &amp;&amp;
+  !sharedProto     .hasOwnProperty(Symbol.iterator) &amp;&amp;
+  !ownProto        .hasOwnProperty(Symbol.iterator) &amp;&amp;
+  g[Symbol.iterator]() === g;
+
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Unexpected token *" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
         <td class="feature subsub">%GeneratorPrototype%.constructor
           <div class="info">?
             <div class="fn">function(){
@@ -7227,6 +7308,8 @@ item = iterator.next();
 passed    &amp;= item.value === 7 &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
+
+passed &amp;= g.constructor === (function*(){}).constructor;
 return passed;</div>}
             </div>
           </div>
@@ -7970,6 +8053,45 @@ passed    &amp;= item.value === 6 &amp;&amp; item.done === false;
 item = iterator.next();
 passed    &amp;= item.value === undefined &amp;&amp; item.done === true;
 return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Yes, but requires --es_staging flag" class="result Yes flag">
+          <div>Yes</div>
+        </td>
+        <td title="Yes, but requires --es_staging flag" class="result Yes flag">
+          <div>Yes</div>
+        </td>
+        <td title="Yes, but requires --es_staging flag" class="result Yes flag">
+          <div>Yes</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Unexpected reserved word" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="feature subsub">shorthand generators can't be constructors
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">class C {
+  * generator() {
+    yield 5; yield 6;
+  }
+};
+try {
+  Function(&quot;class D { * constructor() { return {}; } }&quot;);
+} catch(e) {
+  return true;
+}</div>}
             </div>
           </div>
         </td>
@@ -11621,6 +11743,37 @@ try {
         </td>
       </tr>
       <tr>
+        <td class="feature subsub">no &quot;prototype&quot; property
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">new Proxy({}, {});
+return !Proxy.hasOwnProperty('prototype');</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">
+          <div>Error</div>
+        </td>
+        <td title="Proxy is not defined" class="result Error">
+          <div>Error</div>
+        </td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;get&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -13285,6 +13438,41 @@ if (Object.defineProperty) {
   return object[symbol] === value;
 }
 
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+        <td title="Test passed" class="result Yes">
+          <div>Yes</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="feature subsub">symbols inherit from Symbol.prototype
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var symbol = Symbol();
+var passed = symbol.foo === undefined;
+Symbol.prototype.foo = 2;
+passed &amp;= symbol.foo === 2;
+delete Symbol.prototype.foo;
 return passed;</div>}
             </div>
           </div>
