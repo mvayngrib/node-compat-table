@@ -6350,6 +6350,29 @@ return map.size === 1;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">Map.prototype isn't an instance
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">new Map();
+var obj = {};
+try {
+  Map.prototype.has(obj);
+}
+catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">Map iterator prototype chain
           <div class="info">?
             <div class="fn">function(){
@@ -6707,6 +6730,29 @@ return set.size === 2;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">Set.prototype isn't an instance
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">new Set();
+var obj = {};
+try {
+  Set.prototype.has(obj);
+}
+catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">Set iterator prototype chain
           <div class="info">?
             <div class="fn">function(){
@@ -6963,6 +7009,29 @@ return m.has(key);</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">WeakMap.prototype isn't an instance
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">new WeakMap();
+var obj = {};
+try {
+  WeakMap.prototype.has(obj);
+}
+catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+      </tr>
+      <tr>
         <td colspan="8" class="feature sub">
           <h3>
             <div id="WeakSet" class="hash"></div><a href="#WeakSet">WeakSet</a>
@@ -7154,6 +7223,29 @@ return s.has(key);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">WeakSet.prototype isn't an instance
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">new WeakSet();
+var obj = {};
+try {
+  WeakSet.prototype.has(obj);
+}
+catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td colspan="8" class="feature sub">
@@ -8002,6 +8094,27 @@ try {
   Promise(function(){});
   return false;
 } catch(e) {
+  return true;
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Promise.prototype isn't an instance
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">new Promise(function(){});
+try {
+  Promise.prototype.then(function(){});
+} catch (e) {
   return true;
 }</div>}
             </div>
