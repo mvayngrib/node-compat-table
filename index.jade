@@ -69,6 +69,10 @@ html
         vertical-align: top;
         line-height: 16px;
       }
+      .result {
+        line-height: 21px;
+        padding: 0;
+      }
       sub {
         display: block;
         font-size: 9px;
@@ -89,16 +93,29 @@ html
         text-indent: 10px;
         color: #aaa
       }
-      .flag {
+
+      #flagged {
+        position: fixed;
+        z-index: 101;
+        top: 0;
+        left: 580px;
+      }
+      #flagged:checked ~ article .flagged { display:block; }
+      #flagged ~ article .flagged { display:none; }
+      #flagged:checked ~ article .unflagged { display:none; }
+      #flagged ~ article .unflagged { display:block; }
+
+      .Yes.flagged.required:before {
+        content: '⚐';
+        position: absolute;
+        margin-left: 26px;
+        color: gold;
+      }
+      .Yes.flagged.required {
         color: gold;
       }
       .Yes {
         background-color: #026e00;
-      }
-      .Yes.flag:before {
-        content: '⚐';
-        position: absolute;
-        margin-left: 20px;
       }
       .No {
         background-color: red;
@@ -208,10 +225,10 @@ body
           a(href='https://github.com/kangax/compat-table') kangax's compat-table
           | &nbsp;applied only to Node.js
       .credits
-        span.flag ⚐
-        | &nbsp;= requires&nbsp;
-        a(href='https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag') es_staging
-        | &nbsp;flag.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Created by&nbsp;
+        label(for='flagged', style='cursor:pointer') requires&nbsp;
+          a(href='https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag') es_staging
+          | &nbsp;flag ⚐
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Created by&nbsp;
         a(href='https://github.com/williamkapke') William Kapke
       #more
         a(href='https://github.com/williamkapke/node-compat-table')
@@ -226,6 +243,7 @@ body
             th.version(class='v'+version.split('.')[0], title=tip(version))=version
               sub=percent(version)+'% complete'
     - versions.unshift('nightly')
+    input#flagged(type='checkbox', style='position:fixed', checked='checked')
     article
       each obj1, category in testers
         table.results
@@ -252,12 +270,7 @@ body
                         | }
                 each version in versions
                   if es_staging[version]
-                    - result = es_staging[version][obj3.path]
-                    - flaggd = requires_flag(version, obj3.path);
-                    - title = result===true? (flaggd? 'Yes, but requires --es_staging flag' : 'Test passed') : typeof result==='string'? result : 'Test failed'
-                    - result = result===true? 'Yes' : typeof result==='string'? 'Error' : 'No'
-                    - classes = result + (flaggd? ' flag' : '')
-                    td.result(class=classes, title=title)
-                      div=result
+                    - classes = requires_flag(version, obj3.path)? 'flag' : ''
+                    td.result(class=classes) !{results(version, obj3.path)}
                   else
                     td.result(title='No results yet')

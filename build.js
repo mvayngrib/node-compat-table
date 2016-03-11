@@ -6,33 +6,47 @@ var _testers = require('./testers.json');
 Object.keys(_testers).forEach(path=>$set(testers, path, { path:path, code:_testers[path]}));
 
 var results = {
-  nightly: try_require('./results/nightly.json')
-};
-var es_staging = {
-  nightly: try_require('./results/nightly--es_staging.json')
+  unflagged: {
+    nightly: try_require('./results/nightly.json')
+  },
+  flagged: {
+    nightly: try_require('./results/nightly--es_staging.json')
+  }
 };
 
 var versions = fs.readFileSync('.versions').toString().trim().split('\n');
 versions.forEach(version=> {
-  results[version] = try_require('./results/' +version+ '.json');
-  es_staging[version] = try_require('./results/' +version+ '--es_staging.json');
+  results.unflagged[version] = try_require('./results/' +version+ '.json');
+  results.flagged[version] = try_require('./results/' +version+ '--es_staging.json');
 });
 
+function requires_flag(version, path){
+  return results.flagged[version] && results.unflagged[version] && results.flagged[version][path]===true && results.unflagged[version][path]!==true;
+}
+function result(type, version, path) {
+  if(!results[type][version]) return;
+  var result = results[type][version][path];
+  var flaggd = type === 'flagged';
+  var flag_required = flaggd && requires_flag(version, path);
+  var title = result===true? (flaggd? 'Yes, but requires --es_staging flag' : 'Test passed') : typeof result==='string'? result : 'Test failed';
+  result = result===true? 'Yes' : typeof result==='string'? 'Error' : 'No';
+  return `<div class="${result} ${type} ${flag_required?'required':''}" title="${title}">${result}</div>`
+}
 
 var html = jade.renderFile('index.jade', {
   pretty:true,
   versions:versions,
-  results:results,
   testers:testers,
-  es_staging: es_staging,
-  requires_flag: function(version, path){
-    return es_staging[version] && results[version] && es_staging[version][path]===true && results[version][path]!==true;
+  es_staging: results.flagged,
+  results: function(version, path){
+    return result('unflagged', version, path) + result('flagged', version, path);
   },
+  requires_flag: requires_flag,
   tip: function (version) {
-    return !es_staging[version]? '' : `v8: ${es_staging[version]._v8}`
+    return !results.flagged[version]? '' : `v8: ${results.flagged[version]._v8}`
   },
   percent: function (version) {
-    return !es_staging[version]? '' : es_staging[version]._percent.toFixed(2).substr(-2);
+    return !results.flagged[version]? '' : results.flagged[version]._percent.toFixed(2).substr(-2);
   }
 });
 
