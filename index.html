@@ -7009,6 +7009,25 @@ return m.has(key);</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">.has, .get and .delete methods accept primitives
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var m = new WeakMap;
+return m.has(1) === false
+  &amp;&amp; m.get(1) === undefined
+  &amp;&amp; m.delete(1) === false;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid value used as weak map key">Error</div><div class="Error flagged " title="Invalid value used as weak map key">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">WeakMap.prototype isn't an instance
           <div class="info">?
             <div class="fn">function(){
@@ -7223,6 +7242,24 @@ return s.has(key);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">.has and .delete methods accept primitives
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var s = new WeakSet;
+return s.has(1) === false
+  &amp;&amp; s.delete(1) === false;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid value used in weak set">Error</div><div class="Error flagged " title="Invalid value used in weak set">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">WeakSet.prototype isn't an instance
