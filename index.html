@@ -233,11 +233,11 @@
     <table id="headings">
       <tr>
         <th title="v8: 4.9.385.27" class="version nightly">6.0.0<sup>Nightly!</sup><sub>88% complete</sub></th>
-        <th title="v8: 4.6.85.31" class="version v5">5.8.0<sub>59% complete</sub></th>
-        <th title="v8: 4.6.85.31" class="version v5">5.7.1<sub>59% complete</sub></th>
-        <th title="v8: 4.6.85.31" class="version v5">5.6.0<sub>59% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.4.0<sub>48% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub>48% complete</sub></th>
+        <th title="v8: 4.6.85.31" class="version v5">5.8.0<sub>58% complete</sub></th>
+        <th title="v8: 4.6.85.31" class="version v5">5.7.1<sub>58% complete</sub></th>
+        <th title="v8: 4.6.85.31" class="version v5">5.6.0<sub>58% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.0<sub>47% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub>47% complete</sub></th>
         <th title="v8: 3.28.71.19" class="version v0">0.12.12<sub>24% complete</sub></th>
       </tr>
     </table>
@@ -7375,6 +7375,49 @@ return proxy.foo === 5;</div>}
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;get&quot; handler invariants
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+var proxied = { };
+var proxy = new Proxy(proxied, {
+  get: function () {
+    passed = true;
+    return 4;
+  }
+});
+// The value reported for a property must be the same as the value of the corresponding
+// target object property if the target object property is a non-writable,
+// non-configurable own data property.
+Object.defineProperty(proxied, &quot;foo&quot;, { value: 5, enumerable: true });
+try {
+  proxy.foo;
+  return false;
+}
+catch(e) {}
+// The value reported for a property must be undefined if the corresponding target
+// object property is a non-configurable own accessor property that has undefined
+// as its [[Get]] attribute.
+Object.defineProperty(proxied, &quot;bar&quot;,
+  { set: function(){}, enumerable: true });
+try {
+  proxy.bar;
+  return false;
+}
+catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;set&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -7410,6 +7453,49 @@ var proxy = Object.create(new Proxy(proxied, {
   }
 }));
 proxy.foo = &quot;bar&quot;;
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;set&quot; handler invariants
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// Cannot change the value of a property to be different from the value of
+// the corresponding target object if the corresponding target object
+// property is a non-writable, non-configurable own data property.
+var proxied = {};
+var proxy = new Proxy(proxied, {
+  set: function () {
+    passed = true;
+    return true;
+  }
+});
+Object.defineProperty(proxied, &quot;foo&quot;, { value: 2, enumerable: true });
+proxy.foo = 2;
+try {
+  proxy.foo = 4;
+  return false;
+} catch(e) {}
+// Cannot set the value of a property if the corresponding target
+// object property is a non-configurable own accessor property
+// that has undefined as its [[Set]] attribute.
+Object.defineProperty(proxied, &quot;bar&quot;,
+  { get: function(){}, enumerable: true });
+try {
+  proxy.bar = 2;
+  return false;
+} catch(e) {}
 return passed;</div>}
             </div>
           </div>
@@ -7469,17 +7555,88 @@ return passed;</div>}
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;has&quot; handler invariants
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// A property cannot be reported as non-existent, if it exists as a
+// non-configurable own property of the target object.
+var proxied = {};
+var proxy = new Proxy(proxied, {
+  has: function () {
+    passed = true;
+    return false;
+  }
+});
+Object.defineProperty(proxied, &quot;foo&quot;, { value: 2, writable: true, enumerable: true });
+try {
+  'foo' in proxy;
+  return false;
+} catch(e) {}
+// A property cannot be reported as non-existent, if it exists as an
+// own property of the target object and the target object is not extensible.
+proxied.bar = 2;
+Object.preventExtensions(proxied);
+try {
+  'bar' in proxy;
+  return false;
+} catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;deleteProperty&quot; handler
           <div class="info">?
             <div class="fn">function(){
               <div class="code">var proxied = {};
-  var passed = false;
+var passed = false;
+delete new Proxy(proxied, {
+  deleteProperty: function (t, k) {
+    passed = t === proxied &amp;&amp; k === &quot;foo&quot;;
+  }
+}).foo;
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;deleteProperty&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// A property cannot be reported as deleted, if it exists as a non-configurable
+// own property of the target object.
+var proxied = {};
+Object.defineProperty(proxied, &quot;foo&quot;, { value: 2, writable: true, enumerable: true });
+try {
   delete new Proxy(proxied, {
-    deleteProperty: function (t, k) {
-      passed = t === proxied &amp;&amp; k === &quot;foo&quot;;
+    deleteProperty: function () {
+      passed = true;
+      return true;
     }
   }).foo;
-  return passed;</div>}
+  return false;
+} catch(e) {}
+return passed;</div>}
             </div>
           </div>
         </td>
@@ -7521,6 +7678,72 @@ return (returnedDesc.value     === fakeDesc.value
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;getOwnPropertyDescriptor&quot; handler invariants
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// A property cannot be reported as non-existent, if it exists as a non-configurable
+// own property of the target object.
+var proxied = {};
+var proxy = new Proxy(proxied, {
+  getOwnPropertyDescriptor: function () {
+    passed = true;
+    return undefined;
+  }
+});
+Object.defineProperty(proxied, &quot;foo&quot;, { value: 2, writable: true, enumerable: true });
+try {
+  Object.getOwnPropertyDescriptor(proxy, &quot;foo&quot;);
+  return false;
+} catch(e) {}
+// A property cannot be reported as non-existent, if it exists as an own property
+// of the target object and the target object is not extensible.
+proxied.bar = 3;
+Object.preventExtensions(proxied);
+try {
+  Object.getOwnPropertyDescriptor(proxy, &quot;bar&quot;);
+  return false;
+} catch(e) {}
+// A property cannot be reported as existent, if it does not exists as an own property
+// of the target object and the target object is not extensible.
+try {
+  Object.getOwnPropertyDescriptor(new Proxy(proxied, {
+    getOwnPropertyDescriptor: function() {
+      return { value: 2, configurable: true, writable: true, enumerable: true };
+    }}), &quot;baz&quot;);
+  return false;
+} catch(e) {}
+// A property cannot be reported as non-configurable, if it does not exists as an own
+// property of the target object or if it exists as a configurable own property of
+// the target object.
+try {
+  Object.getOwnPropertyDescriptor(new Proxy({}, {
+    getOwnPropertyDescriptor: function() {
+      return { value: 2, configurable: false, writable: true, enumerable: true };
+    }}), &quot;baz&quot;);
+  return false;
+} catch(e) {}
+try {
+  Object.getOwnPropertyDescriptor(new Proxy({baz:1}, {
+    getOwnPropertyDescriptor: function() {
+      return { value: 1, configurable: false, writable: true, enumerable: true };
+    }}), &quot;baz&quot;);
+  return false;
+} catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;defineProperty&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -7549,6 +7772,50 @@ return passed;</div>}
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;defineProperty&quot; handler invariants
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// A property cannot be added, if the target object is not extensible.
+var proxied = Object.preventExtensions({});
+var proxy = new Proxy(proxied, {
+  defineProperty: function() {
+    passed = true;
+    return true;
+  }
+});
+try {
+  Object.defineProperty(proxy, &quot;foo&quot;, { value: 2 });
+  return false;
+} catch(e) {}
+// A property cannot be non-configurable, unless there exists a corresponding
+// non-configurable own property of the target object.
+try {
+  Object.defineProperty(
+    new Proxy({ bar: true }, {
+      defineProperty: function () {
+        return true;
+      }
+    }),
+    &quot;bar&quot;,
+    { value: 5, configurable: false, writable: true, enumerable: true }
+  );
+  return false;
+} catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;getPrototypeOf&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -7560,6 +7827,35 @@ var proxy = new Proxy(proxied, {
   }
 });
 return Object.getPrototypeOf(proxy) === fakeProto;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;getPrototypeOf&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// If the target object is not extensible, [[GetPrototypeOf]] applied to the proxy object
+// must return the same value as [[GetPrototypeOf]] applied to the proxy object's target object.
+try {
+  Object.getPrototypeOf(new Proxy(Object.preventExtensions({}), {
+    getPrototypeOf: function () {
+      passed = true;
+      return {};
+    }
+  }));
+  return false;
+} catch(e) {}
+return passed;</div>}
             </div>
           </div>
         </td>
@@ -7600,6 +7896,37 @@ return passed;</div>}
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;setPrototypeOf&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+Object.setPrototypeOf({},{});
+// If the target object is not extensible, the argument value must be the
+// same as the result of [[GetPrototypeOf]] applied to target object.
+try {
+  Object.setPrototypeOf(
+    new Proxy(Object.preventExtensions({}), {
+      setPrototypeOf: function () {
+        passed = true;
+        return true;
+      }
+    }),{});
+  return false;
+} catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;isExtensible&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -7613,6 +7940,43 @@ Object.isExtensible(
   })
 );
 return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;isExtensible&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// [[IsExtensible]] applied to the proxy object must return the same value
+// as [[IsExtensible]] applied to the proxy object's target object with the same argument.
+try {
+  Object.isExtensible(new Proxy({}, {
+    isExtensible: function (t) {
+      passed = true;
+      return false;
+    }
+  }));
+  return false;
+} catch(e) {}
+try {
+  Object.isExtensible(new Proxy(Object.preventExtensions({}), {
+    isExtensible: function (t) {
+      return true;
+    }
+  }));
+  return false;
+} catch(e) {}
+return true;</div>}
             </div>
           </div>
         </td>
@@ -7651,6 +8015,35 @@ return passed;</div>}
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;preventExtensions&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// [[PreventExtensions]] applied to the proxy object only returns true
+// if [[IsExtensible]] applied to the proxy object's target object is false.
+try {
+  Object.preventExtensions(new Proxy({}, {
+    preventExtensions: function () {
+      passed = true;
+      return true;
+    }
+  }));
+  return false;
+} catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;ownKeys&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -7663,6 +8056,52 @@ Object.keys(
     }
   })
 );
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;ownKeys&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// The Type of each result List element is either String or Symbol.
+try {
+  Object.keys(new Proxy({}, {
+    ownKeys: function () {
+      passed = true;
+      return [2];
+    }}));
+  return false;
+} catch(e) {}
+// The result List must contain the keys of all non-configurable own properties of the target object. 
+var proxied = {};
+Object.defineProperty(proxied, &quot;foo&quot;, { value: 2, writable: true, enumerable: true });
+try {
+  Object.keys(new Proxy(proxied, {
+    ownKeys: function () {
+      return [];
+    }}));
+  return false;
+} catch(e) {}
+// If the target object is not extensible, then the result List must contain all the keys
+// of the own properties of the target object and no other values.
+try {
+  Object.keys(new Proxy(Object.preventExtensions({b:1}), {
+    ownKeys: function () {
+      return ['a'];
+    }}));
+  return false;
+} catch(e) {}
 return passed;</div>}
             </div>
           </div>
@@ -7702,6 +8141,35 @@ return passed;</div>}
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">&quot;apply&quot; handler invariant
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy(function(){}, {
+    apply: function () { passed = true; }
+})();
+// A Proxy exotic object only has a [[Call]] internal method if the
+// initial value of its [[ProxyTarget]] internal slot is an object
+// that has a [[Call]] internal method.
+try {
+  new Proxy({}, {
+    apply: function () {}
+  })();
+  return false;
+} catch(e) {}
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">&quot;construct&quot; handler
           <div class="info">?
             <div class="fn">function(){
@@ -7713,6 +8181,45 @@ new new Proxy(proxied, {
     return {};
   }
 })(&quot;foo&quot;,&quot;bar&quot;);
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;construct&quot; handler invariants
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = false;
+new Proxy({},{});
+// A Proxy exotic object only has a [[Construct]] internal method if the
+// initial value of its [[ProxyTarget]] internal slot is an object
+// that has a [[Construct]] internal method.
+try {
+  new new Proxy({}, {
+    construct: function (t, args) {
+      return {};
+    }
+  })();
+  return false;
+} catch(e) {}
+// The result of [[Construct]] must be an Object.
+try {
+  new new Proxy(function(){}, {
+    construct: function (t, args) {
+      passed = true;
+      return 5;
+    }
+  })();
+  return false;
+} catch(e) {}
 return passed;</div>}
             </div>
           </div>
