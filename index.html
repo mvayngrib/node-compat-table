@@ -236,8 +236,8 @@
         <th title="v8: 4.6.85.31" class="version v5">5.9.0<sub>58% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.8.0<sub>58% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.7.1<sub>58% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.4.0<sub>47% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub>47% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.0<sub>48% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub>48% complete</sub></th>
         <th title="v8: 3.28.71.19" class="version v0">0.12.12<sub>24% complete</sub></th>
       </tr>
     </table>
@@ -1124,33 +1124,6 @@ return closed;</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-      </tr>
-      <tr>
-        <td class="feature subsub">const/let iteration scope
-          <div class="info">?
-            <div class="fn">function(){
-              <div class="code">let scopes = [];
-for(const i in { a:1, b:1 }) {
-  scopes.push(function(){ return i; });
-}
-passed = (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);
-
-scopes = [];
-for(let i in { a:1, b:1 }) {
-  scopes.push(function(){ return i; });
-}
-passed &amp;= (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);
-return passed;</div>}
-            </div>
-          </div>
-        </td>
-        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
       </tr>
       <tr>
         <td colspan="8" class="feature sub">
@@ -2919,7 +2892,7 @@ try {
           <div class="info">?
             <div class="fn">function(){
               <div class="code">const baz = 1;
-for(const baz = 0; false; false) {}
+for(const baz = 0; false;) {}
 return baz === 1;</div>}
             </div>
           </div>
@@ -2931,6 +2904,46 @@ return baz === 1;</div>}
         <td class="result"><div class="Error unflagged " title="Identifier 'baz' has already been declared">Error</div><div class="Error flagged " title="Identifier 'baz' has already been declared">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Identifier 'baz' has already been declared">Error</div><div class="Error flagged " title="Identifier 'baz' has already been declared">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Identifier 'baz' has already been declared">Error</div><div class="Error flagged " title="Identifier 'baz' has already been declared">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">for-in loop iteration scope
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var scopes = [];
+for(const i in { a:1, b:1 }) {
+  scopes.push(function(){ return i; });
+}
+return (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token in">Error</div><div class="Error flagged " title="Unexpected token in">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">for-of loop iteration scope
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var scopes = [];
+for(const i of ['a','b']) {
+  scopes.push(function(){ return i; });
+}
+return (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">temporal dead zone
@@ -2951,27 +2964,6 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
-      </tr>
-      <tr>
-        <td class="feature subsub">for-in loop iteration scope
-          <div class="info">?
-            <div class="fn">function(){
-              <div class="code">let scopes = [];
-for(const i in { a:1, b:1 }) {
-  scopes.push(function(){ return i; });
-}
-passed = (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);
-return passed;</div>}
-            </div>
-          </div>
-        </td>
-        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected identifier">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">basic support (strict mode)
@@ -3017,29 +3009,10 @@ return bar === 123;</div>}
               <div class="code">'use strict';
 const bar = 1;
 try {
-  Function(&quot;if(true) const baz = 1;&quot;)();
+  Function(&quot;'use strict'; if(true) const baz = 1;&quot;)();
 } catch(e) {
   return true;
 }</div>}
-            </div>
-          </div>
-        </td>
-        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
-      </tr>
-      <tr>
-        <td class="feature subsub">for loop statement scope (strict mode)
-          <div class="info">?
-            <div class="fn">function(){
-              <div class="code">'use strict';
-const baz = 1;
-for(const baz = 0; false; false) {}
-return baz === 1;</div>}
             </div>
           </div>
         </td>
@@ -3074,6 +3047,67 @@ try {
         <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">for loop statement scope (strict mode)
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">'use strict';
+const baz = 1;
+for(const baz = 0; false;) {}
+return baz === 1;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">for-in loop iteration scope (strict mode)
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">'use strict';
+var scopes = [];
+for(const i in { a:1, b:1 }) {
+  scopes.push(function(){ return i; });
+}
+return (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">for-of loop iteration scope (strict mode)
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">'use strict';
+var scopes = [];
+for(const i of ['a','b']) {
+  scopes.push(function(){ return i; });
+}
+return (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">temporal dead zone (strict mode)
           <div class="info">?
             <div class="fn">function(){
@@ -3093,28 +3127,6 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
-      </tr>
-      <tr>
-        <td class="feature subsub">for-in loop iteration scope (strict mode)
-          <div class="info">?
-            <div class="fn">function(){
-              <div class="code">'use strict';
-let scopes = [];
-for(const i in { a:1, b:1 }) {
-  scopes.push(function(){ return i; });
-}
-passed = (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);
-return passed;</div>}
-            </div>
-          </div>
-        </td>
-        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="passed is not defined">Error</div><div class="Error flagged " title="passed is not defined">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="passed is not defined">Error</div><div class="Error flagged " title="passed is not defined">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="passed is not defined">Error</div><div class="Error flagged " title="passed is not defined">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="passed is not defined">Error</div><div class="Error flagged " title="passed is not defined">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="passed is not defined">Error</div><div class="Error flagged " title="passed is not defined">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
       </tr>
       <tr>
         <td colspan="8" class="feature sub">
@@ -3184,7 +3196,7 @@ try {
           <div class="info">?
             <div class="fn">function(){
               <div class="code">let baz = 1;
-for(let baz = 0; false; false) {}
+for(let baz = 0; false;) {}
 return baz === 1;</div>}
             </div>
           </div>
@@ -3288,7 +3300,7 @@ return bar === 123;</div>}
               <div class="code">'use strict';
 let bar = 1;
 try {
-  Function(&quot;if(true) let baz = 1;&quot;)();
+  Function(&quot;'use strict'; if(true) let baz = 1;&quot;)();
 } catch(e) {
   return true;
 }</div>}
@@ -3309,7 +3321,7 @@ try {
             <div class="fn">function(){
               <div class="code">'use strict';
 let baz = 1;
-for(let baz = 0; false; false) {}
+for(let baz = 0; false;) {}
 return baz === 1;</div>}
             </div>
           </div>
