@@ -2,8 +2,14 @@
 
 ORIGIN=https://williamkapke:$GITHUB_TOKEN@github.com/williamkapke/node-compat-table.git
 
-echo 'pulling latest...'
-git pull $ORIGIN
+echo 'downloading latest...'
+rm -rf ./.temp
+git clone $ORIGIN .temp
+
+mkdir -p ./.temp/results
+cd ./.temp
+git config user.email "william.kapke@gmail.com"
+git config user.name "William Kapke"
 
 node versions.js > .versions
 
