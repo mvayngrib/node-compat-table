@@ -9,7 +9,7 @@ node versions.js > .versions
 
 git add .versions
 
-if [[ `git status -s` == '' ]]; then
+if [[ `git diff --name-only --cached` == '' ]]; then
   echo 'No changes';
   exit 1;
 fi
