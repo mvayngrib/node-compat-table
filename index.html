@@ -10060,6 +10060,78 @@ return (a + &quot;&quot;) === &quot;[object foo]&quot;;</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
+        <td class="feature subsub">Symbol.toStringTag affects existing built-ins
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var s = Symbol.toStringTag;
+var passed = true;
+[
+  [Array.prototype, []],
+  [String.prototype, ''],
+  [arguments, arguments],
+  [Function.prototype, function(){}],
+  [Error.prototype, new Error()],
+  [Boolean.prototype, true],
+  [Number.prototype, 2],
+  [Date.prototype, new Date()],
+  [RegExp.prototype, /./]
+].forEach(function(pair){
+  pair[0][s] = &quot;foo&quot;;
+  passed &amp;= (Object.prototype.toString.call(pair[1]) === &quot;[object foo]&quot;);
+  delete pair[0][s];
+});
+return passed;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Symbol.toStringTag, new built-ins
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">var passed = true;
+var s = Symbol.toStringTag;
+[
+  [String, &quot;String Iterator&quot;],
+  [Array, &quot;Array Iterator&quot;],
+  [Map, &quot;Map Iterator&quot;],
+  [Set, &quot;Set Iterator&quot;]
+].forEach(function(pair){
+  var iterProto = Object.getPrototypeOf(new pair[0]()[Symbol.iterator]());
+  passed &amp;= iterProto.hasOwnProperty(s)
+    &amp;&amp; iterProto[s] === pair[1];
+});
+passed &amp;= Object.getPrototypeOf(function*(){})[s] === &quot;GeneratorFunction&quot;
+  &amp;&amp; Object.getPrototypeOf(function*(){}())[s] === &quot;Generator&quot;
+  &amp;&amp; Map.prototype[s] === &quot;Map&quot;
+  &amp;&amp; Set.prototype[s] === &quot;Set&quot;
+  &amp;&amp; ArrayBuffer.prototype[s] === &quot;ArrayBuffer&quot;
+  &amp;&amp; DataView.prototype[s] === &quot;DataView&quot;
+  &amp;&amp; Promise.prototype[s] === &quot;Promise&quot;
+  &amp;&amp; Symbol.prototype[s] === &quot;Symbol&quot;
+  &amp;&amp; typeof Object.getOwnPropertyDescriptor(
+    Object.getPrototypeOf(Int8Array).prototype, Symbol.toStringTag).get === &quot;function&quot;;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
+        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+      </tr>
+      <tr>
         <td class="feature subsub">Symbol.toStringTag, misc. built-ins
           <div class="info">?
             <div class="fn">function(){
