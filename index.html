@@ -10106,10 +10106,12 @@ var s = Symbol.toStringTag;
   [Set, &quot;Set Iterator&quot;]
 ].forEach(function(pair){
   var iterProto = Object.getPrototypeOf(new pair[0]()[Symbol.iterator]());
-  passed &amp;= iterProto.hasOwnProperty(s)
+  passed = passed
+    &amp;&amp; iterProto.hasOwnProperty(s)
     &amp;&amp; iterProto[s] === pair[1];
 });
-passed &amp;= Object.getPrototypeOf(function*(){})[s] === &quot;GeneratorFunction&quot;
+passed = passed
+  &amp;&amp; Object.getPrototypeOf(function*(){})[s] === &quot;GeneratorFunction&quot;
   &amp;&amp; Object.getPrototypeOf(function*(){}())[s] === &quot;Generator&quot;
   &amp;&amp; Map.prototype[s] === &quot;Map&quot;
   &amp;&amp; Set.prototype[s] === &quot;Set&quot;
@@ -10118,11 +10120,12 @@ passed &amp;= Object.getPrototypeOf(function*(){})[s] === &quot;GeneratorFunctio
   &amp;&amp; Promise.prototype[s] === &quot;Promise&quot;
   &amp;&amp; Symbol.prototype[s] === &quot;Symbol&quot;
   &amp;&amp; typeof Object.getOwnPropertyDescriptor(
-    Object.getPrototypeOf(Int8Array).prototype, Symbol.toStringTag).get === &quot;function&quot;;</div>}
+    Object.getPrototypeOf(Int8Array).prototype, Symbol.toStringTag).get === &quot;function&quot;;
+  return passed;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
