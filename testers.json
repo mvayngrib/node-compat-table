@@ -56,6 +56,7 @@
   "syntax›RegExp \"y\" and \"u\" flags›\"y\" flag, lastIndex": "var re = new RegExp('yy', 'y');\nre.lastIndex = 3;\nvar result = re.exec('xxxyyxx')[0];\nreturn result === 'yy' && re.lastIndex === 5;",
   "syntax›RegExp \"y\" and \"u\" flags›\"u\" flag": "return \"𠮷\".match(/^.$/u)[0].length === 2;",
   "syntax›RegExp \"y\" and \"u\" flags›\"u\" flag, Unicode code point escapes": "return \"𝌆\".match(/\\u{1d306}/u)[0].length === 2;",
+  "syntax›RegExp \"y\" and \"u\" flags›\"u\" flag, case folding": "return \"ſ\".match(/S/iu) && \"ſ\".match(/\\w/iu) && \"ſ\".match(/\\W/iu)\n && \"S\".match(/ſ/iu) && \"S\".match(/\\w/iu) && \"S\".match(/\\W/iu);",
   "syntax›destructuring, declarations›with arrays": "var [a, , [b], c] = [5, null, [6]];\nreturn a === 5 && b === 6 && c === undefined;",
   "syntax›destructuring, declarations›with sparse arrays": "var [a, , b] = [,,,];\nreturn a === undefined && b === undefined;",
   "syntax›destructuring, declarations›with strings": "var [a, b, c] = \"ab\";\nreturn a === \"a\" && b === \"b\" && c === undefined;",

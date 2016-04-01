@@ -233,13 +233,13 @@
     <table id="headings">
       <tr>
         <th title="v8: 4.9.385.27" class="version nightly">6.0.0<sup>Nightly!</sup><sub>88% complete</sub></th>
+        <th title="v8: 4.6.85.31" class="version v5">5.10.0<sub>58% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.9.1<sub>58% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.9.0<sub>58% complete</sub></th>
-        <th title="v8: 4.6.85.31" class="version v5">5.8.0<sub>58% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.2<sub>48% complete</sub></th>
         <th title="v8: 4.5.103.35" class="version v4">4.4.1<sub>48% complete</sub></th>
         <th title="v8: 4.5.103.35" class="version v4">4.4.0<sub>48% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.3.2<sub>48% complete</sub></th>
-        <th title="v8: 3.28.71.19" class="version v0">0.12.12<sub>24% complete</sub></th>
+        <th title="v8: 3.28.71.19" class="version v0">0.12.13<sub>24% complete</sub></th>
       </tr>
     </table>
   </header>
@@ -1440,6 +1440,24 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">&quot;u&quot; flag, case folding
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">return &quot;ſ&quot;.match(/S/iu) &amp;&amp; &quot;ſ&quot;.match(/\w/iu) &amp;&amp; &quot;ſ&quot;.match(/\W/iu)
+ &amp;&amp; &quot;S&quot;.match(/ſ/iu) &amp;&amp; &quot;S&quot;.match(/\w/iu) &amp;&amp; &quot;S&quot;.match(/\W/iu);</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
       </tr>
       <tr>
         <td colspan="9" class="feature sub">
