@@ -14659,7 +14659,7 @@ catch(e) {
           <div class="info">?
             <div class="fn">function(){
               <div class="code">try {
-  RegExp.prototype.source; return false;
+  RegExp.prototype.exec(); return false;
 } catch(e) {}
 try {
   Date.prototype.valueOf(); return false;
@@ -14675,7 +14675,7 @@ return true;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
