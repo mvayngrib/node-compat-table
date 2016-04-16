@@ -232,7 +232,7 @@
     <div id="more"><a href="https://github.com/williamkapke/node-compat-table"><img alt="github" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=">Learn more</a></div>
     <table id="headings">
       <tr>
-        <th title="v8: 4.9.385.27" class="version nightly">6.0.0<sup>Nightly!</sup><sub>88% complete</sub></th>
+        <th title="v8: 5.0.71.32" class="version nightly">6.0.0<sup>Nightly!</sup><sub>96% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.10.1<sub>58% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.10.0<sub>58% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.9.1<sub>58% complete</sub></th>
@@ -272,7 +272,7 @@ return (function f(n){
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
@@ -302,7 +302,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;</div>
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
@@ -1415,7 +1415,7 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
@@ -1432,7 +1432,7 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'u'">Error</div></td>
@@ -1450,7 +1450,7 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Invalid regular expression flags">Error</div><div class="Error flagged " title="Invalid regular expression flags">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
@@ -4703,7 +4703,7 @@ catch (e) {
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -4868,7 +4868,7 @@ return passed;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
@@ -5142,7 +5142,7 @@ return closed === 'ab';</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
@@ -5174,7 +5174,7 @@ return closed;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -5709,7 +5709,7 @@ return view.getFloat64(0) === 0.1;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -6446,7 +6446,7 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -6840,7 +6840,7 @@ return 'get' in prop &amp;&amp; Map[Symbol.species] === Map;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -7239,7 +7239,7 @@ return 'get' in prop &amp;&amp; Set[Symbol.species] === Set;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -8665,7 +8665,7 @@ return passed;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -9334,7 +9334,7 @@ return 'get' in prop &amp;&amp; Promise[Symbol.species] === Promise;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -9619,7 +9619,7 @@ return passed;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9693,7 +9693,7 @@ return a[0] === b;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9715,7 +9715,7 @@ return Array.prototype.concat.call(obj, []).foo === 1;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9737,7 +9737,7 @@ return Array.prototype.filter.call(obj, Boolean).foo === 1;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9759,7 +9759,7 @@ return Array.prototype.map.call(obj, Boolean).foo === 1;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9781,7 +9781,7 @@ return Array.prototype.slice.call(obj, 0).foo === 1;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9803,7 +9803,7 @@ return Array.prototype.splice.call(obj, 0).foo === 1;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9828,7 +9828,7 @@ return passed;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9849,7 +9849,7 @@ return promise.then(function(){}) instanceof FakePromise2;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9870,7 +9870,7 @@ return ''.replace(O) === 42;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9891,7 +9891,7 @@ return ''.search(O) === 42;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9912,7 +9912,7 @@ return ''.split(O) === 42;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9933,7 +9933,7 @@ return ''.match(O) === 42;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -9954,7 +9954,7 @@ return RegExp(re) !== re &amp;&amp; RegExp(foo) === foo;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10375,7 +10375,7 @@ return foo.name === &quot;foo&quot; &amp;&amp; bar.name === &quot;baz&quot;;</di
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10396,7 +10396,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10416,7 +10416,7 @@ return descriptor.get.name === &quot;get foo&quot; &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10477,7 +10477,7 @@ return o[sym1].name === &quot;[foo]&quot; &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10537,7 +10537,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10558,7 +10558,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10855,7 +10855,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10872,7 +10872,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10889,7 +10889,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10906,7 +10906,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10924,7 +10924,7 @@ return 'get' in prop &amp;&amp; RegExp[Symbol.species] === RegExp;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -11141,7 +11141,7 @@ return 'get' in prop &amp;&amp; Array[Symbol.species] === Array;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -11901,7 +11901,7 @@ return c.concat(1) instanceof C;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11920,7 +11920,7 @@ return c.filter(Boolean) instanceof C;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11939,7 +11939,7 @@ return c.map(Boolean) instanceof C;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11959,7 +11959,7 @@ return c.slice(1,2) instanceof C;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11979,7 +11979,7 @@ return c.splice(1,2) instanceof C;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12701,7 +12701,7 @@ return get[0] === Symbol.hasInstance &amp;&amp; get.slice(1) + '' === &quot;prot
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -12957,7 +12957,7 @@ return get[0] === Symbol.match &amp;&amp; get.slice(1) + '' === &quot;constructo
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13020,7 +13020,7 @@ return get + '' === &quot;source,flags&quot;;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.toString called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.toString called on incompatible receiver [object Object]">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13043,7 +13043,7 @@ return get + '' === &quot;global,exec,global,unicode,exec&quot;;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@match called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@match called on incompatible receiver [object Object]">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13066,7 +13066,7 @@ return get + '' === &quot;global,exec,global,unicode,exec&quot;;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@replace called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@replace called on incompatible receiver [object Object]">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13087,7 +13087,7 @@ return get + '' === &quot;lastIndex,exec&quot;;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13110,7 +13110,7 @@ return get + '' === &quot;constructor,flags,exec&quot;;</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13159,7 +13159,7 @@ return get[0] === &quot;constructor&quot;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13278,7 +13278,7 @@ return get + '' === &quot;length,constructor,1,2,3,length,constructor,2,1&quot;;
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13387,7 +13387,7 @@ return get[0] === Symbol.replace &amp;&amp; get[1] === Symbol.toPrimitive &amp;&
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -13433,7 +13433,7 @@ return get[0] === Symbol.split &amp;&amp; get[1] === Symbol.toPrimitive &amp;&am
             </div>
           </div>
         </td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14645,7 +14645,7 @@ catch(e) {
             </div>
           </div>
         </td>
-        <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div><div class="Error flagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div><div class="Error flagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div><div class="Error flagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div><div class="Error flagged " title="Method RegExp.prototype.toString called on incompatible receiver #<Object>">Error</div></td>
