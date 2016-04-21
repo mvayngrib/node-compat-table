@@ -100,10 +100,14 @@ html
         top: 0;
         left: 580px;
       }
-      #flagged:checked ~ article .flagged { display:block; }
-      #flagged ~ article .flagged { display:none; }
-      #flagged:checked ~ article .unflagged { display:none; }
-      #flagged ~ article .unflagged { display:block; }
+      #flagged:checked ~ article .flagged,
+      #flagged:checked ~ header .flagged { display:block; }
+      #flagged ~ article .flagged,
+      #flagged ~ header .flagged { display:none; }
+      #flagged:checked ~ article .unflagged,
+      #flagged:checked ~ header .unflagged { display:none; }
+      #flagged ~ article .unflagged,
+      #flagged ~ header .unflagged { display:block; }
 
       .Yes.flagged.required:before {
         content: '⚐';
@@ -219,6 +223,7 @@ html
         width: 100%;
       }
 body
+    input#flagged(type='checkbox', style='position:fixed', checked='checked')
     header
       div(style="float:left")
         h1 Node.js ES2015 Support
@@ -239,12 +244,13 @@ body
         tr
           th.version(class='nightly', title=tip('nightly'))=es_staging.nightly._version.replace(/-nightly.*/,'')
             sup Nightly!
-            sub=percent('nightly')+'% complete'
+            sub.flagged=percent('nightly')+'% complete'
+            sub.unflagged=percent('nightly', true)+'% complete'
           each version in versions
             th.version(class='v'+version.split('.')[0], title=tip(version))=version
-              sub=percent(version)+'% complete'
+              sub.flagged=percent(version)+'% complete'
+              sub.unflagged=percent(version, true)+'% complete'
     - versions.unshift('nightly')
-    input#flagged(type='checkbox', style='position:fixed', checked='checked')
     article
       each obj1, category in testers
         table.results

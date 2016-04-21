@@ -45,8 +45,9 @@ var html = jade.renderFile('index.jade', {
   tip: function (version) {
     return !results.flagged[version]? '' : `v8: ${results.flagged[version]._v8}`
   },
-  percent: function (version) {
-    return !results.flagged[version]? '' : results.flagged[version]._percent.toFixed(2).substr(-2);
+  percent: function (version, unflagged) {
+    var datasource = unflagged? results.unflagged : results.flagged;
+    return !datasource[version]? '' : datasource[version]._percent.toFixed(2).substr(-2);
   }
 });
 
