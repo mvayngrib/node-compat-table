@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-ORIGIN=https://williamkapke:$GITHUB_TOKEN@github.com/williamkapke/node-compat-table.git
+ORIGIN=https://hubbed:$GITHUB_TOKEN@github.com/williamkapke/node-compat-table.git
 
 echo
 echo 'downloading latest...'
@@ -9,8 +9,8 @@ git clone $ORIGIN .temp
 
 mkdir -p ./.temp/results
 cd ./.temp
-git config user.email "william.kapke@gmail.com"
-git config user.name "William Kapke"
+git config user.email "hubbed@kap.co"
+git config user.name "Imma Bot"
 curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-es6.js > data-es6.js
 
 echo
