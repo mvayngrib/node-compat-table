@@ -245,7 +245,7 @@
         <th title="v8: 4.5.103.35" class="version v4">4.4.3<sub class="flagged">48% complete</sub><sub class="unflagged">44% complete</sub></th>
         <th title="v8: 4.5.103.35" class="version v4">4.4.2<sub class="flagged">48% complete</sub><sub class="unflagged">44% complete</sub></th>
         <th title="v8: 4.5.103.35" class="version v4">4.4.1<sub class="flagged">48% complete</sub><sub class="unflagged">44% complete</sub></th>
-        <th title="v8: 3.28.71.19" class="version v0">0.12.13<sub class="flagged">24% complete</sub><sub class="unflagged">24% complete</sub></th>
+        <th title="v8: 3.28.71.19" class="version v0">0.12.13<sub class="flagged">30% complete</sub><sub class="unflagged">24% complete</sub></th>
       </tr>
     </table>
   </header>
@@ -277,7 +277,7 @@ return (function f(n){
             </div>
           </div>
         </td>
-        <td class="result flag"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
@@ -307,7 +307,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;</div>
             </div>
           </div>
         </td>
-        <td class="result flag"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
@@ -744,7 +744,7 @@ return Math.max(...iterable) === 3;</div>}
         <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">with generator instances, in arrays
@@ -762,7 +762,7 @@ return [&quot;a&quot;, ...iterable, &quot;e&quot;][3] === &quot;d&quot;;</div>}
         <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result flag"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">with generic iterables, in calls
@@ -1083,7 +1083,7 @@ return result === &quot;123&quot;;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">with generic iterables
@@ -1197,7 +1197,7 @@ return closed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">binary literals
@@ -1214,7 +1214,7 @@ return closed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">octal supported by Number()
@@ -1231,7 +1231,7 @@ return closed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">binary supported by Number()
@@ -1248,7 +1248,7 @@ return closed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td colspan="9" class="feature sub">
@@ -3021,7 +3021,7 @@ try {
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">redefining a const is an error
@@ -3043,7 +3043,7 @@ try {
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">for loop statement scope
@@ -3125,7 +3125,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">basic support (strict mode)
@@ -3144,7 +3144,7 @@ return (foo === 123);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">is block-scoped (strict mode)
@@ -3164,7 +3164,7 @@ return bar === 123;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">cannot be in statements (strict mode)
@@ -3187,7 +3187,7 @@ try {
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">redefining a const (strict mode)
@@ -3210,7 +3210,7 @@ try {
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">for loop statement scope (strict mode)
@@ -3230,7 +3230,7 @@ return baz === 1;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">for-in loop iteration scope (strict mode)
@@ -3252,7 +3252,7 @@ return (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Unexpected token in">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">for-of loop iteration scope (strict mode)
@@ -3274,7 +3274,7 @@ return (scopes[0]() === &quot;a&quot; &amp;&amp; scopes[1]() === &quot;b&quot;);
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">temporal dead zone (strict mode)
@@ -3296,7 +3296,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Error flagged " title="Use of const in strict mode.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td colspan="9" class="feature sub">
@@ -3449,7 +3449,7 @@ return (foo === 123);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">is block-scoped (strict mode)
@@ -3469,7 +3469,7 @@ return bar === 123;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">cannot be in statements (strict mode)
@@ -3492,7 +3492,7 @@ try {
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">for loop statement scope (strict mode)
@@ -3512,7 +3512,7 @@ return baz === 1;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">temporal dead zone (strict mode)
@@ -3534,7 +3534,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">for/for-in loop iteration scope (strict mode)
@@ -3563,7 +3563,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected strict mode reserved word">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td colspan="9" class="feature sub">
@@ -3592,7 +3592,7 @@ return f() === 1;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="In strict mode code, functions can only be declared at top level or immediately within another function.">Error</div><div class="Error flagged " title="In strict mode code, functions can only be declared at top level or immediately within another function.">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="In strict mode code, functions can only be declared at top level or immediately within another function.">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
     </table>
     <table class="results">
@@ -3623,7 +3623,7 @@ return f() === 1;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Error flagged " title="Unexpected token )">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">1 parameter, no brackets
@@ -3641,7 +3641,7 @@ return (b(&quot;fee fie foe &quot;) === &quot;fee fie foe foo&quot;);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token =>">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">multiple parameters
@@ -3659,7 +3659,7 @@ return (c(6, 5, 4, 3, 2) === &quot;65432&quot;);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token =>">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">lexical &quot;this&quot; binding
@@ -3678,7 +3678,7 @@ return d(&quot;ley&quot;) === &quot;barley&quot; &amp;&amp; e.y(&quot;ley&quot;)
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token =>">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Cannot read property 'x' of undefined">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">&quot;this&quot; unchanged by call or apply
@@ -3697,7 +3697,7 @@ return d.y().call(e) === &quot;foo&quot; &amp;&amp; d.y().apply(e) === &quot;foo
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Error flagged " title="Unexpected token )">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">can't be bound, can be curried
@@ -3716,7 +3716,7 @@ return d.y().bind(e, &quot;ley&quot;)() === &quot;barley&quot;;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token =>">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">lexical &quot;arguments&quot; binding
@@ -3734,7 +3734,7 @@ return f(6) === 5;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token =>">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">no line break between params and &lt;code&gt;=&gt;&lt;/code&gt;
@@ -3753,7 +3753,7 @@ return f(6) === 5;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Error flagged " title="Unexpected token )">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">correct precedence
@@ -3772,7 +3772,7 @@ return f(6) === 5;</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Error flagged " title="Unexpected token )">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">no &quot;prototype&quot; property
@@ -3790,7 +3790,7 @@ return !a.hasOwnProperty(&quot;prototype&quot;);</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Error flagged " title="Unexpected token )">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">lexical &quot;super&quot; binding in constructors
@@ -3868,7 +3868,7 @@ return new C()() === C &amp;&amp; C()() === undefined;</div>}
         <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token =>">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token =>">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
       </tr>
       <tr>
         <td colspan="9" class="feature sub">
@@ -4636,7 +4636,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">generator function expressions
@@ -4663,7 +4663,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">correct &quot;this&quot; binding
@@ -4690,7 +4690,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">can't use &quot;this&quot; with new
@@ -4715,7 +4715,7 @@ catch (e) {
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">sending
@@ -4740,7 +4740,7 @@ return sent[0] === &quot;foo&quot; &amp;&amp; sent[1] === &quot;bar&quot;;</div>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">%GeneratorPrototype%
@@ -4766,7 +4766,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">%GeneratorPrototype% prototype chain
@@ -4796,7 +4796,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">%GeneratorPrototype%.constructor
@@ -4825,7 +4825,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">%GeneratorPrototype%.throw
@@ -4853,7 +4853,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">%GeneratorPrototype%.return
@@ -4880,7 +4880,7 @@ return passed;</div>}
         <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="iterator.return is not a function">Error</div><div class="Error flagged " title="iterator.return is not a function">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield operator precedence
@@ -4904,7 +4904,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, arrays
@@ -4930,7 +4930,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, sparse arrays
@@ -4956,7 +4956,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, strings
@@ -4982,7 +4982,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, astral plane strings
@@ -5008,7 +5008,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, generator instances
@@ -5036,7 +5036,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, generic iterables
@@ -5064,7 +5064,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, instances of iterables
@@ -5092,7 +5092,7 @@ return passed;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield * on non-iterables is a runtime error
@@ -5121,7 +5121,7 @@ try {
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, iterator closing
@@ -5154,7 +5154,7 @@ return closed === 'ab';</div>}
         <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
         <td class="result"><div class="Error unflagged " title="gen.return is not a function">Error</div><div class="Error flagged " title="gen.return is not a function">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">yield *, iterator closing via throw()
@@ -5186,7 +5186,7 @@ return closed;</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">shorthand generator methods
@@ -9989,7 +9989,7 @@ try {
         <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
         <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
         <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Symbol.match, String.prototype.endsWith
@@ -10012,7 +10012,7 @@ try {
         <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
         <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
         <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Symbol.match, String.prototype.includes
@@ -10155,7 +10155,7 @@ passed = passed
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Cannot convert undefined or null to object">Error</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Symbol.toStringTag, misc. built-ins
@@ -10667,7 +10667,7 @@ return descriptor.enumerable   === false &amp;&amp;
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td colspan="9" class="feature sub">
@@ -10691,7 +10691,7 @@ return descriptor.enumerable   === false &amp;&amp;
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">String.prototype.normalize
@@ -10728,7 +10728,7 @@ return descriptor.enumerable   === false &amp;&amp;
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">String.prototype.startsWith
@@ -10746,7 +10746,7 @@ return descriptor.enumerable   === false &amp;&amp;
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">String.prototype.endsWith
@@ -10764,7 +10764,7 @@ return descriptor.enumerable   === false &amp;&amp;
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">String.prototype.includes
@@ -10978,7 +10978,7 @@ return Array.from(iterable) + '' === &quot;1,2,3&quot;;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Array.from, generic iterables
@@ -11053,7 +11053,7 @@ return Array.from(iterable, function(e, i) {
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Array.from map function, generic iterables
@@ -11194,7 +11194,7 @@ return 'get' in prop &amp;&amp; Array[Symbol.species] === Array;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Array.prototype.findIndex
@@ -11211,7 +11211,7 @@ return 'get' in prop &amp;&amp; Array[Symbol.species] === Array;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Array.prototype.fill
@@ -11228,7 +11228,7 @@ return 'get' in prop &amp;&amp; Array[Symbol.species] === Array;</div>}
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Yes, but requires --es_staging flag">Yes</div></td>
-        <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --es_staging flag">Yes</div></td>
       </tr>
       <tr>
         <td class="feature subsub">Array.prototype.keys
@@ -12554,7 +12554,7 @@ return correctProtoBound(Function.prototype)
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">arrow functions
@@ -12584,7 +12584,7 @@ return correctProtoBound(Function.prototype)
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="Error flagged " title="Unexpected token )">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Unexpected token )">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">classes
@@ -14757,7 +14757,7 @@ return passed;</div>}
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Error unflagged " title="In strict mode code, functions can only be declared at top level or immediately within another function.">Error</div><div class="Error flagged " title="In strict mode code, functions can only be declared at top level or immediately within another function.">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="In strict mode code, functions can only be declared at top level or immediately within another function.">Error</div><div class="No flagged " title="Test failed">No</div></td>
       </tr>
       <tr>
         <td class="feature subsub">labeled function statements
