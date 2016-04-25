@@ -2,8 +2,13 @@ const testers = require('./testers.json');
 const fs = require('fs');
 var successful = 0;
 var version = process.versions.node;
+
 var es_staging = /--es_staging/.test(process.execArgv)? '--es_staging' : '';
 if(es_staging) version+='--es_staging';
+
+var harmony = /--harmony/.test(process.execArgv)? '--harmony' : '';
+if(harmony) version+='--harmony';
+
 console.log('Testing '+version);
 
 // This function is needed to run the tests and was extracted from:
@@ -62,6 +67,7 @@ Promise.all(
   if(/nightly/.test(version)) {
     version = 'nightly';
     if(es_staging) version+='--es_staging';
+    if(harmony) version+='--harmony';
   }
   fs.writeFileSync(__dirname+'/results/'+version+'.json', json);
 })

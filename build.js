@@ -10,14 +10,14 @@ var results = {
     nightly: try_require('./results/nightly.json')
   },
   flagged: {
-    nightly: try_require('./results/nightly--es_staging.json')
+    nightly: try_require('./results/nightly--harmony.json')
   }
 };
 
 var versions = fs.readFileSync('.versions').toString().trim().split('\n');
 versions.forEach(version=> {
   results.unflagged[version] = try_require('./results/' +version+ '.json');
-  results.flagged[version] = try_require('./results/' +version+ '--es_staging.json');
+  results.flagged[version] = try_require('./results/' +version+ '--harmony.json');
 });
 
 function requires_flag(version, path){
@@ -28,7 +28,7 @@ function result(type, version, path) {
   var result = results[type][version][path];
   var flaggd = type === 'flagged';
   var flag_required = flaggd && requires_flag(version, path);
-  var title = result===true? (flaggd? 'Yes, but requires --es_staging flag' : 'Test passed') : typeof result==='string'? result : 'Test failed';
+  var title = result===true? (flaggd? 'Yes, but requires --harmony flag' : 'Test passed') : typeof result==='string'? result : 'Test failed';
   result = result===true? 'Yes' : typeof result==='string'? 'Error' : 'No';
   return `<div class="${result} ${type} ${flag_required?'required':''}" title="${title}">${result}</div>`
 }
@@ -37,7 +37,7 @@ var html = jade.renderFile('index.jade', {
   pretty:true,
   versions:versions,
   testers:testers,
-  es_staging: results.flagged,
+  harmony: results.flagged,
   results: function(version, path){
     return result('unflagged', version, path) + result('flagged', version, path);
   },

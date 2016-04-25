@@ -232,7 +232,7 @@ body
           | &nbsp;applied only to Node.js
       .credits
         label(for='flagged', style='cursor:pointer') requires&nbsp;
-          a(href='https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag') es_staging
+          a(href='https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag') harmony
           | &nbsp;flag ⚐
         | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Created by&nbsp;
         a(href='https://github.com/williamkapke') William Kapke
@@ -242,7 +242,7 @@ body
           | Learn more
       table#headings
         tr
-          th.version(class='nightly', title=tip('nightly'))=es_staging.nightly._version.replace(/-nightly.*/,'')
+          th.version(class='nightly', title=tip('nightly'))=harmony.nightly._version.replace(/-nightly.*/,'')
             sup Nightly!
             sub.flagged=percent('nightly')+'% complete'
             sub.unflagged=percent('nightly', true)+'% complete'
@@ -276,7 +276,7 @@ body
                         .code=obj3.code
                         | }
                 each version in versions
-                  if es_staging[version]
+                  if harmony[version]
                     - classes = requires_flag(version, obj3.path)? 'flag' : ''
                     td.result(class=classes) !{results(version, obj3.path)}
                   else
