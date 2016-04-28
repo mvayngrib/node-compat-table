@@ -28,7 +28,7 @@ function result(type, version, path) {
   var result = results[type][version][path];
   var flaggd = type === 'flagged';
   var flag_required = flaggd && requires_flag(version, path);
-  var title = result===true? (flaggd? 'Yes, but requires --harmony flag' : 'Test passed') : typeof result==='string'? result : 'Test failed';
+  var title = result===true? (flag_required? 'Yes, but requires --harmony flag' : 'Test passed') : typeof result==='string'? result : 'Test failed';
   result = result===true? 'Yes' : typeof result==='string'? 'Error' : 'No';
   return `<div class="${result} ${type} ${flag_required?'required':''}" title="${title}">${result}</div>`
 }
