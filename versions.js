@@ -27,8 +27,8 @@ function filter(published) {
   var last = ()=>desired[desired.length-1];
   var add = v=>v && desired.push(v);
   add(max('6'));
-  add(max('<'+last()));
-  add(max('<'+last()));
+  add(max('>6 <'+last()));
+  add(max('>6 <'+last()));
   add(max('5'));
   add(max('<'+last()));
   add(max('<'+last()));
