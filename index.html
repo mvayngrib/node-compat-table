@@ -244,10 +244,10 @@
         <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.10.1<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.10.0<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.4.3<sub class="flagged">48% complete</sub><sub class="unflagged">44% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.4.2<sub class="flagged">48% complete</sub><sub class="unflagged">44% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.4.1<sub class="flagged">48% complete</sub><sub class="unflagged">44% complete</sub></th>
-        <th title="v8: 3.28.71.19" class="version v0">0.12.13<sub class="flagged">30% complete</sub><sub class="unflagged">24% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.3<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.2<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.1<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
+        <th title="v8: 3.28.71.19" class="version v0">0.12.13<sub class="flagged">30% complete</sub><sub class="unflagged">23% complete</sub></th>
       </tr>
     </table>
   </header>
@@ -9467,7 +9467,7 @@ return keys.indexOf(s2) &gt;-1 &amp;&amp; keys.indexOf(s3) &gt;-1 &amp;&amp; key
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
       </tr>
       <tr>
-        <td class="feature subsub">Reflect.construct sets new.target meta property
+        <td class="feature subsub">Reflect.construct sets new.target meta-property
           <div class="info">?
             <div class="fn">function(){
               <div class="code">return Reflect.construct(function(a, b, c) {
@@ -9489,16 +9489,122 @@ return keys.indexOf(s2) &gt;-1 &amp;&amp; keys.indexOf(s3) &gt;-1 &amp;&amp; key
         <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
       </tr>
       <tr>
-        <td class="feature subsub">Reflect.construct creates instance from newTarget argument
+        <td class="feature subsub">Reflect.construct creates instances from third argument
           <div class="info">?
             <div class="fn">function(){
               <div class="code">function F(){}
-return Reflect.construct(function(){}, [], F) instanceof F;</div>}
+var obj = Reflect.construct(function(){ this.y = 1; }, [], F);
+return obj.y === 1 &amp;&amp; obj instanceof F;</div>}
             </div>
           </div>
         </td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
         <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Reflect.construct, Array subclassing
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">function F(){}
+var obj = Reflect.construct(Array, [], F);
+obj[2] = 'foo';
+return obj.length === 3 &amp;&amp; obj instanceof F;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Reflect.construct, RegExp subclassing
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">function F(){}
+var obj = Reflect.construct(RegExp, [&quot;baz&quot;,&quot;g&quot;], F);
+return RegExp.prototype.exec.call(obj, &quot;foobarbaz&quot;)[0] === &quot;baz&quot;
+  &amp;&amp; obj.lastIndex === 9 &amp;&amp; obj instanceof F;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Reflect.construct, Function subclassing
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">function F(){}
+var obj = Reflect.construct(Function, [&quot;return 2&quot;], F);
+return obj() === 2 &amp;&amp; obj instanceof F;</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+        <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
+      </tr>
+      <tr>
+        <td class="feature subsub">Reflect.construct, Promise subclassing
+          <div class="info">?
+            <div class="fn">function(){
+              <div class="code">function F(){}
+var p1 = Reflect.construct(Promise,[function(resolve, reject) { resolve(&quot;foo&quot;); }], F);
+var p2 = Reflect.construct(Promise,[function(resolve, reject) { reject(&quot;quux&quot;); }], F);
+var score = +(p1 instanceof F &amp;&amp; p2 instanceof F);
+
+function thenFn(result)  { score += (result === &quot;foo&quot;);  check(); }
+function catchFn(result) { score += (result === &quot;quux&quot;); check(); }
+function shouldNotRun(result)  { score = -Infinity;   }
+
+p1.then = p2.then = Promise.prototype.then;
+p1.catch = p2.catch = Promise.prototype.catch;
+
+p1.then(thenFn, shouldNotRun);
+p2.then(shouldNotRun, catchFn);
+p1.catch(shouldNotRun);
+p2.catch(catchFn);
+
+p1.then(function() {
+  // P.prototype.then() should return a new F
+  score += p1.then() instanceof F &amp;&amp; p1.then() !== p1;
+  check();
+});
+
+function check() {
+  if (score === 5) asyncTestPassed();
+}</div>}
+            </div>
+          </div>
+        </td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="No flagged " title="Test failed">No</div></td>
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
