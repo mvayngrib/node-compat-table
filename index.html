@@ -250,13 +250,13 @@
     <table id="headings">
       <tr>
         <th title="v8: 5.0.71.35" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
-        <th title="v8: 5.0.71.35" class="version v6">6.0.0<sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
+        <th title="v8: 5.0.71.35" class="version v6">6.1.0<sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
+        <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
         <th title="v8: 4.6.85.31" class="version v5">5.10.1<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
-        <th title="v8: 4.6.85.31" class="version v5">5.10.0<sub class="flagged">58% complete</sub><sub class="unflagged">47% complete</sub></th>
+        <th title="v8: 4.5.103.35" class="version v4">4.4.4<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
         <th title="v8: 4.5.103.35" class="version v4">4.4.3<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
         <th title="v8: 4.5.103.35" class="version v4">4.4.2<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
-        <th title="v8: 4.5.103.35" class="version v4">4.4.1<sub class="flagged">47% complete</sub><sub class="unflagged">44% complete</sub></th>
         <th title="v8: 3.28.71.19" class="version v0">0.12.13<sub class="flagged">30% complete</sub><sub class="unflagged">23% complete</sub></th>
       </tr>
     </table>
@@ -9601,20 +9601,14 @@ p2.then(shouldNotRun, catchFn);
 p1.catch(shouldNotRun);
 p2.catch(catchFn);
 
-p1.then(function() {
-  // P.prototype.then() should return a new F
-  score += p1.then() instanceof F &amp;&amp; p1.then() !== p1;
-  check();
-});
-
 function check() {
-  if (score === 5) asyncTestPassed();
+  if (score === 4) asyncTestPassed();
 }</div>}
             </div>
           </div>
         </td>
-        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="No flagged " title="Test failed">No</div></td>
-        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="No flagged " title="Test failed">No</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
         <td class="result"><div class="Error unflagged " title="Reflect is not defined">Error</div><div class="Error flagged " title="Reflect is not defined">Error</div></td>
