@@ -81,7 +81,9 @@ function runAsync(script, cb) {
 
     fn(function() {
       clearTimeout(timer);
-      process.nextTick(cb, true);
+      process.nextTick(function() {
+        cb(true);
+      });
     });
 
     timer = setTimeout(function() {
@@ -90,7 +92,9 @@ function runAsync(script, cb) {
   }
   catch(e){
     clearTimeout(timer);
-    process.nextTick(cb, e.message);
+    process.nextTick(function() {
+      cb(e.message);
+    });
   }
 }
 
