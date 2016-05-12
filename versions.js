@@ -35,7 +35,8 @@ function filter(published) {
   add(max('4'));
   add(max('<'+last()));
   add(max('<'+last()));
-  add(max("0"));
+  add(max('0.12'));
+  add(max('0.10'));
 
   console.log(desired.join('\n'));
 }
