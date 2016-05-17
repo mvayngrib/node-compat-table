@@ -62,13 +62,13 @@ function run(script, cb) {
   var async = /asyncTestPassed/.test(script);
   if(async) {
     runAsync(script, function(result) {
-      if(result===false) return runAsync(strict(script), cb);
+      if(!result || typeof result==='string') return runAsync(strict(script), cb);
       return cb(result);
     });
   }
   else {
     var result = runSync(script);
-    if(result===false) result = runSync(strict(script));
+    if(!result || typeof result==='string') result = runSync(strict(script));
     return cb(result);
   }
 }
