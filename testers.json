@@ -466,7 +466,7 @@
   "built-in extensions›String.prototype methods›String.prototype.startsWith": "return typeof String.prototype.startsWith === 'function'\n  && \"foobar\".startsWith(\"foo\");",
   "built-in extensions›String.prototype methods›String.prototype.startsWith throws on RegExp": "try {\n  \"a\".startsWith(/./);\n} catch(e) {\n  return typeof String.prototype.startsWith === 'function';",
   "built-in extensions›String.prototype methods›String.prototype.endsWith": "return typeof String.prototype.endsWith === 'function'\n  && \"foobar\".endsWith(\"bar\");",
-  "built-in extensions›String.prototype methods›String.prototype.endsWith throws on RegExp": "try {\n  \"a\".endsWith(/./);\n} catch(e) {\n  return typeof String.prototype.startsWith === 'function';",
+  "built-in extensions›String.prototype methods›String.prototype.endsWith throws on RegExp": "try {\n  \"a\".endsWith(/./);\n} catch(e) {\n  return typeof String.prototype.endsWith === 'function';",
   "built-in extensions›String.prototype methods›String.prototype.includes": "return typeof String.prototype.includes === 'function'\n  && \"foobar\".includes(\"oba\");",
   "built-in extensions›String.prototype methods›String.prototype[Symbol.iterator]": "return typeof String.prototype[Symbol.iterator] === 'function';",
   "built-in extensions›String.prototype methods›String iterator prototype chain": "// Iterator instance\nvar iterator = ''[Symbol.iterator]();\n// %StringIteratorPrototype%\nvar proto1 = Object.getPrototypeOf(iterator);\n// %IteratorPrototype%\nvar proto2 = Object.getPrototypeOf(proto1);\n\nreturn proto2.hasOwnProperty(Symbol.iterator) &&\n  !proto1    .hasOwnProperty(Symbol.iterator) &&\n  !iterator  .hasOwnProperty(Symbol.iterator) &&\n  iterator[Symbol.iterator]() === iterator;",
