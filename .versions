@@ -1,9 +1,7 @@
-6.2.1
-5.11.1
-5.11.0
-5.10.1
-4.4.5
-4.4.4
-4.4.3
-0.12.14
-0.10.45
+{ [Error: getaddrinfo ENOTFOUND nodejs.org nodejs.org:443]
+  code: 'ENOTFOUND',
+  errno: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'nodejs.org',
+  host: 'nodejs.org',
+  port: 443 }
