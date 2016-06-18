@@ -1,4 +1,6 @@
-const testers = require('./testers.json');
+const testers = {
+  ES2015: require('./testers-ES2015.json')
+};
 const fs = require('fs');
 var version = process.versions.node;
 
@@ -34,28 +36,38 @@ global.__createIterableObject = function (arr, methods) {
   return iterable;
 };
 
-var results = {
+var output = {
   _version: version,
-  _v8: process.versions.v8,
-  _completed: 0,
-  _successful: 0,
-  _count: Object.keys(testers).length,
-  _percent: 0
+  _v8: process.versions.v8
 };
 
-Object.keys(testers).forEach(function(name) {
-  var script = testers[name];
-  results[name] = false; //make SURE it makes it to the output
+var versions = ['ES2015'];
+function next(ver) {
+  if(!ver) return write();
 
-  run(script, function(result) {
-    //expected results: `e.message` or true/false
-    results[name] = typeof result==='string'? result : !!result;
-    if(results[name]===true) results._successful++;
+  var completed = 0;
+  var results = output[ver] = {
+    _successful: 0,
+    _count: Object.keys(testers[ver]).length,
+    _percent: 0
+  };
+  Object.keys(testers[ver]).forEach(function(name) {
+    var script = testers[ver][name];
+    results[name] = false; //make SURE it makes it to the output
 
-    results._completed++;
-    if(results._completed===results._count) write();
+    run(script, function(result) {
+      //expected results: `e.message` or true/false
+      results[name] = typeof result==='string'? result : !!result;
+      if(results[name]===true) results._successful++;
+
+      if(++completed===results._count) {
+        results._percent = results._successful / results._count;
+        setTimeout(next, 10, versions.pop());
+      }
+    });
   });
-});
+}
+setTimeout(next, 10, versions.pop());
 
 function run(script, cb) {
   //kangax's Promise tests reply on a asyncTestPassed function.
@@ -113,9 +125,7 @@ function strict(script) {
 }
 
 function write() {
-  delete results._completed;
-  results._percent = results._successful/results._count;
-  var json = JSON.stringify(results, null, 2);
+  var json = JSON.stringify(output, null, 2);
   if(/nightly/.test(version)) {
     version = 'nightly';
     if(es_staging) version+='--es_staging';

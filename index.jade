@@ -257,13 +257,13 @@ body
         tr
           th.version(class='nightly', title=tip('nightly'))=harmony.nightly._version.replace(/-nightly.*/,'')
             sup Nightly!
-            sub.flagged=percent('nightly')+'% complete'
-            sub.unflagged=percent('nightly', true)+'% complete'
-          each version in versions
-            th.version(class='v'+version.split('.')[0], title=tip(version))=version
-              sub.flagged=percent(version)+'% complete'
-              sub.unflagged=percent(version, true)+'% complete'
-    - versions.unshift('nightly')
+            sub.flagged=percent('nightly', 'ES2015')+'% complete'
+            sub.unflagged=percent('nightly', 'ES2015', true)+'% complete'
+          each node_version in node_versions
+            th.version(class='v'+node_version.split('.')[0], title=tip(node_version))=node_version
+              sub.flagged=percent(node_version, 'ES2015')+'% complete'
+              sub.unflagged=percent(node_version, 'ES2015', true)+'% complete'
+    - node_versions.unshift('nightly')
     article
       each obj1, category in testers
         table.results
@@ -273,7 +273,7 @@ body
               a(href='#'+category.replace(/\W/g, '-'))=category
           each obj2, subcategory in obj1
             tr
-              td.feature.sub(colspan=versions.length+1)
+              td.feature.sub(colspan=node_versions.length+1)
                 h3
                   .hash(id=subcategory.replace(/\W/g, '-'))
                   a(href='#'+subcategory.replace(/\W/g, '-'))=subcategory
@@ -288,9 +288,9 @@ body
                         | function(){
                         .code=obj3.code
                         | }
-                each version in versions
-                  if harmony[version]
-                    - classes = requires_flag(version, obj3.path)? 'flag' : ''
-                    td.result(class=classes) !{results(version, obj3.path)}
+                each node_version in node_versions
+                  if harmony[node_version]
+                    - classes = requires_flag(node_version, 'ES2015', obj3.path)? 'flag' : ''
+                    td.result(class=classes) !{results(node_version, 'ES2015', obj3.path)}
                   else
                     td.result(title='No results yet')

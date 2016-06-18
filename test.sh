@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-es6.js 
 
 echo
 echo 'extracting testers...'
-node extract.js > ./testers.json
+node extract.js > ./testers-ES2015.json
 
 
 echo
