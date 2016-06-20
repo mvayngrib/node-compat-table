@@ -1,4 +1,4 @@
-var es6 = require('./data-es6.js');
+var es6 = require(process.argv[2]);
 var tests = es6.tests;
 var testers = {};
 var category;

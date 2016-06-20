@@ -2,10 +2,13 @@ var jade = require('jade');
 var fs = require('fs');
 
 var testers = {};
-var _testers = require('./testers-ES2015.json');
-Object.keys(_testers).forEach(path=>
-  $set(testers, path, { path:path, code:_testers[path]})
-);
+var _testers = require('./testers.json');
+Object.keys(_testers).forEach(es_version=> {
+  testers[es_version] = {};
+  Object.keys(_testers[es_version]).forEach(path=>
+    $set(testers[es_version], path, { path: path, code: _testers[es_version][ path ] })
+  )
+});
 
 var results = {
   unflagged: {},
@@ -20,14 +23,15 @@ node_versions.forEach(version=> {
 });
 
 function requires_flag(node_version, es_version, path){
-  return results.flagged[node_version]
-    && results.unflagged[node_version]
-    && results.flagged[node_version][es_version][path]===true
-    && results.unflagged[node_version][es_version][path]!==true;
+  var flagged = $get(results.flagged, node_version, es_version);
+  var unflagged = $get(results.unflagged, node_version, es_version);
+  return flagged && unflagged && flagged[path]===true && unflagged[path]!==true;
 }
 function result(type, node_version, es_version, path) {
-  if(!results[type][node_version]) return;
-  var result = results[type][node_version][es_version][path];
+  var result = $get(results, type, node_version);
+  if(!result) return;
+  result = $get(result, es_version, path);
+
   var flaggd = type === 'flagged';
   var flag_required = flaggd && requires_flag(node_version, es_version, path);
   var title = result===true? (flag_required? 'Yes, but requires --harmony flag' : 'Test passed') : typeof result==='string'? result : 'Test failed';
@@ -49,13 +53,16 @@ var html = jade.renderFile('index.jade', {
   },
   percent: function (node_version, es_version, unflagged) {
     var datasource = unflagged? results.unflagged : results.flagged;
-    return !datasource[node_version]? '' : datasource[node_version][es_version]._percent.toFixed(2).substr(-2);
+    var data = $get(datasource, node_version, es_version);
+    return data? data._percent.toFixed(2).substr(-2) : '';
   }
 });
 
-//console.log(data);
 fs.writeFileSync('index.html', html);
 
+function $get(obj, path, ...more) {
+  return more.length && obj[path]? $get(obj[path], ...more) : obj[path];
+}
 function $set(target, path, value) {
   var parts = path.split('›');
   if(parts.length===2) parts.splice(1,0,'');

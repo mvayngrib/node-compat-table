@@ -18,7 +18,7 @@ body
 
   mixin header(es_version)
     header
-      h1(id=es_version) Node.js #{es_version} Support
+      h1: a(href="#"+es_version) Node.js #{es_version} Support
       table.headings
         tr
           each node_version in node_versions
@@ -33,9 +33,9 @@ body
                 sub.unflagged=percent(node_version, es_version, true) + '% complete'
 
   mixin article(es_version)
-    article
+    article(id=es_version)
       +header(es_version)
-      each obj1, category in testers
+      each obj1, category in testers[es_version]
         table.results
           caption
             h2.category
@@ -67,21 +67,23 @@ body
 
 
   +article('ES2015')
+  +article('ES2016')
+  +article('ES2017')
 
   header(style="position:fixed")
     a#node-compat-logo(href='./')
       img(src='logo.png')
     #subheading
-      a(href='https://github.com/kangax/compat-table') kangax's compat-table
+      a(href='https://github.com/kangax/compat-table', target="_blank") kangax's compat-table
       | &nbsp;applied only to Node.js
     label(for='flagged', style='cursor:pointer') requires&nbsp;
-      a(href='https://nodejs.org/en/docs/es6/') harmony
+      a(href='https://nodejs.org/en/docs/es6/', target="_blank") harmony
       | &nbsp;flag ⚐
     #credits
       | Created by&nbsp;
-      a(href='https://github.com/williamkapke') William Kapke
+      a(href='https://github.com/williamkapke', target="_blank") William Kapke
     #more
-      a(href='https://github.com/williamkapke/node-compat-table')
+      a(href='https://github.com/williamkapke/node-compat-table', target="_blank")
         img(alt='github' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=')
         | Learn more
 

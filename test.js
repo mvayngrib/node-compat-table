@@ -1,6 +1,4 @@
-const testers = {
-  ES2015: require('./testers-ES2015.json')
-};
+const testers = require('./testers.json');
 const fs = require('fs');
 var version = process.versions.node;
 
@@ -41,7 +39,7 @@ var output = {
   _v8: process.versions.v8
 };
 
-var versions = ['ES2015'];
+var versions = Object.keys(testers);
 function next(ver) {
   if(!ver) return write();
 

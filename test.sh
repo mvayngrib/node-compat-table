@@ -12,10 +12,13 @@ cd ./.temp
 git config user.email "hubbed@kap.co"
 git config user.name "Imma Bot"
 curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-es6.js > data-es6.js
+curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-esnext.js > data-esnext.js
 
 echo
 echo 'extracting testers...'
-node extract.js > ./testers-ES2015.json
+node extract.js ./data-es6.js > ./testers-es6.json
+node extract.js ./data-esnext.js > ./testers-esnext.json
+node testers.js > testers.json
 
 
 echo
