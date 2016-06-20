@@ -12,259 +12,29 @@ html
       ga('create', 'UA-73643513-1', 'auto');
       ga('send', 'pageview');
 
-    style.
-      body {
-        font-family: 'Raleway', sans-serif;
-        color: #333;
-        padding: 0;
-        margin: 0;
-      }
-      h1,h2,h3 { margin:0; padding:0; font-size:inherit; }
-      a { text-decoration:none; color:inherit; }
-      a:hover { text-decoration:underline; }
-      header{
-        background-color: #454545;
-        color: #eee;
-        padding: 3px 10px 6px;
-        position: fixed;
-        width: 100%;
-        box-sizing: border-box;
-        top: 0;
-        z-index: 100;
-      }
-      header h1{
-        margin: 0;
-        font-weight: normal;
-        font-size: 1.5em;
-        font-family: monospace;
-        display: inline-block;
-      }
-      article {
-        margin-top: 42px;
-      }
-      .category {
-        background-color: #efefef;
-        padding: 3px;
-        margin: 2px 0;
-        color: #191970;
-        text-indent: 10px;
-        text-align: left;
-        font-size: 22px;
-      }
-      .feature {
-        width: 480px;
-        min-width: 480px;
-      }
-      .result,.version {
-        color: white;
-        text-align: center;
-        font-size: 12px;
-        width: 65px;
-        min-width: 65px;
-      }
-      .version {
-        font-size: 16px;
-        padding: 3px 0;
-        color: white;
-        position: relative;
-        vertical-align: top;
-        line-height: 16px;
-      }
-      .result {
-        line-height: 21px;
-        padding: 0;
-      }
-      sub {
-        display: block;
-        font-size: 9px;
-        font-weight: normal;
-        bottom: -3px;
-        font-family: serif;
-        line-height: 8px;
-        margin-top: 3px;
-      }
-      .sub {
-        text-indent: 10px;
-        font-weight: bold;
-        color: #191970;
-        border-bottom: solid 1px;
-        padding-top: 10px;
-      }
-      .subsub {
-        text-indent: 10px;
-        color: #aaa
-      }
-
-      #flagged {
-        position: fixed;
-        z-index: 101;
-        top: 0;
-        left: 580px;
-      }
-      #flagged:checked ~ article .flagged,
-      #flagged:checked ~ header .flagged { display:block; }
-      #flagged ~ article .flagged,
-      #flagged ~ header .flagged { display:none; }
-      #flagged:checked ~ article .unflagged,
-      #flagged:checked ~ header .unflagged { display:none; }
-      #flagged ~ article .unflagged,
-      #flagged ~ header .unflagged { display:block; }
-
-      .Yes.flagged.required:before {
-        content: '⚐';
-        position: absolute;
-        margin-left: 26px;
-        color: #666;
-      }
-      .Yes.flagged.required {
-        background-color: gold;
-        color: #666;
-      }
-      .Yes {
-        background-color: #026e00;
-      }
-      .No {
-        background-color: red;
-      }
-      .Error {
-        background-color: #dd0000;
-      }
-      .v6 { background-color: #026E00; }
-      .v5 { background-color: #028F00; }
-      .v4 { background-color: #03A300; }
-      .v0 { background-color: #03B800; }
-      #headings {
-        position: absolute;
-        top: 16px;
-        left: 484px;
-      }
-      body.scrolled #headings {
-        position: fixed;
-        top: -2px;
-      }
-      .fn {
-        font-family: monospace;
-        text-indent: 0;
-        background-color: #454545;
-        border-radius: 6px;
-        padding: 6px;
-        position: absolute;
-        display: none;
-        margin-left: 8px;
-        text-align: left;
-        color: #eee;
-        z-index: 99;
-      }
-      .code {
-        white-space: pre;
-        margin: 0 15px;
-      }
-      .info {
-        border-radius: 9px;
-        background-color: #eee;
-        color: #aaa;
-        float: right;
-        text-align: center;
-        font-size: 12px;
-        width: 18px;
-        height: 18px;
-        text-indent: 0;
-        line-height: 18px;
-        cursor: pointer;
-      }
-      .info:hover .fn {
-        display: inline-block;
-      }
-      .credits {
-        position: absolute;
-        left: 600px;
-        top: 2px;
-        font-size: 12px;
-        margin-right: 20px;
-      }
-      header a {
-        color: #eee;
-        text-decoration: underline;
-      }
-      .subheading {
-        font-size: 10px;
-      }
-
-      table.results {
-        margin-bottom: 20px;
-      }
-      .hash {
-        position: absolute;
-        margin-top: -46px;
-      }
-      #more img {
-        height: 14px;
-        margin-right: 6px;
-        background-color: #ccc;
-        border-radius: 3px;
-        padding: 1px;
-      }
-      #more a {
-        vertical-align: top;
-        font-size: 14px;
-      }
-      #more {
-        font-size: 12px;
-        position: absolute;
-        left: 350px;
-        top: 14px;
-      }
-      .nightly {
-        background-color: #454545;
-      }
-      .nightly sup {
-        color: gold;
-        position: absolute;
-        top: -15px;
-        left: 0;
-        width: 100%;
-      }
-      #node-compat-logo {
-        display: block;
-        float: left;
-        margin-right: 10px;
-      }
-      #node-compat-logo img {
-        display: block;
-        height: 34px;
-      }
+    link(rel="stylesheet", href="style.css")
 body
-    input#flagged(type='checkbox', style='position:fixed', checked='checked')
+  input#flagged(type='checkbox', style='position:fixed', checked='checked')
+
+  mixin header(es_version)
     header
-      a#node-compat-logo(href='./')
-        img(src='logo.png')
-      div(style="float:left")
-        h1 Node.js ES2015 Support
-        .subheading
-          a(href='https://github.com/kangax/compat-table') kangax's compat-table
-          | &nbsp;applied only to Node.js
-      .credits
-        label(for='flagged', style='cursor:pointer') requires&nbsp;
-          a(href='https://nodejs.org/en/docs/es6/#which-features-are-behind-the-es_staging-flag') harmony
-          | &nbsp;flag ⚐
-        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Created by&nbsp;
-        a(href='https://github.com/williamkapke') William Kapke
-      #more
-        a(href='https://github.com/williamkapke/node-compat-table')
-          img(alt='github' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=')
-          | Learn more
-      table#headings
+      h1(id=es_version) Node.js #{es_version} Support
+      table.headings
         tr
-          th.version(class='nightly', title=tip('nightly'))=harmony.nightly._version.replace(/-nightly.*/,'')
-            sup Nightly!
-            sub.flagged=percent('nightly', 'ES2015')+'% complete'
-            sub.unflagged=percent('nightly', 'ES2015', true)+'% complete'
           each node_version in node_versions
-            th.version(class='v'+node_version.split('.')[0], title=tip(node_version))=node_version
-              sub.flagged=percent(node_version, 'ES2015')+'% complete'
-              sub.unflagged=percent(node_version, 'ES2015', true)+'% complete'
-    - node_versions.unshift('nightly')
+            if(node_version === 'nightly')
+              th.version(class='nightly', title=tip('nightly'))=harmony.nightly._version.replace(/-nightly.*/, '')
+                sup Nightly!
+                sub.flagged=percent('nightly', es_version) + '% complete'
+                sub.unflagged=percent('nightly', es_version, true) + '% complete'
+            else
+              th.version(class='v' + node_version.split('.')[ 0 ], title=tip(node_version))=node_version
+                sub.flagged=percent(node_version, es_version) + '% complete'
+                sub.unflagged=percent(node_version, es_version, true) + '% complete'
+
+  mixin article(es_version)
     article
+      +header(es_version)
       each obj1, category in testers
         table.results
           caption
@@ -290,7 +60,40 @@ body
                         | }
                 each node_version in node_versions
                   if harmony[node_version]
-                    - classes = requires_flag(node_version, 'ES2015', obj3.path)? 'flag' : ''
-                    td.result(class=classes) !{results(node_version, 'ES2015', obj3.path)}
+                    - classes = requires_flag(node_version, es_version, obj3.path)? 'flag' : ''
+                    td.result(class=classes) !{results(node_version, es_version, obj3.path)}
                   else
                     td.result(title='No results yet')
+
+
+  +article('ES2015')
+
+  header(style="position:fixed")
+    a#node-compat-logo(href='./')
+      img(src='logo.png')
+    #subheading
+      a(href='https://github.com/kangax/compat-table') kangax's compat-table
+      | &nbsp;applied only to Node.js
+    label(for='flagged', style='cursor:pointer') requires&nbsp;
+      a(href='https://nodejs.org/en/docs/es6/') harmony
+      | &nbsp;flag ⚐
+    #credits
+      | Created by&nbsp;
+      a(href='https://github.com/williamkapke') William Kapke
+    #more
+      a(href='https://github.com/williamkapke/node-compat-table')
+        img(alt='github' src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=')
+        | Learn more
+
+
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script.
+    var $articles = $("article");
+    $(window).scroll(function(e){
+      var scrollY = $(window).scrollTop();
+      $articles.each(function(){
+        var $this = $(this);
+        var top = $this.position().top;
+        $this.toggleClass('fixed', scrollY > top)
+      });
+    })

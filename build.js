@@ -8,15 +8,12 @@ Object.keys(_testers).forEach(path=>
 );
 
 var results = {
-  unflagged: {
-    nightly: try_require('./results/nightly.json')
-  },
-  flagged: {
-    nightly: try_require('./results/nightly--harmony.json')
-  }
+  unflagged: {},
+  flagged: {}
 };
 
 var node_versions = fs.readFileSync('.versions').toString().trim().split('\n');
+node_versions.unshift('nightly');
 node_versions.forEach(version=> {
   results.unflagged[version] = try_require('./results/' +version+ '.json');
   results.flagged[version] = try_require('./results/' +version+ '--harmony.json');
