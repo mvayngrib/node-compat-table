@@ -17,9 +17,9 @@
 </html>
 <body>
   <input id="flagged" type="checkbox" style="position:fixed" checked="checked">
-    <article>
+    <article id="ES2015">
         <header>
-          <h1 id="ES2015">Node.js ES2015 Support</h1>
+          <h1><a href="#ES2015">Node.js ES2015 Support</a></h1>
           <table class="headings">
             <tr>
               <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
@@ -16601,11 +16601,1119 @@ return a === 3;</div>}
         </tr>
       </table>
     </article>
+    <article id="ES2016">
+        <header>
+          <h1><a href="#ES2016">Node.js ES2016 Support</a></h1>
+          <table class="headings">
+            <tr>
+              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">77% complete</sub><sub class="unflagged">77% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">77% complete</sub><sub class="unflagged">77% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">31% complete</sub><sub class="unflagged">08% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">31% complete</sub><sub class="unflagged">08% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.10.1<sub class="flagged">31% complete</sub><sub class="unflagged">08% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">08% complete</sub><sub class="unflagged">08% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.4<sub class="flagged">08% complete</sub><sub class="unflagged">08% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.3<sub class="flagged">08% complete</sub><sub class="unflagged">08% complete</sub></th>
+              <th title="v8: 3.28.71.19" class="version v0">0.12.14<sub class="flagged">08% complete</sub><sub class="unflagged">00% complete</sub></th>
+              <th title="v8: 3.14.5.9" class="version v0">0.10.45<sub class="flagged">00% complete</sub><sub class="unflagged">00% complete</sub></th>
+            </tr>
+          </table>
+        </header>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div id="features" class="hash"></div><a href="#features">features</a>
+          </h2>
+        </caption>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="exponentiation------operator" class="hash"></div><a href="#exponentiation------operator">exponentiation (**) operator</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">basic support
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 2 ** 3 === 8 &amp;&amp; -(5 ** 2) === -25 &amp;&amp; (-5) ** 2 === 25;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">assignment
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a = 2; a **= 3; return a === 8;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">early syntax error for unary negation without parens
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">if (2 ** 3 !== 8) { return false; }
+try {
+  Function(&quot;-5 ** 2&quot;)();
+} catch(e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="Array-prototype-includes" class="hash"></div><a href="#Array-prototype-includes">Array.prototype.includes</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Array.prototype.includes
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [1, 2, 3].includes(1)
+  &amp;&amp; ![1, 2, 3].includes(4)
+  &amp;&amp; ![1, 2, 3].includes(1, 1)
+  &amp;&amp; [NaN].includes(NaN)
+  &amp;&amp; Array(1).includes();</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="[1,2,3].includes is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="[1,2,3].includes is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="[1,2,3].includes is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,2,3].includes is not a function">Error</div><div class="Error flagged " title="[1,2,3].includes is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,2,3].includes is not a function">Error</div><div class="Error flagged " title="[1,2,3].includes is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="[1,2,3].includes is not a function">Error</div><div class="Error flagged " title="[1,2,3].includes is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object 1,2,3 has no method 'includes'">Error</div><div class="Error flagged " title="Object 1,2,3 has no method 'includes'">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Array.prototype.includes is generic
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var passed = 0;
+return [].includes.call({
+  get &quot;0&quot;() {
+    passed = NaN;
+    return 'foo';
+  },
+  get &quot;11&quot;() {
+    passed += 1;
+    return 0;
+  },
+  get &quot;19&quot;() {
+    passed += 1;
+    return 'foo';
+  },
+  get &quot;21&quot;() {
+    passed = NaN;
+    return 'foo';
+  },
+  get length() {
+    passed += 1;
+    return 24;
+  }
+}, 'foo', 6) === true &amp;&amp; passed === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Cannot read property 'call' of undefined">Error</div><div class="Error flagged " title="Cannot read property 'call' of undefined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Cannot call method 'call' of undefined">Error</div><div class="Error flagged " title="Cannot call method 'call' of undefined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">%TypedArray%.prototype.includes
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
+    Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
+  return new TypedArray([1, 2, 3]).includes(1)
+    &amp;&amp; !new TypedArray([1, 2, 3]).includes(4)
+    &amp;&amp; !new TypedArray([1, 2, 3]).includes(1, 1);
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="(intermediate value).includes is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="(intermediate value).includes is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="(intermediate value).includes is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="(intermediate value).includes is not a function">Error</div><div class="Error flagged " title="(intermediate value).includes is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="(intermediate value).includes is not a function">Error</div><div class="Error flagged " title="(intermediate value).includes is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="(intermediate value).includes is not a function">Error</div><div class="Error flagged " title="(intermediate value).includes is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object #<Int8Array> has no method 'includes'">Error</div><div class="Error flagged " title="Object #<Int8Array> has no method 'includes'">Error</div></td>
+        </tr>
+      </table>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div id="misc" class="hash"></div><a href="#misc">misc</a>
+          </h2>
+        </caption>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="" class="hash"></div><a href="#"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">generator functions can't be used with &quot;new&quot;
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function * generator() {
+  yield 3;
+}
+try {
+  new generator();
+} catch(e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">generator throw() caught by inner generator
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function * generator() {
+  yield * (function * () {
+    try {
+      yield 'foo';
+    }
+    catch(e) {
+      return;
+    }
+  }());
+  yield 'bar';
+}
+var iter = generator();
+iter.next();
+return iter['throw']().value === 'bar';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">strict fn w/ non-strict non-simple params is error
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function foo(...a){}
+try {
+  Function(&quot;function bar(...a){'use strict';}&quot;)();
+} catch(e) {
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token ...">Error</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token .">Error</div><div class="Error flagged " title="Unexpected token .">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">nested rest destructuring, declarations
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var [x, ...[y, ...z]] = [1,2,3,4];
+return x === 1 &amp;&amp; y === 2 &amp;&amp; z + '' === '3,4';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">nested rest destructuring, parameters
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return function([x, ...[y, ...z]]) {
+  return x === 1 &amp;&amp; y === 2 &amp;&amp; z + '' === '3,4';
+}([1,2,3,4]);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Proxy, &quot;enumerate&quot; handler removed
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var passed = true;
+var proxy = new Proxy({}, {
+  enumerate: function() {
+    passed = false;
+  }
+});
+for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
+return passed;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Proxy internal calls, Array.prototype.includes
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">// Array.prototype.includes -&gt; Get -&gt; [[Get]]
+var get = [];
+var p = new Proxy({length: 3, 0: '', 1: '', 2: '', 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+Array.prototype.includes.call(p, {});
+if (get + '' !== &quot;length,0,1,2&quot;) return;
+
+get = [];
+p = new Proxy({length: 4, 0: NaN, 1: '', 2: NaN, 3: ''}, { get: function(o, k) { get.push(k); return o[k]; }});
+Array.prototype.includes.call(p, NaN, 1);
+return (get + '' === &quot;length,1,2&quot;);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+      </table>
+    </article>
+    <article id="ES2017">
+        <header>
+          <h1><a href="#ES2017">Node.js ES2017 Support</a></h1>
+          <table class="headings">
+            <tr>
+              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">42% complete</sub><sub class="unflagged">42% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">42% complete</sub><sub class="unflagged">42% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.10.1<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.4<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.3<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 3.28.71.19" class="version v0">0.12.14<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 3.14.5.9" class="version v0">0.10.45<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+            </tr>
+          </table>
+        </header>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div id="features" class="hash"></div><a href="#features">features</a>
+          </h2>
+        </caption>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="" class="hash"></div><a href="#"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Object.values
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
+obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
+var v = Object.values(obj);
+return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object function Object() { [native code] } has no method 'values'">Error</div><div class="Error flagged " title="Object function Object() { [native code] } has no method 'values'">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Object.entries
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = Object.create({ a: &quot;qux&quot;, d: &quot;qux&quot; });
+obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
+var e = Object.entries(obj);
+return Array.isArray(e)
+  &amp;&amp; e.length === 3
+  &amp;&amp; String(e[0]) === &quot;a,foo&quot;
+  &amp;&amp; String(e[1]) === &quot;b,bar&quot;
+  &amp;&amp; String(e[2]) === &quot;c,baz&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object function Object() { [native code] } has no method 'entries'">Error</div><div class="Error flagged " title="Object function Object() { [native code] } has no method 'entries'">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Object.getOwnPropertyDescriptors
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var object = {a: 1};
+var B = typeof Symbol === 'function' ? Symbol('b') : 'b';
+object[B] = 2;
+var O = Object.defineProperty(object, 'c', {value: 3});
+var D = Object.getOwnPropertyDescriptors(O);
+
+return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configurable === true &amp;&amp; D.a.writable === true
+  &amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
+  &amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object function Object() { [native code] } has no method 'getOwnPropertyDescriptors'">Error</div><div class="Error flagged " title="Object function Object() { [native code] } has no method 'getOwnPropertyDescriptors'">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="String-padding" class="hash"></div><a href="#String-padding">String padding</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">String.prototype.padStart
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 'hello'.padStart(10) === '     hello'
+  &amp;&amp; 'hello'.padStart(10, '1234') === '12341hello'
+  &amp;&amp; 'hello'.padStart() === 'hello'
+  &amp;&amp; 'hello'.padStart(6, '123') === '1hello';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padStart is not a function">Error</div><div class="Error flagged " title=""hello".padStart is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object hello has no method 'padStart'">Error</div><div class="Error flagged " title="Object hello has no method 'padStart'">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">String.prototype.padEnd
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return 'hello'.padEnd(10) === 'hello     '
+  &amp;&amp; 'hello'.padEnd(10, '1234') === 'hello12341'
+  &amp;&amp; 'hello'.padEnd() === 'hello'
+  &amp;&amp; 'hello'.padEnd(6, '123') === 'hello1';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title=""hello".padEnd is not a function">Error</div><div class="Error flagged " title=""hello".padEnd is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="undefined is not a function">Error</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object hello has no method 'padEnd'">Error</div><div class="Error flagged " title="Object hello has no method 'padEnd'">Error</div></td>
+        </tr>
+      </table>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div id="misc" class="hash"></div><a href="#misc">misc</a>
+          </h2>
+        </caption>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="class-extends-null" class="hash"></div><a href="#class-extends-null">class extends null</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">proper default constructor
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">class C extends null {}
+return new C instanceof C;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function is not a function">Error</div><div class="Error flagged " title="function is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="function () {} is not a constructor">Error</div><div class="Error flagged " title="function () {} is not a constructor">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">proper &quot;this&quot; binding
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var passed = false;
+new class C extends null {
+  constructor() {
+    passed = (this instanceof C &amp;&amp; !(this instanceof Object));
+    return this;
+  }
+};
+return passed;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="this is not defined">Error</div><div class="Error flagged " title="this is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="" class="hash"></div><a href="#"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">Proxy &quot;ownKeys&quot; handler, duplicate keys for non-extensible targets
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
+  ownKeys: function() {
+    return ['a','a','b','b'];
+  }
+});
+return Object.getOwnPropertyNames(P) + '' === &quot;a,a,b,b&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+      </table>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div id="annex-b" class="hash"></div><a href="#annex-b">annex b</a>
+          </h2>
+        </caption>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="Object-prototype-getter-setter-methods" class="hash"></div><a href="#Object-prototype-getter-setter-methods">Object.prototype getter/setter methods</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineGetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {};
+function bar() { return &quot;bar&quot;; }
+Object.prototype.__defineGetter__.call(obj, &quot;foo&quot;, bar);
+var prop = Object.getOwnPropertyDescriptor(obj, &quot;foo&quot;);
+return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
+  &amp;&amp; prop.enumerable;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineGetter__, symbols
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {};
+var sym = Symbol();
+function bar() { return &quot;bar&quot;; }
+Object.prototype.__defineGetter__.call(obj, sym, bar);
+var prop = Object.getOwnPropertyDescriptor(obj, sym);
+return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
+  &amp;&amp; prop.enumerable;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineGetter__, ToObject(this)
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var key = '__accessors_test__';
+__defineGetter__.call(1, key, function(){});
+try {
+  __defineGetter__.call(null, key, function(){});
+} catch(e){
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineSetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {};
+function bar() {}
+Object.prototype.__defineSetter__.call(obj, &quot;foo&quot;, bar);
+var prop = Object.getOwnPropertyDescriptor(obj, &quot;foo&quot;);
+return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
+  &amp;&amp; prop.enumerable;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineSetter__, symbols
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {};
+var sym = Symbol();
+function bar(baz) {}
+Object.prototype.__defineSetter__.call(obj, sym, bar);
+var prop = Object.getOwnPropertyDescriptor(obj, sym);
+return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
+  &amp;&amp; prop.enumerable;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineSetter__, ToObject(this)
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var key = '__accessors_test__';
+__defineSetter__.call(1, key, function(){});
+try {
+  __defineSetter__.call(null, key, function(){});
+} catch(e){
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupGetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {
+  get foo() { return &quot;bar&quot;},
+  qux: 1
+};
+var foo = Object.prototype.__lookupGetter__.call(obj, &quot;foo&quot;);
+return foo() === &quot;bar&quot;
+  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;qux&quot;) === undefined
+  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupGetter__, prototype chain
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {
+  get foo() { return &quot;bar&quot;},
+  qux: 1
+};
+var foo = Object.prototype.__lookupGetter__.call(Object.create(obj), &quot;foo&quot;);
+return foo() === &quot;bar&quot;
+  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;qux&quot;) === undefined
+  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupGetter__, symbols
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var sym = Symbol();
+var sym2 = Symbol();
+var obj = {};
+Object.defineProperty(obj, sym, { get: function() { return &quot;bar&quot;; }});
+Object.defineProperty(obj, sym2, { value: 1 });
+var foo = Object.prototype.__lookupGetter__.call(obj, sym);
+return foo() === &quot;bar&quot;
+  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
+  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupGetter__, ToObject(this)
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">__lookupGetter__.call(1, 'key');
+try {
+  __lookupGetter__.call(null, 'key');
+} catch(e){
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupSetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {
+  set foo(baz) { return &quot;bar&quot;; },
+  qux: 1
+};
+var foo = Object.prototype.__lookupSetter__.call(obj, &quot;foo&quot;);
+return foo() === &quot;bar&quot;
+  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;qux&quot;) === undefined
+  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupSetter__, prototype chain
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var obj = {
+  set foo(baz) { return &quot;bar&quot;; },
+  qux: 1
+};
+var foo = Object.prototype.__lookupSetter__.call(Object.create(obj), &quot;foo&quot;);
+return foo() === &quot;bar&quot;
+  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;qux&quot;) === undefined
+  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupSetter__, symbols
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var sym = Symbol();
+var sym2 = Symbol();
+var obj = {};
+Object.defineProperty(obj, sym, { set: function(baz) { return &quot;bar&quot;; }});
+Object.defineProperty(obj, sym2, { value: 1 });
+var foo = Object.prototype.__lookupSetter__.call(obj, sym);
+return foo() === &quot;bar&quot;
+  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, sym2) === undefined
+  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupSetter__, ToObject(this)
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">__lookupSetter__.call(1, 'key');
+try {
+  __lookupSetter__.call(null, 'key');
+} catch(e){
+  return true;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="Proxy-internal-calls--getter-setter-methods" class="hash"></div><a href="#Proxy-internal-calls--getter-setter-methods">Proxy internal calls, getter/setter methods</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineGetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">// Object.prototype.__defineGetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
+var def = [];
+var p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+Object.prototype.__defineGetter__.call(p, &quot;foo&quot;, Object);
+return def + '' === &quot;foo&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Object.defineProperty called on non-object">Error</div><div class="Error flagged " title="Object.defineProperty called on non-object">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.defineProperty called on non-object">Error</div><div class="Error flagged " title="Object.defineProperty called on non-object">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__defineSetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">// Object.prototype.__defineSetter__ -&gt; DefinePropertyOrThrow -&gt; [[DefineOwnProperty]]
+var def = [];
+var p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});
+Object.prototype.__defineSetter__.call(p, &quot;foo&quot;, Object);
+return def + '' === &quot;foo&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Object.defineProperty called on non-object">Error</div><div class="Error flagged " title="Object.defineProperty called on non-object">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Object.defineProperty called on non-object">Error</div><div class="Error flagged " title="Object.defineProperty called on non-object">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupGetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">// Object.prototype.__lookupGetter__ -&gt; [[GetOwnProperty]]
+// Object.prototype.__lookupGetter__ -&gt; [[GetPrototypeOf]]
+var gopd = [];
+var gpo = false;
+var p = new Proxy({}, {
+  getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },
+  getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }
+});
+Object.prototype.__lookupGetter__.call(p, &quot;foo&quot;);
+return gopd + '' === &quot;foo&quot; &amp;&amp; gpo;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupSetter__
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">// Object.prototype.__lookupSetter__ -&gt; [[GetOwnProperty]]
+// Object.prototype.__lookupSetter__ -&gt; [[GetPrototypeOf]]
+var gopd = [];
+var gpo = false;
+var p = new Proxy({}, {
+  getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },
+  getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }
+});
+Object.prototype.__lookupSetter__.call(p, &quot;foo&quot;);
+return gopd + '' === &quot;foo&quot; &amp;&amp; gpo;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+      </table>
+    </article>
   <header style="position:fixed"><a id="node-compat-logo" href="./"><img src="logo.png"></a>
-    <div id="subheading"><a href="https://github.com/kangax/compat-table">kangax's compat-table</a>&nbsp;applied only to Node.js</div>
-    <label for="flagged" style="cursor:pointer">requires&nbsp;<a href="https://nodejs.org/en/docs/es6/">harmony</a>&nbsp;flag ⚐</label>
-    <div id="credits">Created by&nbsp;<a href="https://github.com/williamkapke">William Kapke</a></div>
-    <div id="more"><a href="https://github.com/williamkapke/node-compat-table"><img alt="github" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=">Learn more</a></div>
+    <div id="subheading"><a href="https://github.com/kangax/compat-table" target="_blank">kangax's compat-table</a>&nbsp;applied only to Node.js</div>
+    <label for="flagged" style="cursor:pointer">requires&nbsp;<a href="https://nodejs.org/en/docs/es6/" target="_blank">harmony</a>&nbsp;flag ⚐</label>
+    <div id="credits">Created by&nbsp;<a href="https://github.com/williamkapke" target="_blank">William Kapke</a></div>
+    <div id="more"><a href="https://github.com/williamkapke/node-compat-table" target="_blank"><img alt="github" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNDBweCIgdmlld0JveD0iMTIgMTIgNDAgNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMTIgMTIgNDAgNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMzMzMzMzMiIGQ9Ik0zMiAxMy40Yy0xMC41IDAtMTkgOC41LTE5IDE5YzAgOC40IDUuNSAxNS41IDEzIDE4YzEgMC4yIDEuMy0wLjQgMS4zLTAuOWMwLTAuNSAwLTEuNyAwLTMuMiBjLTUuMyAxLjEtNi40LTIuNi02LjQtMi42QzIwIDQxLjYgMTguOCA0MSAxOC44IDQxYy0xLjctMS4yIDAuMS0xLjEgMC4xLTEuMWMxLjkgMC4xIDIuOSAyIDIuOSAyYzEuNyAyLjkgNC41IDIuMSA1LjUgMS42IGMwLjItMS4yIDAuNy0yLjEgMS4yLTIuNmMtNC4yLTAuNS04LjctMi4xLTguNy05LjRjMC0yLjEgMC43LTMuNyAyLTUuMWMtMC4yLTAuNS0wLjgtMi40IDAuMi01YzAgMCAxLjYtMC41IDUuMiAyIGMxLjUtMC40IDMuMS0wLjcgNC44LTAuN2MxLjYgMCAzLjMgMC4yIDQuNyAwLjdjMy42LTIuNCA1LjItMiA1LjItMmMxIDIuNiAwLjQgNC42IDAuMiA1YzEuMiAxLjMgMiAzIDIgNS4xYzAgNy4zLTQuNSA4LjktOC43IDkuNCBjMC43IDAuNiAxLjMgMS43IDEuMyAzLjVjMCAyLjYgMCA0LjYgMCA1LjJjMCAwLjUgMC40IDEuMSAxLjMgMC45YzcuNS0yLjYgMTMtOS43IDEzLTE4LjFDNTEgMjEuOSA0Mi41IDEzLjQgMzIgMTMuNHoiLz48L3N2Zz4=">Learn more</a></div>
   </header>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script>
