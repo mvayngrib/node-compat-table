@@ -1349,8 +1349,7 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
           <td class="feature subsub">&quot;u&quot; flag, case folding
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">return &quot;ſ&quot;.match(/S/iu) &amp;&amp; &quot;ſ&quot;.match(/\w/iu) &amp;&amp; &quot;ſ&quot;.match(/\W/iu)
- &amp;&amp; &quot;S&quot;.match(/ſ/iu) &amp;&amp; &quot;S&quot;.match(/\w/iu) &amp;&amp; &quot;S&quot;.match(/\W/iu);</div>}
+                <div class="code">return &quot;ſ&quot;.match(/S/iu) &amp;&amp; &quot;S&quot;.match(/ſ/iu);</div>}
               </div>
             </div>
           </td>
@@ -16987,16 +16986,16 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
           <h1><a href="#ES2017">Node.js ES2017 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">42% complete</sub><sub class="unflagged">42% complete</sub></th>
-              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">42% complete</sub><sub class="unflagged">42% complete</sub></th>
-              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.4<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
-              <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">23% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">41% complete</sub><sub class="unflagged">41% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">41% complete</sub><sub class="unflagged">41% complete</sub></th>
+              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.4<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
+              <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
             </tr>
           </table>
         </header>
@@ -17229,6 +17228,28 @@ return Object.getOwnPropertyNames(P) + '' === &quot;a,a,b,b&quot;;</div>}
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">RegExp &quot;u&quot; flag, case folding
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return &quot;ſ&quot;.match(/\w/iu) &amp;&amp; !&quot;ſ&quot;.match(/\W/iu)
+  &amp;&amp; &quot;K&quot;.match(/\w/iu) &amp;&amp; !&quot;K&quot;.match(/\W/iu)
+  &amp;&amp; &quot;K &quot;.match(/.\b/iu) &amp;&amp; &quot;ſ &quot;.match(/.\b/iu)
+  &amp;&amp; !&quot;K &quot;.match(/.\B/iu) &amp;&amp; !&quot;ſ &quot;.match(/.\B/iu);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor 'iu'">Error</div></td>
         </tr>
       </table>
       <table class="results">
