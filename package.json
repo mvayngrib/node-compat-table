@@ -15,5 +15,12 @@
     "jade": "^1.11.0",
     "object.assign": "^3.0.1",
     "semver": "^5.1.0"
+  },
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "standard"
+  },
+  "devDependencies": {
+    "standard": "^7.1.2"
   }
 }
