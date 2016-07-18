@@ -1,5 +1,6 @@
 const testers = require('./testers.json')
 const fs = require('fs')
+const path = require('path')
 var version = process.versions.node
 
 var esStaging = /--es_staging/.test(process.execArgv) ? '--es_staging' : ''
@@ -128,5 +129,5 @@ function write () {
     if (esStaging) version += '--es_staging'
     if (harmony) version += '--harmony'
   }
-  fs.writeFileSync(`${__dirname}/results/${version}.json`, json)
+  fs.writeFileSync(path.resolve(__dirname, 'results', version + '.json'), json)
 }
