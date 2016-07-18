@@ -7,8 +7,8 @@ var testers = {
 }
 
 // kangax's esnext file contains ES2016, ES2017... and more. I'm just using 2016 & 2017 for now.
-var esnext = require('./testers-esnext.json')
-Object.keys(esnext).forEach(key => {
+var esnext = require('./testers-es2016plus.json')
+Object.keys(esnext).forEach((key) => {
   if (/^2016/.test(key)) {
     testers.ES2016[key.substr(5)] = esnext[key]
   }

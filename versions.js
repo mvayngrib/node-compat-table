@@ -1,10 +1,10 @@
 const semver = require('semver')
 const https = require('https')
-const error = e => console.log(e); process.exit(1)
+const error = (e) => { console.log(e); process.exit(1) }
 
 var chunks = []
 https.get('https://nodejs.org/dist/index.json', function (res) {
-  res.on('data', chunk => chunks.push(chunk))
+  res.on('data', (chunk) => chunks.push(chunk))
   res.on('close', error)
   res.on('end', function () {
     if (res.statusCode !== 200) {
@@ -12,7 +12,7 @@ https.get('https://nodejs.org/dist/index.json', function (res) {
     }
 
     var body = Buffer.concat(chunks).toString()
-    var publishedVersions = JSON.parse(body).map(v => v.version)
+    var publishedVersions = JSON.parse(body).map((v) => v.version)
     filter(publishedVersions)
   })
 })
@@ -26,7 +26,7 @@ function filter (published) {
 
   var desired = []
   var last = () => desired[desired.length - 1]
-  var add = v => v && desired.push(v)
+  var add = (v) => v && desired.push(v)
   add(max('6'))
   add(max('>6 <' + last()))
   add(max('>6 <' + last()))

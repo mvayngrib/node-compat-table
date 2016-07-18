@@ -3,9 +3,10 @@ var fs = require('fs')
 
 var testers = {}
 var _testers = require('./testers.json')
-Object.keys(_testers).forEach(esVersion => {
+Object.keys(_testers).forEach((esVersion) => {
   testers[esVersion] = {}
-  Object.keys(_testers[esVersion]).forEach(path => $set(testers[esVersion], path, {path: path, code: _testers[esVersion][path]})
+  Object.keys(_testers[esVersion]).forEach((path) =>
+    $set(testers[esVersion], path, {path: path, code: _testers[esVersion][path]})
   )
 })
 
@@ -16,7 +17,7 @@ var results = {
 
 var nodeVersions = fs.readFileSync('.versions').toString().trim().split('\n')
 nodeVersions.unshift('nightly')
-nodeVersions.forEach(version => {
+nodeVersions.forEach((version) => {
   results.unflagged[version] = tryRequire('./results/' + version + '.json')
   results.flagged[version] = tryRequire('./results/' + version + '--harmony.json')
 })

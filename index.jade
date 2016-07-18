@@ -16,26 +16,26 @@ html
 body
   input#flagged(type='checkbox', style='position:fixed', checked='checked')
 
-  mixin header(es_version)
+  mixin header(esVersion)
     header
-      h1: a(href="#"+es_version) Node.js #{es_version} Support
+      h1: a(href="#"+esVersion) Node.js #{esVersion} Support
       table.headings
         tr
-          each node_version in node_versions
-            if(node_version === 'nightly')
+          each nodeVersion in nodeVersions
+            if(nodeVersion === 'nightly')
               th.version(class='nightly', title=tip('nightly'))=harmony.nightly._version.replace(/-nightly.*/, '')
                 sup Nightly!
-                sub.flagged=percent('nightly', es_version) + '% complete'
-                sub.unflagged=percent('nightly', es_version, true) + '% complete'
+                sub.flagged=percent('nightly', esVersion) + '% complete'
+                sub.unflagged=percent('nightly', esVersion, true) + '% complete'
             else
-              th.version(class='v' + node_version.split('.')[ 0 ], title=tip(node_version))=node_version
-                sub.flagged=percent(node_version, es_version) + '% complete'
-                sub.unflagged=percent(node_version, es_version, true) + '% complete'
+              th.version(class='v' + nodeVersion.split('.')[ 0 ], title=tip(nodeVersion))=nodeVersion
+                sub.flagged=percent(nodeVersion, esVersion) + '% complete'
+                sub.unflagged=percent(nodeVersion, esVersion, true) + '% complete'
 
-  mixin article(es_version)
-    article(id=es_version)
-      +header(es_version)
-      each obj1, category in testers[es_version]
+  mixin article(esVersion)
+    article(id=esVersion)
+      +header(esVersion)
+      each obj1, category in testers[esVersion]
         table.results
           caption
             h2.category
@@ -43,7 +43,7 @@ body
               a(href='#'+category.replace(/\W/g, '-'))=category
           each obj2, subcategory in obj1
             tr
-              td.feature.sub(colspan=node_versions.length+1)
+              td.feature.sub(colspan=nodeVersions.length+1)
                 h3
                   .hash(id=subcategory.replace(/\W/g, '-'))
                   a(href='#'+subcategory.replace(/\W/g, '-'))=subcategory
@@ -58,10 +58,10 @@ body
                         | function(){
                         .code=obj3.code
                         | }
-                each node_version in node_versions
-                  if harmony[node_version]
-                    - classes = requires_flag(node_version, es_version, obj3.path)? 'flag' : ''
-                    td.result(class=classes) !{results(node_version, es_version, obj3.path)}
+                each nodeVersion in nodeVersions
+                  if harmony[nodeVersion]
+                    - classes = requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : ''
+                    td.result(class=classes) !{results(nodeVersion, esVersion, obj3.path)}
                   else
                     td.result(title='No results yet')
 
