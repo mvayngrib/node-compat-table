@@ -22,8 +22,8 @@
           <h1><a href="#ES2015">Node.js ES2015 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
-              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
+              <th title="v8: 5.1.281.76" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">00% complete</sub><sub class="unflagged">00% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version v6">6.3.0<sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
               <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
@@ -62,7 +62,7 @@ return (function f(n){
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
@@ -94,7 +94,7 @@ return f(1e6) === &quot;foo&quot; &amp;&amp; f(1e6+1) === &quot;bar&quot;;</div>
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Maximum call stack size exceeded">Error</div><div class="Error flagged " title="Maximum call stack size exceeded">Error</div></td>
@@ -1011,7 +1011,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -1037,7 +1037,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -1524,7 +1524,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
@@ -2016,7 +2016,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Invalid left-hand side in assignment">Error</div><div class="Error flagged " title="Invalid left-hand side in assignment">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Invalid left-hand side in assignment">Error</div><div class="Error flagged " title="Invalid left-hand side in assignment">Error</div></td>
@@ -2548,7 +2548,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
@@ -5996,7 +5996,7 @@ return view.getFloat64(0) === 0.1;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -6114,7 +6114,7 @@ return true;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -6789,7 +6789,7 @@ typeof Float64Array[Symbol.species] === &quot;function&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -6944,7 +6944,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -7221,7 +7221,7 @@ return 'get' in prop &amp;&amp; Map[Symbol.species] === Map;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -7379,7 +7379,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -7658,7 +7658,7 @@ return 'get' in prop &amp;&amp; Set[Symbol.species] === Set;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -7835,7 +7835,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -8103,7 +8103,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10019,7 +10019,7 @@ return 'get' in prop &amp;&amp; Promise[Symbol.species] === Promise;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -10328,7 +10328,7 @@ return passed;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10410,7 +10410,7 @@ return a[0] === b;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10434,7 +10434,7 @@ return Array.prototype.concat.call(obj, []).foo === 1;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10458,7 +10458,7 @@ return Array.prototype.filter.call(obj, Boolean).foo === 1;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10482,7 +10482,7 @@ return Array.prototype.map.call(obj, Boolean).foo === 1;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10506,7 +10506,7 @@ return Array.prototype.slice.call(obj, 0).foo === 1;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10530,7 +10530,7 @@ return Array.prototype.splice.call(obj, 0).foo === 1;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10557,7 +10557,7 @@ return passed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10580,7 +10580,7 @@ return promise.then(function(){}) instanceof FakePromise2;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -10720,7 +10720,7 @@ try {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.startsWith must not be a regular expression">Error</div></td>
@@ -10745,7 +10745,7 @@ try {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.endsWith must not be a regular expression">Error</div></td>
@@ -10770,7 +10770,7 @@ try {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div></td>
           <td class="result"><div class="Error unflagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div><div class="Error flagged " title="First argument to String.prototype.includes must not be a regular expression">Error</div></td>
@@ -11152,7 +11152,7 @@ return foo.name === &quot;foo&quot; &amp;&amp; bar.name === &quot;baz&quot;;</di
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11175,7 +11175,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11197,7 +11197,7 @@ return descriptor.get.name === &quot;get foo&quot; &amp;&amp;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11264,7 +11264,7 @@ return o[sym1].name === &quot;[foo]&quot; &amp;&amp;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11330,7 +11330,7 @@ return foo.name === &quot;foo&quot; &amp;&amp;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11353,7 +11353,7 @@ return o.foo.name === &quot;foo&quot; &amp;&amp;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -11803,7 +11803,7 @@ return 'get' in prop &amp;&amp; RegExp[Symbol.species] === RegExp;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -12002,7 +12002,7 @@ return closed;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12042,7 +12042,7 @@ return 'get' in prop &amp;&amp; Array[Symbol.species] === Array;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div><div class="Error flagged " title="Cannot use 'in' operator to search for 'get' in undefined">Error</div></td>
@@ -12230,7 +12230,7 @@ return proto2.hasOwnProperty(Symbol.iterator) &amp;&amp;
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12882,7 +12882,7 @@ return c.concat(1) instanceof C;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12903,7 +12903,7 @@ return c.filter(Boolean) instanceof C;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12924,7 +12924,7 @@ return c.map(Boolean) instanceof C;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12946,7 +12946,7 @@ return c.slice(1,2) instanceof C;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -12968,7 +12968,7 @@ return c.splice(1,2) instanceof C;</div>}
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
@@ -13771,7 +13771,7 @@ return get[0] === Symbol.hasInstance &amp;&amp; get.slice(1) + '' === &quot;prot
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14095,7 +14095,7 @@ return get + '' === &quot;exec&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.test called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.test called on incompatible receiver [object Object]">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.test called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.test called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14143,7 +14143,7 @@ return get + '' === &quot;global,exec,global,unicode,exec&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@match called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@match called on incompatible receiver [object Object]">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@match called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@match called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14168,7 +14168,7 @@ return get + '' === &quot;global,exec,global,unicode,exec&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@replace called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@replace called on incompatible receiver [object Object]">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@replace called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@replace called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14191,7 +14191,7 @@ return get + '' === &quot;lastIndex,exec&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@search called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14216,7 +14216,7 @@ return get + '' === &quot;constructor,flags,exec&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div><div class="Error flagged " title="Method RegExp.prototype.@@split called on incompatible receiver [object Object]">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14269,7 +14269,7 @@ return get[0] === &quot;constructor&quot;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14305,7 +14305,7 @@ return true;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14398,7 +14398,7 @@ return get + '' === &quot;length,constructor,1,2,3,length,constructor,2,1&quot;;
               </div>
             </div>
           </td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14492,7 +14492,7 @@ return get[0] === Symbol.match &amp;&amp; get[1] === Symbol.toPrimitive &amp;&am
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -14542,7 +14542,7 @@ return get[0] === Symbol.search &amp;&amp; get[1] === Symbol.toPrimitive &amp;&a
               </div>
             </div>
           </td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
@@ -16605,8 +16605,8 @@ return a === 3;</div>}
           <h1><a href="#ES2016">Node.js ES2016 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">77% complete</sub><sub class="unflagged">77% complete</sub></th>
-              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">77% complete</sub><sub class="unflagged">77% complete</sub></th>
+              <th title="v8: 5.1.281.76" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">00% complete</sub><sub class="unflagged">77% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version v6">6.3.0<sub class="flagged">77% complete</sub><sub class="unflagged">77% complete</sub></th>
               <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">31% complete</sub><sub class="unflagged">08% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">31% complete</sub><sub class="unflagged">08% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">31% complete</sub><sub class="unflagged">08% complete</sub></th>
@@ -16639,7 +16639,7 @@ return a === 3;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
@@ -16658,7 +16658,7 @@ return a === 3;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *=">Error</div><div class="Error flagged " title="Unexpected token *=">Error</div></td>
@@ -16675,14 +16675,14 @@ return a === 3;</div>}
               <div class="fn">function(){
                 <div class="code">if (2 ** 3 !== 8) { return false; }
 try {
-  Function(&quot;-5 ** 2&quot;)();
+Function(&quot;-5 ** 2&quot;)();
 } catch(e) {
-  return true;
+return true;
 }</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected token *">Error</div><div class="Error flagged " title="Unexpected token *">Error</div></td>
@@ -16705,10 +16705,10 @@ try {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return [1, 2, 3].includes(1)
-  &amp;&amp; ![1, 2, 3].includes(4)
-  &amp;&amp; ![1, 2, 3].includes(1, 1)
-  &amp;&amp; [NaN].includes(NaN)
-  &amp;&amp; Array(1).includes();</div>}
+&amp;&amp; ![1, 2, 3].includes(4)
+&amp;&amp; ![1, 2, 3].includes(1, 1)
+&amp;&amp; [NaN].includes(NaN)
+&amp;&amp; Array(1).includes();</div>}
               </div>
             </div>
           </td>
@@ -16729,26 +16729,26 @@ try {
               <div class="fn">function(){
                 <div class="code">var passed = 0;
 return [].includes.call({
-  get &quot;0&quot;() {
-    passed = NaN;
-    return 'foo';
-  },
-  get &quot;11&quot;() {
-    passed += 1;
-    return 0;
-  },
-  get &quot;19&quot;() {
-    passed += 1;
-    return 'foo';
-  },
-  get &quot;21&quot;() {
-    passed = NaN;
-    return 'foo';
-  },
-  get length() {
-    passed += 1;
-    return 24;
-  }
+get &quot;0&quot;() {
+passed = NaN;
+return 'foo';
+},
+get &quot;11&quot;() {
+passed += 1;
+return 0;
+},
+get &quot;19&quot;() {
+passed += 1;
+return 'foo';
+},
+get &quot;21&quot;() {
+passed = NaN;
+return 'foo';
+},
+get length() {
+passed += 1;
+return 24;
+}
 }, 'foo', 6) === true &amp;&amp; passed === 3;</div>}
               </div>
             </div>
@@ -16769,10 +16769,10 @@ return [].includes.call({
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array,
-    Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
-  return new TypedArray([1, 2, 3]).includes(1)
-    &amp;&amp; !new TypedArray([1, 2, 3]).includes(4)
-    &amp;&amp; !new TypedArray([1, 2, 3]).includes(1, 1);
+Int32Array, Uint32Array, Float32Array, Float64Array].every(function(TypedArray){
+return new TypedArray([1, 2, 3]).includes(1)
+&amp;&amp; !new TypedArray([1, 2, 3]).includes(4)
+&amp;&amp; !new TypedArray([1, 2, 3]).includes(1, 1);
 });</div>}
               </div>
             </div>
@@ -16807,12 +16807,12 @@ return [].includes.call({
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">function * generator() {
-  yield 3;
+yield 3;
 }
 try {
-  new generator();
+new generator();
 } catch(e) {
-  return true;
+return true;
 }</div>}
               </div>
             </div>
@@ -16833,15 +16833,15 @@ try {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">function * generator() {
-  yield * (function * () {
-    try {
-      yield 'foo';
-    }
-    catch(e) {
-      return;
-    }
-  }());
-  yield 'bar';
+yield * (function * () {
+try {
+yield 'foo';
+}
+catch(e) {
+return;
+}
+}());
+yield 'bar';
 }
 var iter = generator();
 iter.next();
@@ -16866,9 +16866,9 @@ return iter['throw']().value === 'bar';</div>}
               <div class="fn">function(){
                 <div class="code">function foo(...a){}
 try {
-  Function(&quot;function bar(...a){'use strict';}&quot;)();
+Function(&quot;function bar(...a){'use strict';}&quot;)();
 } catch(e) {
-  return true;
+return true;
 }</div>}
               </div>
             </div>
@@ -16909,7 +16909,7 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + '' === '3,4';</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return function([x, ...[y, ...z]]) {
-  return x === 1 &amp;&amp; y === 2 &amp;&amp; z + '' === '3,4';
+return x === 1 &amp;&amp; y === 2 &amp;&amp; z + '' === '3,4';
 }([1,2,3,4]);</div>}
               </div>
             </div>
@@ -16931,9 +16931,9 @@ return x === 1 &amp;&amp; y === 2 &amp;&amp; z + '' === '3,4';</div>}
               <div class="fn">function(){
                 <div class="code">var passed = true;
 var proxy = new Proxy({}, {
-  enumerate: function() {
-    passed = false;
-  }
+enumerate: function() {
+passed = false;
+}
 });
 for(var key in proxy); // Should not throw, nor execute the 'enumerate' method.
 return passed;</div>}
@@ -16986,8 +16986,8 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
           <h1><a href="#ES2017">Node.js ES2017 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.0.71.52" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">41% complete</sub><sub class="unflagged">41% complete</sub></th>
-              <th title="v8: 5.0.71.52" class="version v6">6.2.2<sub class="flagged">41% complete</sub><sub class="unflagged">41% complete</sub></th>
+              <th title="v8: 5.1.281.76" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">52% complete</sub><sub class="unflagged">41% complete</sub></th>
+              <th title="v8: 5.0.71.52" class="version v6">6.3.0<sub class="flagged">41% complete</sub><sub class="unflagged">41% complete</sub></th>
               <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
@@ -17023,7 +17023,7 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object.values is not a function">Error</div><div class="Error flagged " title="Object.values is not a function">Error</div></td>
@@ -17042,14 +17042,14 @@ return Array.isArray(v) &amp;&amp; String(v) === &quot;foo,bar,baz&quot;;</div>}
 obj.a = &quot;foo&quot;; obj.b = &quot;bar&quot;; obj.c = &quot;baz&quot;;
 var e = Object.entries(obj);
 return Array.isArray(e)
-  &amp;&amp; e.length === 3
-  &amp;&amp; String(e[0]) === &quot;a,foo&quot;
-  &amp;&amp; String(e[1]) === &quot;b,bar&quot;
-  &amp;&amp; String(e[2]) === &quot;c,baz&quot;;</div>}
+&amp;&amp; e.length === 3
+&amp;&amp; String(e[0]) === &quot;a,foo&quot;
+&amp;&amp; String(e[1]) === &quot;b,bar&quot;
+&amp;&amp; String(e[2]) === &quot;c,baz&quot;;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object.entries is not a function">Error</div><div class="Error flagged " title="Object.entries is not a function">Error</div></td>
@@ -17071,12 +17071,12 @@ var O = Object.defineProperty(object, 'c', {value: 3});
 var D = Object.getOwnPropertyDescriptors(O);
 
 return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configurable === true &amp;&amp; D.a.writable === true
-  &amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
-  &amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;</div>}
+&amp;&amp; D[B].value === 2 &amp;&amp; D[B].enumerable === true &amp;&amp; D[B].configurable === true &amp;&amp; D[B].writable === true
+&amp;&amp; D.c.value === 3 &amp;&amp; D.c.enumerable === false &amp;&amp; D.c.configurable === false &amp;&amp; D.c.writable === false;</div>}
               </div>
             </div>
           </td>
-          <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
+          <td class="result flag"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
           <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div><div class="Error flagged " title="Object.getOwnPropertyDescriptors is not a function">Error</div></td>
@@ -17099,9 +17099,9 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return 'hello'.padStart(10) === '     hello'
-  &amp;&amp; 'hello'.padStart(10, '1234') === '12341hello'
-  &amp;&amp; 'hello'.padStart() === 'hello'
-  &amp;&amp; 'hello'.padStart(6, '123') === '1hello';</div>}
+&amp;&amp; 'hello'.padStart(10, '1234') === '12341hello'
+&amp;&amp; 'hello'.padStart() === 'hello'
+&amp;&amp; 'hello'.padStart(6, '123') === '1hello';</div>}
               </div>
             </div>
           </td>
@@ -17121,9 +17121,9 @@ return D.a.value === 1 &amp;&amp; D.a.enumerable === true &amp;&amp; D.a.configu
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return 'hello'.padEnd(10) === 'hello     '
-  &amp;&amp; 'hello'.padEnd(10, '1234') === 'hello12341'
-  &amp;&amp; 'hello'.padEnd() === 'hello'
-  &amp;&amp; 'hello'.padEnd(6, '123') === 'hello1';</div>}
+&amp;&amp; 'hello'.padEnd(10, '1234') === 'hello12341'
+&amp;&amp; 'hello'.padEnd() === 'hello'
+&amp;&amp; 'hello'.padEnd(6, '123') === 'hello1';</div>}
               </div>
             </div>
           </td>
@@ -17178,10 +17178,10 @@ return new C instanceof C;</div>}
               <div class="fn">function(){
                 <div class="code">var passed = false;
 new class C extends null {
-  constructor() {
-    passed = (this instanceof C &amp;&amp; !(this instanceof Object));
-    return this;
-  }
+constructor() {
+passed = (this instanceof C &amp;&amp; !(this instanceof Object));
+return this;
+}
 };
 return passed;</div>}
               </div>
@@ -17210,9 +17210,9 @@ return passed;</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var P = new Proxy(Object.preventExtensions(Object.defineProperty({a:1}, &quot;b&quot;, {value:1})), {
-  ownKeys: function() {
-    return ['a','a','b','b'];
-  }
+ownKeys: function() {
+return ['a','a','b','b'];
+}
 });
 return Object.getOwnPropertyNames(P) + '' === &quot;a,a,b,b&quot;;</div>}
               </div>
@@ -17234,9 +17234,9 @@ return Object.getOwnPropertyNames(P) + '' === &quot;a,a,b,b&quot;;</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">return &quot;ſ&quot;.match(/\w/iu) &amp;&amp; !&quot;ſ&quot;.match(/\W/iu)
-  &amp;&amp; &quot;K&quot;.match(/\w/iu) &amp;&amp; !&quot;K&quot;.match(/\W/iu)
-  &amp;&amp; &quot;K &quot;.match(/.\b/iu) &amp;&amp; &quot;ſ &quot;.match(/.\b/iu)
-  &amp;&amp; !&quot;K &quot;.match(/.\B/iu) &amp;&amp; !&quot;ſ &quot;.match(/.\B/iu);</div>}
+&amp;&amp; &quot;K&quot;.match(/\w/iu) &amp;&amp; !&quot;K&quot;.match(/\W/iu)
+&amp;&amp; &quot;K &quot;.match(/.\b/iu) &amp;&amp; &quot;ſ &quot;.match(/.\b/iu)
+&amp;&amp; !&quot;K &quot;.match(/.\B/iu) &amp;&amp; !&quot;ſ &quot;.match(/.\B/iu);</div>}
               </div>
             </div>
           </td>
@@ -17274,7 +17274,7 @@ function bar() { return &quot;bar&quot;; }
 Object.prototype.__defineGetter__.call(obj, &quot;foo&quot;, bar);
 var prop = Object.getOwnPropertyDescriptor(obj, &quot;foo&quot;);
 return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
-  &amp;&amp; prop.enumerable;</div>}
+&amp;&amp; prop.enumerable;</div>}
               </div>
             </div>
           </td>
@@ -17299,7 +17299,7 @@ function bar() { return &quot;bar&quot;; }
 Object.prototype.__defineGetter__.call(obj, sym, bar);
 var prop = Object.getOwnPropertyDescriptor(obj, sym);
 return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
-  &amp;&amp; prop.enumerable;</div>}
+&amp;&amp; prop.enumerable;</div>}
               </div>
             </div>
           </td>
@@ -17321,9 +17321,9 @@ return prop.get === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
                 <div class="code">var key = '__accessors_test__';
 __defineGetter__.call(1, key, function(){});
 try {
-  __defineGetter__.call(null, key, function(){});
+__defineGetter__.call(null, key, function(){});
 } catch(e){
-  return true;
+return true;
 }</div>}
               </div>
             </div>
@@ -17348,7 +17348,7 @@ function bar() {}
 Object.prototype.__defineSetter__.call(obj, &quot;foo&quot;, bar);
 var prop = Object.getOwnPropertyDescriptor(obj, &quot;foo&quot;);
 return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
-  &amp;&amp; prop.enumerable;</div>}
+&amp;&amp; prop.enumerable;</div>}
               </div>
             </div>
           </td>
@@ -17373,7 +17373,7 @@ function bar(baz) {}
 Object.prototype.__defineSetter__.call(obj, sym, bar);
 var prop = Object.getOwnPropertyDescriptor(obj, sym);
 return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
-  &amp;&amp; prop.enumerable;</div>}
+&amp;&amp; prop.enumerable;</div>}
               </div>
             </div>
           </td>
@@ -17395,9 +17395,9 @@ return prop.set === bar &amp;&amp; !prop.writable &amp;&amp; prop.configurable
                 <div class="code">var key = '__accessors_test__';
 __defineSetter__.call(1, key, function(){});
 try {
-  __defineSetter__.call(null, key, function(){});
+__defineSetter__.call(null, key, function(){});
 } catch(e){
-  return true;
+return true;
 }</div>}
               </div>
             </div>
@@ -17418,13 +17418,13 @@ try {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  get foo() { return &quot;bar&quot;},
-  qux: 1
+get foo() { return &quot;bar&quot;},
+qux: 1
 };
 var foo = Object.prototype.__lookupGetter__.call(obj, &quot;foo&quot;);
 return foo() === &quot;bar&quot;
-  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;qux&quot;) === undefined
-  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+&amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;qux&quot;) === undefined
+&amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
               </div>
             </div>
           </td>
@@ -17444,13 +17444,13 @@ return foo() === &quot;bar&quot;
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  get foo() { return &quot;bar&quot;},
-  qux: 1
+get foo() { return &quot;bar&quot;},
+qux: 1
 };
 var foo = Object.prototype.__lookupGetter__.call(Object.create(obj), &quot;foo&quot;);
 return foo() === &quot;bar&quot;
-  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;qux&quot;) === undefined
-  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+&amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;qux&quot;) === undefined
+&amp;&amp; Object.prototype.__lookupGetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
               </div>
             </div>
           </td>
@@ -17476,8 +17476,8 @@ Object.defineProperty(obj, sym, { get: function() { return &quot;bar&quot;; }});
 Object.defineProperty(obj, sym2, { value: 1 });
 var foo = Object.prototype.__lookupGetter__.call(obj, sym);
 return foo() === &quot;bar&quot;
-  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
-  &amp;&amp; Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;</div>}
+&amp;&amp; Object.prototype.__lookupGetter__.call(obj, sym2) === undefined
+&amp;&amp; Object.prototype.__lookupGetter__.call(obj, Symbol()) === undefined;</div>}
               </div>
             </div>
           </td>
@@ -17498,9 +17498,9 @@ return foo() === &quot;bar&quot;
               <div class="fn">function(){
                 <div class="code">__lookupGetter__.call(1, 'key');
 try {
-  __lookupGetter__.call(null, 'key');
+__lookupGetter__.call(null, 'key');
 } catch(e){
-  return true;
+return true;
 }</div>}
               </div>
             </div>
@@ -17521,13 +17521,13 @@ try {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  set foo(baz) { return &quot;bar&quot;; },
-  qux: 1
+set foo(baz) { return &quot;bar&quot;; },
+qux: 1
 };
 var foo = Object.prototype.__lookupSetter__.call(obj, &quot;foo&quot;);
 return foo() === &quot;bar&quot;
-  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;qux&quot;) === undefined
-  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+&amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;qux&quot;) === undefined
+&amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
               </div>
             </div>
           </td>
@@ -17547,13 +17547,13 @@ return foo() === &quot;bar&quot;
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  set foo(baz) { return &quot;bar&quot;; },
-  qux: 1
+set foo(baz) { return &quot;bar&quot;; },
+qux: 1
 };
 var foo = Object.prototype.__lookupSetter__.call(Object.create(obj), &quot;foo&quot;);
 return foo() === &quot;bar&quot;
-  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;qux&quot;) === undefined
-  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
+&amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;qux&quot;) === undefined
+&amp;&amp; Object.prototype.__lookupSetter__.call(obj, &quot;baz&quot;) === undefined;</div>}
               </div>
             </div>
           </td>
@@ -17579,8 +17579,8 @@ Object.defineProperty(obj, sym, { set: function(baz) { return &quot;bar&quot;; }
 Object.defineProperty(obj, sym2, { value: 1 });
 var foo = Object.prototype.__lookupSetter__.call(obj, sym);
 return foo() === &quot;bar&quot;
-  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, sym2) === undefined
-  &amp;&amp; Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;</div>}
+&amp;&amp; Object.prototype.__lookupSetter__.call(obj, sym2) === undefined
+&amp;&amp; Object.prototype.__lookupSetter__.call(obj, Symbol()) === undefined;</div>}
               </div>
             </div>
           </td>
@@ -17601,9 +17601,9 @@ return foo() === &quot;bar&quot;
               <div class="fn">function(){
                 <div class="code">__lookupSetter__.call(1, 'key');
 try {
-  __lookupSetter__.call(null, 'key');
+__lookupSetter__.call(null, 'key');
 } catch(e){
-  return true;
+return true;
 }</div>}
               </div>
             </div>
@@ -17681,8 +17681,8 @@ return def + '' === &quot;foo&quot;;</div>}
 var gopd = [];
 var gpo = false;
 var p = new Proxy({}, {
-  getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },
-  getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }
+getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },
+getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }
 });
 Object.prototype.__lookupGetter__.call(p, &quot;foo&quot;);
 return gopd + '' === &quot;foo&quot; &amp;&amp; gpo;</div>}
@@ -17709,8 +17709,8 @@ return gopd + '' === &quot;foo&quot; &amp;&amp; gpo;</div>}
 var gopd = [];
 var gpo = false;
 var p = new Proxy({}, {
-  getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },
-  getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }
+getPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },
+getOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }
 });
 Object.prototype.__lookupSetter__.call(p, &quot;foo&quot;);
 return gopd + '' === &quot;foo&quot; &amp;&amp; gpo;</div>}
