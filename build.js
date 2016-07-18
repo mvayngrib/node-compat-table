@@ -54,7 +54,7 @@ var html = jade.renderFile('index.jade', {
   percent: function (nodeVersion, esVersion, unflagged) {
     var datasource = unflagged ? results.unflagged : results.flagged
     var data = $get(datasource, nodeVersion, esVersion)
-    return data ? data._percent.toFixed(2).substr(-2) : ''
+    return data ? data._percent === 1 ? '100' : data._percent.toFixed(2).substr(-2) : ''
   }
 })
 
