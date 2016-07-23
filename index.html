@@ -22,15 +22,15 @@
           <h1><a href="#ES2015">Node.js ES2015 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.1.281.77" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">00% complete</sub><sub class="unflagged">00% complete</sub></th>
-              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">96% complete</sub><sub class="unflagged">92% complete</sub></th>
+              <th title="v8: 5.1.281.77" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub></th>
+              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">95% complete</sub><sub class="unflagged">91% complete</sub></th>
               <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">58% complete</sub><sub class="unflagged">55% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">58% complete</sub><sub class="unflagged">55% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">58% complete</sub><sub class="unflagged">55% complete</sub></th>
-              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">32% complete</sub><sub class="unflagged">23% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
+              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">31% complete</sub><sub class="unflagged">23% complete</sub></th>
               <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">12% complete</sub><sub class="unflagged">07% complete</sub></th>
             </tr>
           </table>
@@ -9883,12 +9883,12 @@ try {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var fulfills = Promise.all([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;bar&quot;); }),
 ]);
 var rejects = Promise.all([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;qux&quot;); }),
 ]);
 var score = 0;
 fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
@@ -9900,15 +9900,15 @@ function check() {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Promise is not defined">Error</div><div class="Error flagged " title="Promise is not defined">Error</div></td>
         </tr>
         <tr>
@@ -9916,12 +9916,12 @@ function check() {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var fulfills = Promise.all(global.__createIterableObject([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;bar&quot;); }),
 ]));
 var rejects = Promise.all(global.__createIterableObject([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;qux&quot;); }),
 ]));
 var score = 0;
 fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
@@ -9933,14 +9933,14 @@ function check() {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Promise is not defined">Error</div><div class="Error flagged " title="Promise is not defined">Error</div></td>
         </tr>
@@ -9949,12 +9949,12 @@ function check() {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var fulfills = Promise.race([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;bar&quot;); }),
 ]);
 var rejects = Promise.race([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;qux&quot;); }),
 ]);
 var score = 0;
 fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
@@ -9966,15 +9966,15 @@ function check() {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Promise is not defined">Error</div><div class="Error flagged " title="Promise is not defined">Error</div></td>
         </tr>
         <tr>
@@ -9982,12 +9982,12 @@ function check() {
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var fulfills = Promise.race(global.__createIterableObject([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;bar&quot;); }),
 ]));
 var rejects = Promise.race(global.__createIterableObject([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;qux&quot;); }),
 ]));
 var score = 0;
 fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
@@ -9999,14 +9999,14 @@ function check() {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Promise is not defined">Error</div><div class="Error flagged " title="Promise is not defined">Error</div></td>
         </tr>
@@ -13319,12 +13319,12 @@ return c instanceof C &amp;&amp; c instanceof Promise &amp;&amp; Object.getProto
               <div class="fn">function(){
                 <div class="code">class P extends Promise {}
 var fulfills = P.all([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,100,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;foo&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;bar&quot;); }),
 ]);
 var rejects = P.all([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 100,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;baz&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;qux&quot;); }),
 ]);
 var score = +(fulfills instanceof P);
 fulfills.then(function(result) { score += (result + &quot;&quot; === &quot;foo,bar&quot;); check(); });
@@ -13336,14 +13336,14 @@ function check() {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
         </tr>
@@ -13353,12 +13353,12 @@ function check() {
               <div class="fn">function(){
                 <div class="code">class P extends Promise {}
 var fulfills = P.race([
-  new Promise(function(resolve)   { setTimeout(resolve,200,&quot;foo&quot;); }),
-  new Promise(function(_, reject) { setTimeout(reject, 300,&quot;bar&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,1000,&quot;foo&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 2000,&quot;bar&quot;); }),
 ]);
 var rejects = P.race([
-  new Promise(function(_, reject) { setTimeout(reject, 200,&quot;baz&quot;); }),
-  new Promise(function(resolve)   { setTimeout(resolve,300,&quot;qux&quot;); }),
+  new Promise(function(_, reject) { setTimeout(reject, 1000,&quot;baz&quot;); }),
+  new Promise(function(resolve)   { setTimeout(resolve,2000,&quot;qux&quot;); }),
 ]);
 var score = +(fulfills instanceof P);
 fulfills.then(function(result) { score += (result === &quot;foo&quot;); check(); });
@@ -13370,14 +13370,14 @@ function check() {
               </div>
             </div>
           </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
         </tr>
@@ -16986,16 +16986,16 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
           <h1><a href="#ES2017">Node.js ES2017 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.1.281.77" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">52% complete</sub><sub class="unflagged">41% complete</sub></th>
-              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">41% complete</sub><sub class="unflagged">41% complete</sub></th>
-              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">37% complete</sub><sub class="unflagged">37% complete</sub></th>
-              <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">22% complete</sub><sub class="unflagged">22% complete</sub></th>
+              <th title="v8: 5.1.281.77" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">48% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">38% complete</sub><sub class="unflagged">38% complete</sub></th>
+              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">34% complete</sub><sub class="unflagged">34% complete</sub></th>
+              <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">21% complete</sub><sub class="unflagged">21% complete</sub></th>
             </tr>
           </table>
         </header>
@@ -17517,6 +17517,29 @@ return true;
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">__lookupGetter__, data properties can shadow accessors
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a = { };
+var b = Object.create(a);
+b.foo = 1;
+a.__defineGetter__(&quot;foo&quot;, function () {})
+return b.__lookupGetter__(&quot;foo&quot;) === undefined</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
           <td class="feature subsub">__lookupSetter__
             <div class="info">?
               <div class="fn">function(){
@@ -17605,6 +17628,29 @@ __lookupSetter__.call(null, 'key');
 } catch(e){
 return true;
 }</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">__lookupSetter__, data properties can shadow accessors
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a = { };
+var b = Object.create(a);
+b.foo = 1;
+a.__defineSetter__(&quot;foo&quot;, function () {})
+return b.__lookupSetter__(&quot;foo&quot;) === undefined</div>}
               </div>
             </div>
           </td>
