@@ -54,9 +54,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 670,
+    "_successful": 671,
     "_count": 675,
-    "_percent": 0.9925925925925926,
+    "_percent": 0.9940740740740741,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
     "syntax›default function parameters›basic functionality": true,
