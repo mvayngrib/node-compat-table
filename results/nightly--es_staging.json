@@ -1,5 +1,5 @@
 {
-  "_version": "7.0.0-nightly20160722b3127df59a--es_staging",
+  "_version": "7.0.0-nightly20160725809aabcc13--es_staging",
   "_v8": "5.1.281.77",
   "ES2017": {
     "_successful": 14,
@@ -54,9 +54,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 671,
+    "_successful": 670,
     "_count": 675,
-    "_percent": 0.9940740740740741,
+    "_percent": 0.9925925925925926,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
     "syntax›default function parameters›basic functionality": true,
