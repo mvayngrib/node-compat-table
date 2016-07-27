@@ -455,7 +455,7 @@
     "built-ins›Promise›Promise.prototype isn't an instance": true,
     "built-ins›Promise›Promise.all": false,
     "built-ins›Promise›Promise.all, generic iterables": false,
-    "built-ins›Promise›Promise.race": true,
+    "built-ins›Promise›Promise.race": false,
     "built-ins›Promise›Promise.race, generic iterables": false,
     "built-ins›Promise›Promise[Symbol.species]": "Cannot use 'in' operator to search for 'get' in undefined",
     "built-ins›Symbol›basic functionality": true,
