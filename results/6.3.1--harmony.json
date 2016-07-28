@@ -456,7 +456,7 @@
     "built-ins›Promise›Promise.all": false,
     "built-ins›Promise›Promise.all, generic iterables": false,
     "built-ins›Promise›Promise.race": false,
-    "built-ins›Promise›Promise.race, generic iterables": false,
+    "built-ins›Promise›Promise.race, generic iterables": true,
     "built-ins›Promise›Promise[Symbol.species]": true,
     "built-ins›Symbol›basic functionality": true,
     "built-ins›Symbol›typeof support": true,

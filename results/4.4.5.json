@@ -56,7 +56,7 @@
   "ES2015": {
     "_successful": 364,
     "_count": 675,
-    "_percent": 0.5392592592592592,
+    "_percent": 0.5377777777777778,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": "Unexpected token =",
