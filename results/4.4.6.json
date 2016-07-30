@@ -3,11 +3,12 @@
   "_v8": "4.5.103.36",
   "ES2017": {
     "_successful": 10,
-    "_count": 34,
-    "_percent": 0.29411764705882354,
+    "_count": 35,
+    "_percent": 0.2857142857142857,
     "features›Object.values": "Object.values is not a function",
     "features›Object.entries": "Object.entries is not a function",
-    "features›Object.getOwnPropertyDescriptors": "Object.getOwnPropertyDescriptors is not a function",
+    "features›Object.getOwnPropertyDescriptors›basic support": "Object.getOwnPropertyDescriptors is not a function",
+    "features›Object.getOwnPropertyDescriptors›doesn't provide undefined descriptors": "Proxy is not defined",
     "features›String padding›String.prototype.padStart": "\"hello\".padStart is not a function",
     "features›String padding›String.prototype.padEnd": "\"hello\".padEnd is not a function",
     "features›trailing commas in function syntax›in parameter lists": "Unexpected token )",
@@ -59,7 +60,7 @@
     "misc›Proxy internal calls, Array.prototype.includes": "Proxy is not defined"
   },
   "ES2015": {
-    "_successful": 364,
+    "_successful": 363,
     "_count": 675,
     "_percent": 0.5377777777777778,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
@@ -461,7 +462,7 @@
     "built-ins›Promise›Promise.all": false,
     "built-ins›Promise›Promise.all, generic iterables": false,
     "built-ins›Promise›Promise.race": false,
-    "built-ins›Promise›Promise.race, generic iterables": true,
+    "built-ins›Promise›Promise.race, generic iterables": false,
     "built-ins›Promise›Promise[Symbol.species]": "Cannot use 'in' operator to search for 'get' in undefined",
     "built-ins›Symbol›basic functionality": true,
     "built-ins›Symbol›typeof support": true,
