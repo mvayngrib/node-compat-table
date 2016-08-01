@@ -60,9 +60,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": "Proxy is not defined"
   },
   "ES2015": {
-    "_successful": 212,
+    "_successful": 213,
     "_count": 676,
-    "_percent": 0.3136094674556213,
+    "_percent": 0.3150887573964497,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": "Maximum call stack size exceeded",
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": "Maximum call stack size exceeded",
     "syntax›default function parameters›basic functionality": "Unexpected token =",
@@ -459,9 +459,9 @@
     "built-ins›Promise›basic functionality": true,
     "built-ins›Promise›constructor requires new": true,
     "built-ins›Promise›Promise.prototype isn't an instance": true,
-    "built-ins›Promise›Promise.all": false,
+    "built-ins›Promise›Promise.all": true,
     "built-ins›Promise›Promise.all, generic iterables": false,
-    "built-ins›Promise›Promise.race": false,
+    "built-ins›Promise›Promise.race": true,
     "built-ins›Promise›Promise.race, generic iterables": false,
     "built-ins›Promise›Promise[Symbol.species]": "Cannot use 'in' operator to search for 'get' in undefined",
     "built-ins›Symbol›basic functionality": true,
