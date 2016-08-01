@@ -167,7 +167,7 @@
     "functions›arrow functions›\"this\" unchanged by call or apply": "var d = { x : \"foo\", y : function() { return () => this.x; }};\nvar e = { x : \"bar\" };\nreturn d.y().call(e) === \"foo\" && d.y().apply(e) === \"foo\";",
     "functions›arrow functions›can't be bound, can be curried": "var d = { x : \"bar\", y : function() { return z => this.x + z; }};\nvar e = { x : \"baz\" };\nreturn d.y().bind(e, \"ley\")() === \"barley\";",
     "functions›arrow functions›lexical \"arguments\" binding": "var f = (function() { return z => arguments[0]; }(5));\nreturn f(6) === 5;",
-    "functions›arrow functions›no line break between params and <code>=></code>": "return (() => {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n})();",
+    "functions›arrow functions›no line break between params and =>": "return (() => {\n  try { Function(\"x\\n => 2\")(); } catch(e) { return true; }\n})();",
     "functions›arrow functions›correct precedence": "return (() => {\n  try { Function(\"0 || () => 2\")(); } catch(e) { return true; }\n})();",
     "functions›arrow functions›no \"prototype\" property": "var a = () => 5;\nreturn !a.hasOwnProperty(\"prototype\");",
     "functions›arrow functions›lexical \"super\" binding in constructors": "var received;\n\nclass B {\n  constructor (arg) {\n    received = arg;\n  }\n}\nclass C extends B {\n  constructor () {\n    var callSuper = () => super('foo');\n    callSuper();\n  }\n}\nreturn new C instanceof C && received === 'foo'",

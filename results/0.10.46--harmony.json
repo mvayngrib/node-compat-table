@@ -230,7 +230,7 @@
     "functions›arrow functions›\"this\" unchanged by call or apply": "Unexpected token )",
     "functions›arrow functions›can't be bound, can be curried": "Unexpected token >",
     "functions›arrow functions›lexical \"arguments\" binding": "Unexpected token >",
-    "functions›arrow functions›no line break between params and <code>=></code>": "Unexpected token )",
+    "functions›arrow functions›no line break between params and =>": "Unexpected token )",
     "functions›arrow functions›correct precedence": "Unexpected token )",
     "functions›arrow functions›no \"prototype\" property": "Unexpected token )",
     "functions›arrow functions›lexical \"super\" binding in constructors": "Unexpected reserved word",

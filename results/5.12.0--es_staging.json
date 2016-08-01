@@ -230,7 +230,7 @@
     "functions›arrow functions›\"this\" unchanged by call or apply": true,
     "functions›arrow functions›can't be bound, can be curried": true,
     "functions›arrow functions›lexical \"arguments\" binding": true,
-    "functions›arrow functions›no line break between params and <code>=></code>": true,
+    "functions›arrow functions›no line break between params and =>": true,
     "functions›arrow functions›correct precedence": false,
     "functions›arrow functions›no \"prototype\" property": true,
     "functions›arrow functions›lexical \"super\" binding in constructors": true,
