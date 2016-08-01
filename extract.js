@@ -18,10 +18,10 @@ tests.forEach(function (test) {
   if (test.subtests) {
     test.subtests.forEach(function (subtest) {
       name[2] = subtest.name
-      testers[name.join('›')] = getScript(subtest.exec)
+      testers[name.join('›').replace(/<[^>]+>/g, '')] = getScript(subtest.exec)
     })
   } else {
-    testers[name.join('›')] = getScript(test.exec)
+    testers[name.join('›').replace(/<[^>]+>/g, '')] = getScript(test.exec)
   }
 
   function getScript (fn) {
