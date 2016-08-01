@@ -100,7 +100,7 @@ function runAsync (script, cb) {
 
     timer = setTimeout(function () {
       cb(false)
-    }, 500)
+    }, 5000)
   } catch (e) {
     clearTimeout(timer)
     process.nextTick(function () {
