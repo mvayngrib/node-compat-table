@@ -70,7 +70,7 @@
     "syntax›destructuring, declarations›with objects": "var {c, x:d, e} = {c:7, x:8};\nreturn c === 7 && d === 8 && e === undefined;",
     "syntax›destructuring, declarations›object destructuring with primitives": "var {toFixed} = 2;\nvar {slice} = '';\nreturn toFixed === Number.prototype.toFixed\n  && slice === String.prototype.slice;",
     "syntax›destructuring, declarations›trailing commas in object patterns": "var {a,} = {a:1};\nreturn a === 1;",
-    "syntax›destructuring, declarations›throws on null and undefined": "try {\n  var {a} = null;\n  return false;\n} catch(e) {}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {}\nreturn true;",
+    "syntax›destructuring, declarations›throws on null and undefined": "try {\n  var {a} = null;\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\ntry {\n  var {b} = undefined;\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\nreturn true;",
     "syntax›destructuring, declarations›computed properties": "var qux = \"corge\";\nvar { [qux]: grault } = { corge: \"garply\" };\nreturn grault === \"garply\";",
     "syntax›destructuring, declarations›multiples in a single var statement": "var [a,b] = [5,6], {c,d} = {c:7,d:8};\nreturn a === 5 && b === 6 && c === 7 && d === 8;",
     "syntax›destructuring, declarations›nested": "var [e, {x:f, g}] = [9, {x:10}];\nvar {h, x:[i]} = {h:11, x:[12]};\nreturn e === 9 && f === 10 && g === undefined\n  && h === 11 && i === 12;",
