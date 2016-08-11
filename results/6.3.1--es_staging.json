@@ -60,9 +60,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 650,
-    "_count": 676,
-    "_percent": 0.9615384615384616,
+    "_successful": 651,
+    "_count": 677,
+    "_percent": 0.9615952732644018,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
     "syntax›default function parameters›basic functionality": true,
@@ -473,7 +473,8 @@
     "built-ins›Symbol›can convert with String()": true,
     "built-ins›Symbol›new Symbol() throws": true,
     "built-ins›Symbol›Object(symbol)": true,
-    "built-ins›Symbol›JSON.stringify ignores symbols": true,
+    "built-ins›Symbol›JSON.stringify ignores symbol primitives": true,
+    "built-ins›Symbol›JSON.stringify ignores symbol objects": true,
     "built-ins›Symbol›global symbol registry": true,
     "built-ins›well-known symbols›Symbol.hasInstance": true,
     "built-ins›well-known symbols›Symbol.isConcatSpreadable": true,
