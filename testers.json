@@ -97,7 +97,7 @@
     "syntax›destructuring, assignment›object destructuring expression": "var a, b, obj = { a:1, b:2 };\nreturn ({a,b} = obj) === obj;",
     "syntax›destructuring, assignment›parenthesised left-hand-side is a syntax error": "var a, b;\n({a,b} = {a:1,b:2});\ntry {\n  eval(\"({a,b}) = {a:3,b:4};\");\n}\ncatch(e) {\n  return a === 1 && b === 2;\n}",
     "syntax›destructuring, assignment›chained object destructuring": "var a,b,c,d;\n({a,b} = {c,d} = {a:1,b:2,c:3,d:4});\nreturn a === 1 && b === 2 && c === 3 && d === 4;",
-    "syntax›destructuring, assignment›throws on null and undefined": "var a,b;\ntry {\n  ({a} = null);\n  return false;\n} catch(e) {}\ntry {\n  ({b} = undefined);\n  return false;\n} catch(e) {}\nreturn true;",
+    "syntax›destructuring, assignment›throws on null and undefined": "var a,b;\ntry {\n  ({a} = null);\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\ntry {\n  ({b} = undefined);\n  return false;\n} catch(e) {\n  if (!(e instanceof TypeError))\n    return false;\n}\nreturn true;",
     "syntax›destructuring, assignment›computed properties": "var grault, qux = \"corge\";\n({ [qux]: grault } = { corge: \"garply\" });\nreturn grault === \"garply\";",
     "syntax›destructuring, assignment›nested": "var e,f,g,h,i;\n[e, {x:f, g}] = [9, {x:10}];\n({h, x:[i]} = {h:11, x:[12]});\nreturn e === 9 && f === 10 && g === undefined\n  && h === 11 && i === 12;",
     "syntax›destructuring, assignment›rest": "var a,b,c,d;\n[a, ...b] = [3, 4, 5];\n[c, ...d] = [6];\nreturn a === 3 && b instanceof Array && (b + \"\") === \"4,5\" &&\n   c === 6 && d instanceof Array && d.length === 0;",
