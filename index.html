@@ -22,14 +22,14 @@
           <h1><a href="#ES2015">Node.js ES2015 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.1.281.79" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub></th>
-              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">95% complete</sub><sub class="unflagged">91% complete</sub></th>
+              <th title="v8: 5.1.281.80" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub></th>
+              <th title="v8: 5.0.71.60" class="version v6">6.4.0<sub class="flagged">95% complete</sub><sub class="unflagged">91% complete</sub></th>
               <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">59% complete</sub><sub class="unflagged">58% complete</sub></th>
+              <th title="v8: 4.5.103.37" class="version v4">4.5.0<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
               <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
               <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">57% complete</sub><sub class="unflagged">54% complete</sub></th>
               <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">31% complete</sub><sub class="unflagged">23% complete</sub></th>
               <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">11% complete</sub><sub class="unflagged">6% complete</sub></th>
             </tr>
@@ -1624,11 +1624,17 @@ return a === 1;</div>}
                 <div class="code">try {
   var {a} = null;
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 try {
   var {b} = undefined;
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 return true;</div>}
               </div>
             </div>
@@ -2229,11 +2235,17 @@ return a === 1 &amp;&amp; b === 2 &amp;&amp; c === 3 &amp;&amp; d === 4;</div>}
 try {
   ({a} = null);
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 try {
   ({b} = undefined);
   return false;
-} catch(e) {}
+} catch(e) {
+  if (!(e instanceof TypeError))
+    return false;
+}
 return true;</div>}
               </div>
             </div>
@@ -3679,11 +3691,15 @@ return passed;</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">'use strict';
+if (f() !== 1) return false;
 function f() { return 1; }
 {
+  if (f() !== 2) return false;
   function f() { return 2; }
+  if (f() !== 2) return false;
 }
-return f() === 1;</div>}
+if (f() !== 1) return false;
+return true;</div>}
               </div>
             </div>
           </td>
@@ -10264,10 +10280,10 @@ return typeof symbolObject === &quot;object&quot; &amp;&amp;
           <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
         </tr>
         <tr>
-          <td class="feature subsub">JSON.stringify ignores symbols
+          <td class="feature subsub">JSON.stringify ignores symbol primitives
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">var object = {foo: Symbol()};
+                <div class="code">var object = { foo: Symbol() };
 object[Symbol()] = 1;
 var array = [Symbol()];
 return JSON.stringify(object) === '{}' &amp;&amp; JSON.stringify(array) === '[null]' &amp;&amp; JSON.stringify(Symbol()) === undefined;</div>}
@@ -10283,6 +10299,38 @@ return JSON.stringify(object) === '{}' &amp;&amp; JSON.stringify(array) === '[nu
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">JSON.stringify ignores symbol objects
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var testSymbolObject = function (sym) {
+  var object = { foo: sym };
+  try {
+    // some browsers throw a TypeError when setting symbol object keys.
+    // this isn't part of this test, so, ignore it if so.
+    object[sym] = 1;
+  } catch (e) {} // some browsers throw a TypeError when setting symbol object keys.
+  var array = [sym];
+  return JSON.stringify(object) === '{&quot;foo&quot;:{}}' &amp;&amp; JSON.stringify(array) === '[{}]' &amp;&amp; JSON.stringify(sym) === '{}';
+};
+var objSym = Object(Symbol());
+var symNoToJSON = Object(Symbol());
+Object.defineProperty(symNoToJSON, 'toJSON', { enumerable: false, value: null }); // ensure it overrides the prototype, but is not callable
+return testSymbolObject(objSym) &amp;&amp; testSymbolObject(symNoToJSON);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
           <td class="result"><div class="Error unflagged " title="Symbol is not defined">Error</div><div class="Error flagged " title="Symbol is not defined">Error</div></td>
         </tr>
         <tr>
@@ -15791,10 +15839,11 @@ return this === undefined &amp;&amp; ({ a:1, a:1 }).a === 1;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
         </tr>
         <tr>
-          <td class="feature subsub">no assignments allowed in for-in head
+          <td class="feature subsub">no assignments allowed in for-in head in strict mode
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">try {
+                <div class="code">'use strict';
+try {
   eval('for (var i = 0 in {}) {}');
 }
 catch(e) {
@@ -15818,8 +15867,9 @@ catch(e) {
           <td class="feature subsub">accessors aren't constructors
             <div class="info">?
               <div class="fn">function(){
-                <div class="code">try {
-  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
+                <div class="code">var f = (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;
+try {
+  new f;
 } catch(e) {
   return true;
 }</div>}
@@ -16636,14 +16686,14 @@ return a === 3;</div>}
           <h1><a href="#ES2016">Node.js ES2016 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.1.281.79" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">76% complete</sub></th>
-              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">76% complete</sub><sub class="unflagged">76% complete</sub></th>
+              <th title="v8: 5.1.281.80" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">76% complete</sub></th>
+              <th title="v8: 5.0.71.60" class="version v6">6.4.0<sub class="flagged">76% complete</sub><sub class="unflagged">76% complete</sub></th>
               <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">30% complete</sub><sub class="unflagged">7% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">30% complete</sub><sub class="unflagged">7% complete</sub></th>
               <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">30% complete</sub><sub class="unflagged">7% complete</sub></th>
+              <th title="v8: 4.5.103.37" class="version v4">4.5.0<sub class="flagged">7% complete</sub><sub class="unflagged">7% complete</sub></th>
               <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">7% complete</sub><sub class="unflagged">7% complete</sub></th>
               <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">7% complete</sub><sub class="unflagged">7% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">7% complete</sub><sub class="unflagged">7% complete</sub></th>
               <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">7% complete</sub><sub class="unflagged">0% complete</sub></th>
               <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">0% complete</sub><sub class="unflagged">0% complete</sub></th>
             </tr>
@@ -17017,16 +17067,16 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
           <h1><a href="#ES2017">Node.js ES2017 Support</a></h1>
           <table class="headings">
             <tr>
-              <th title="v8: 5.1.281.79" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">40% complete</sub><sub class="unflagged">31% complete</sub></th>
-              <th title="v8: 5.0.71.57" class="version v6">6.3.1<sub class="flagged">31% complete</sub><sub class="unflagged">31% complete</sub></th>
-              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 4.5.103.35" class="version v4">4.4.5<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">28% complete</sub><sub class="unflagged">28% complete</sub></th>
-              <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">17% complete</sub><sub class="unflagged">17% complete</sub></th>
+              <th title="v8: 5.1.281.80" class="version nightly">7.0.0<sup>Nightly!</sup><sub class="flagged">41% complete</sub><sub class="unflagged">33% complete</sub></th>
+              <th title="v8: 5.0.71.60" class="version v6">6.4.0<sub class="flagged">33% complete</sub><sub class="unflagged">33% complete</sub></th>
+              <th title="v8: 4.6.85.32" class="version v5">5.12.0<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.1<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 4.6.85.31" class="version v5">5.11.0<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 4.5.103.37" class="version v4">4.5.0<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.7<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 4.5.103.36" class="version v4">4.4.6<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 3.28.71.19" class="version v0">0.12.15<sub class="flagged">30% complete</sub><sub class="unflagged">30% complete</sub></th>
+              <th title="v8: 3.14.5.9" class="version v0">0.10.46<sub class="flagged">19% complete</sub><sub class="unflagged">19% complete</sub></th>
             </tr>
           </table>
         </header>
@@ -17946,6 +17996,33 @@ return gopd + '' === &quot;foo&quot; &amp;&amp; gpo;</div>}
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="Proxy is not defined">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Proxy is not defined">Error</div><div class="Error flagged " title="object is not a function">Error</div></td>
+        </tr>
+        <tr>
+          <td colspan="11" class="feature sub">
+            <h3>
+              <div id="" class="hash"></div><a href="#"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">assignments allowed in for-in head in non-strict mode
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">for (var i = 0 in {}) {}
+return i === 0;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
         </tr>
       </table>
     </article>

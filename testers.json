@@ -159,7 +159,7 @@
     "bindings›let›for loop statement scope (strict mode)": "'use strict';\nlet baz = 1;\nfor(let baz = 0; false;) {}\nreturn baz === 1;",
     "bindings›let›temporal dead zone (strict mode)": "'use strict';\nvar passed = (function(){ try {  qux; } catch(e) { return true; }}());\nfunction fn() { passed &= qux === 456; }\nlet qux = 456;\nfn();\nreturn passed;",
     "bindings›let›for/for-in loop iteration scope (strict mode)": "'use strict';\nlet scopes = [];\nfor(let i = 0; i < 2; i++) {\n  scopes.push(function(){ return i; });\n}\nlet passed = (scopes[0]() === 0 && scopes[1]() === 1);\n\nscopes = [];\nfor(let i in { a:1, b:1 }) {\n  scopes.push(function(){ return i; });\n}\npassed &= (scopes[0]() === \"a\" && scopes[1]() === \"b\");\nreturn passed;",
-    "bindings›block-level function declaration": "'use strict';\nfunction f() { return 1; }\n{\n  function f() { return 2; }\n}\nreturn f() === 1;",
+    "bindings›block-level function declaration": "'use strict';\nif (f() !== 1) return false;\nfunction f() { return 1; }\n{\n  if (f() !== 2) return false;\n  function f() { return 2; }\n  if (f() !== 2) return false;\n}\nif (f() !== 1) return false;\nreturn true;",
     "functions›arrow functions›0 parameters": "return (() => 5)() === 5;",
     "functions›arrow functions›1 parameter, no brackets": "var b = x => x + \"foo\";\nreturn (b(\"fee fie foe \") === \"fee fie foe foo\");",
     "functions›arrow functions›multiple parameters": "var c = (v, w, x, y, z) => \"\" + v + w + x + y + z;\nreturn (c(6, 5, 4, 3, 2) === \"65432\");",
@@ -642,8 +642,8 @@
     "misc›miscellaneous›no escaped reserved words as identifiers": "var \\u0061;\ntry {\n  eval('var v\\\\u0061r');\n} catch(e) {\n  return true;\n}",
     "misc›miscellaneous›duplicate property names in strict mode": "'use strict';\nreturn this === undefined && ({ a:1, a:1 }).a === 1;",
     "misc›miscellaneous›no semicolon needed after do-while": "do {} while (false) return true;",
-    "misc›miscellaneous›no assignments allowed in for-in head": "try {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}",
-    "misc›miscellaneous›accessors aren't constructors": "try {\n  new (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\n} catch(e) {\n  return true;\n}",
+    "misc›miscellaneous›no assignments allowed in for-in head in strict mode": "'use strict';\ntry {\n  eval('for (var i = 0 in {}) {}');\n}\ncatch(e) {\n  return true;\n}",
+    "misc›miscellaneous›accessors aren't constructors": "var f = (Object.getOwnPropertyDescriptor({get a(){}}, 'a')).get;\ntry {\n  new f;\n} catch(e) {\n  return true;\n}",
     "misc›miscellaneous›Invalid Date": "return new Date(NaN) + \"\" === \"Invalid Date\";",
     "misc›miscellaneous›RegExp constructor can alter flags": "return new RegExp(/./im, \"g\").global === true;",
     "misc›miscellaneous›RegExp.prototype.toString generic and uses \"flags\" property": "return RegExp.prototype.toString.call({source: 'foo', flags: 'bar'}) === '/foo/bar';",
@@ -728,6 +728,7 @@
     "annex b›Proxy internal calls, getter/setter methods›__defineGetter__": "// Object.prototype.__defineGetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]\nvar def = [];\nvar p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});\nObject.prototype.__defineGetter__.call(p, \"foo\", Object);\nreturn def + '' === \"foo\";",
     "annex b›Proxy internal calls, getter/setter methods›__defineSetter__": "// Object.prototype.__defineSetter__ -> DefinePropertyOrThrow -> [[DefineOwnProperty]]\nvar def = [];\nvar p = new Proxy({}, { defineProperty: function(o, v, desc) { def.push(v); Object.defineProperty(o, v, desc); return true; }});\nObject.prototype.__defineSetter__.call(p, \"foo\", Object);\nreturn def + '' === \"foo\";",
     "annex b›Proxy internal calls, getter/setter methods›__lookupGetter__": "// Object.prototype.__lookupGetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupGetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupGetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;",
-    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": "// Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupSetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;"
+    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": "// Object.prototype.__lookupSetter__ -> [[GetOwnProperty]]\n// Object.prototype.__lookupSetter__ -> [[GetPrototypeOf]]\nvar gopd = [];\nvar gpo = false;\nvar p = new Proxy({}, {\ngetPrototypeOf: function(o) { gpo = true; return Object.getPrototypeOf(o); },\ngetOwnPropertyDescriptor: function(o, v) { gopd.push(v); return Object.getOwnPropertyDescriptor(o, v); }\n});\nObject.prototype.__lookupSetter__.call(p, \"foo\");\nreturn gopd + '' === \"foo\" && gpo;",
+    "annex b›assignments allowed in for-in head in non-strict mode": "for (var i = 0 in {}) {}\nreturn i === 0;"
   }
 }

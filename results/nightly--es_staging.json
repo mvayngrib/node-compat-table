@@ -1,10 +1,10 @@
 {
-  "_version": "7.0.0-nightly201608074c86fa30d8--es_staging",
-  "_v8": "5.1.281.79",
+  "_version": "7.0.0-nightly20160816647826017e--es_staging",
+  "_v8": "5.1.281.80",
   "ES2017": {
-    "_successful": 14,
-    "_count": 35,
-    "_percent": 0.4,
+    "_successful": 15,
+    "_count": 36,
+    "_percent": 0.4166666666666667,
     "features›Object.values": true,
     "features›Object.entries": true,
     "features›Object.getOwnPropertyDescriptors›basic support": true,
@@ -39,7 +39,8 @@
     "annex b›Proxy internal calls, getter/setter methods›__defineGetter__": "Object.defineProperty called on non-object",
     "annex b›Proxy internal calls, getter/setter methods›__defineSetter__": "Object.defineProperty called on non-object",
     "annex b›Proxy internal calls, getter/setter methods›__lookupGetter__": false,
-    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": false
+    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": false,
+    "annex b›assignments allowed in for-in head in non-strict mode": true
   },
   "ES2016": {
     "_successful": 13,
@@ -60,9 +61,9 @@
     "misc›Proxy internal calls, Array.prototype.includes": true
   },
   "ES2015": {
-    "_successful": 674,
-    "_count": 676,
-    "_percent": 0.9970414201183432,
+    "_successful": 675,
+    "_count": 677,
+    "_percent": 0.9970457902511078,
     "optimisation›proper tail calls (tail call optimisation)›direct recursion": true,
     "optimisation›proper tail calls (tail call optimisation)›mutual recursion": true,
     "syntax›default function parameters›basic functionality": true,
@@ -473,7 +474,8 @@
     "built-ins›Symbol›can convert with String()": true,
     "built-ins›Symbol›new Symbol() throws": true,
     "built-ins›Symbol›Object(symbol)": true,
-    "built-ins›Symbol›JSON.stringify ignores symbols": true,
+    "built-ins›Symbol›JSON.stringify ignores symbol primitives": true,
+    "built-ins›Symbol›JSON.stringify ignores symbol objects": true,
     "built-ins›Symbol›global symbol registry": true,
     "built-ins›well-known symbols›Symbol.hasInstance": true,
     "built-ins›well-known symbols›Symbol.isConcatSpreadable": true,
@@ -704,7 +706,7 @@
     "misc›miscellaneous›no escaped reserved words as identifiers": true,
     "misc›miscellaneous›duplicate property names in strict mode": true,
     "misc›miscellaneous›no semicolon needed after do-while": true,
-    "misc›miscellaneous›no assignments allowed in for-in head": true,
+    "misc›miscellaneous›no assignments allowed in for-in head in strict mode": true,
     "misc›miscellaneous›accessors aren't constructors": true,
     "misc›miscellaneous›Invalid Date": true,
     "misc›miscellaneous›RegExp constructor can alter flags": true,

@@ -2,9 +2,9 @@
   "_version": "5.11.0--es_staging",
   "_v8": "4.6.85.31",
   "ES2017": {
-    "_successful": 10,
-    "_count": 35,
-    "_percent": 0.2857142857142857,
+    "_successful": 11,
+    "_count": 36,
+    "_percent": 0.3055555555555556,
     "features›Object.values": "Object.values is not a function",
     "features›Object.entries": "Object.entries is not a function",
     "features›Object.getOwnPropertyDescriptors›basic support": "Object.getOwnPropertyDescriptors is not a function",
@@ -39,7 +39,8 @@
     "annex b›Proxy internal calls, getter/setter methods›__defineGetter__": "Proxy is not defined",
     "annex b›Proxy internal calls, getter/setter methods›__defineSetter__": "Proxy is not defined",
     "annex b›Proxy internal calls, getter/setter methods›__lookupGetter__": "Proxy is not defined",
-    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": "Proxy is not defined"
+    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": "Proxy is not defined",
+    "annex b›assignments allowed in for-in head in non-strict mode": true
   },
   "ES2016": {
     "_successful": 4,
@@ -705,7 +706,7 @@
     "misc›miscellaneous›no escaped reserved words as identifiers": false,
     "misc›miscellaneous›duplicate property names in strict mode": true,
     "misc›miscellaneous›no semicolon needed after do-while": true,
-    "misc›miscellaneous›no assignments allowed in for-in head": true,
+    "misc›miscellaneous›no assignments allowed in for-in head in strict mode": true,
     "misc›miscellaneous›accessors aren't constructors": true,
     "misc›miscellaneous›Invalid Date": true,
     "misc›miscellaneous›RegExp constructor can alter flags": "Cannot supply flags when constructing one RegExp from another",

@@ -2,9 +2,9 @@
   "_version": "0.10.46--harmony",
   "_v8": "3.14.5.9",
   "ES2017": {
-    "_successful": 6,
-    "_count": 35,
-    "_percent": 0.17142857142857143,
+    "_successful": 7,
+    "_count": 36,
+    "_percent": 0.19444444444444445,
     "features›Object.values": "Object function Object() { [native code] } has no method 'values'",
     "features›Object.entries": "Object function Object() { [native code] } has no method 'entries'",
     "features›Object.getOwnPropertyDescriptors›basic support": "Object function Object() { [native code] } has no method 'getOwnPropertyDescriptors'",
@@ -39,7 +39,8 @@
     "annex b›Proxy internal calls, getter/setter methods›__defineGetter__": "object is not a function",
     "annex b›Proxy internal calls, getter/setter methods›__defineSetter__": "object is not a function",
     "annex b›Proxy internal calls, getter/setter methods›__lookupGetter__": "object is not a function",
-    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": "object is not a function"
+    "annex b›Proxy internal calls, getter/setter methods›__lookupSetter__": "object is not a function",
+    "annex b›assignments allowed in for-in head in non-strict mode": true
   },
   "ES2016": {
     "_successful": 0,
@@ -705,7 +706,7 @@
     "misc›miscellaneous›no escaped reserved words as identifiers": false,
     "misc›miscellaneous›duplicate property names in strict mode": "Duplicate data property in object literal not allowed in strict mode",
     "misc›miscellaneous›no semicolon needed after do-while": true,
-    "misc›miscellaneous›no assignments allowed in for-in head": false,
+    "misc›miscellaneous›no assignments allowed in for-in head in strict mode": false,
     "misc›miscellaneous›accessors aren't constructors": false,
     "misc›miscellaneous›Invalid Date": true,
     "misc›miscellaneous›RegExp constructor can alter flags": "Cannot supply flags when constructing one RegExp from another",
