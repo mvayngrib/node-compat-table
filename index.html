@@ -15500,15 +15500,15 @@ return s.length === 1 &amp;&amp; s[0] === '0';</div>}
               <div class="fn">function(){
                 <div class="code">var obj = {
   // Non-negative integer names appear first in value order
-  2:    true,
-  0:    true,
-  1:    true,
+  2: true,
+  0: true,
+  1: true,
   // Other string names appear in source order
-  ' ':  true,
+  ' ': true,
   // Non-negative integers are sorted above other names
-  9:    true,
-  D:    true,
-  B:    true,
+  9: true,
+  D: true,
+  B: true,
   // Negative integers are treated as other names
   '-1': true,
 };
@@ -15550,13 +15550,13 @@ return Object.keys(obj).join('') === forInOrder;</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  ' ':  true,
-  9:    true,
-  D:    true,
-  B:    true,
+  2: true,
+  0: true,
+  1: true,
+  ' ': true,
+  9: true,
+  D: true,
+  B: true,
   '-1': true
 };
 obj.A = true;
@@ -15633,13 +15633,13 @@ return result === &quot;012349 DB-1ACEFGHIJKLMNOPQRST&quot;;</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  ' ':  true,
-  9:    true,
-  D:    true,
-  B:    true,
+  2: true,
+  0: true,
+  1: true,
+  ' ': true,
+  9: true,
+  D: true,
+  B: true,
   '-1': true
 };
 obj.A = true;
@@ -15700,13 +15700,13 @@ return result === &quot;012349 DB-1EFGHIJKLAC&quot;;</div>}
             <div class="info">?
               <div class="fn">function(){
                 <div class="code">var obj = {
-  2:    true,
-  0:    true,
-  1:    true,
-  ' ':  true,
-  9:    true,
-  D:    true,
-  B:    true,
+  2: true,
+  0: true,
+  1: true,
+  ' ': true,
+  9: true,
+  D: true,
+  B: true,
   '-1': true
 };
 obj.A = true;
@@ -15740,8 +15740,8 @@ return Reflect.ownKeys(obj).join('') === &quot;012349 DB-1AEFGHIJKLMNOPQRSTUVWXY
               <div class="fn">function(){
                 <div class="code">var sym1 = Symbol(), sym2 = Symbol(), sym3 = Symbol();
 var obj = {
-  1:    true,
-  A:    true,
+  1: true,
+  A: true,
 };
 obj.B = true;
 obj[sym1] = true;
