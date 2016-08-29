@@ -36,6 +36,7 @@ node test.js
 node --es_staging test.js
 node --harmony test.js
 
+n use 6.5.0
 git add ./results/*.json
 
 if [[ `git status -s` == '' ]]; then
