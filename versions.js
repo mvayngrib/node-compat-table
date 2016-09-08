@@ -36,6 +36,7 @@ function filter (published) {
   add(max('4'))
   add(max('<' + last()))
   add(max('<' + last()))
+  add(max('4.3')) // for AWS Lambda
   add(max('0.12'))
   add(max('0.10'))
 
