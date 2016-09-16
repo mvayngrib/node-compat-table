@@ -1,6 +1,6 @@
 {
-  "_version": "7.0.0-nightly20160915ea2a309e3b--es_staging",
-  "_v8": "5.1.281.82",
+  "_version": "6.6.0--harmony",
+  "_v8": "5.1.281.83",
   "ES2017": {
     "_successful": 15,
     "_count": 36,
