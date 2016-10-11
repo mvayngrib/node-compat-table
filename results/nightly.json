@@ -1,9 +1,9 @@
 {
-  "_version": "7.0.0-nightly201610097542bdddda",
+  "_version": "7.0.0-nightly20161010c9dade48b4",
   "_v8": "5.4.500.31",
   "ES2017": {
-    "_successful": 20,
-    "_count": 40,
+    "_successful": 18,
+    "_count": 36,
     "_percent": 0.5,
     "features›Object.values": true,
     "features›Object.entries": true,
@@ -11,10 +11,6 @@
     "features›Object.getOwnPropertyDescriptors›doesn't provide undefined descriptors": true,
     "features›String padding›String.prototype.padStart": "\"hello\".padStart is not a function",
     "features›String padding›String.prototype.padEnd": "\"hello\".padEnd is not a function",
-    "features›string trimming›String.prototype.trimLeft": true,
-    "features›string trimming›String.prototype.trimRight": true,
-    "features›string trimming›String.prototype.trimStart": "\" \t \n abc   \t\n\".trimStart is not a function",
-    "features›string trimming›String.prototype.trimEnd": "\" \t \n abc   \t\n\".trimEnd is not a function",
     "features›trailing commas in function syntax›in parameter lists": "Unexpected token )",
     "features›trailing commas in function syntax›in argument lists": "Unexpected token )",
     "features›async functions›basic support": "Unexpected token function",
