@@ -27,11 +27,13 @@ function filter (published) {
   var desired = []
   var last = () => desired[desired.length - 1]
   var add = (v) => v && desired.push(v)
-  for (var i = 16; i >= 4; i--) {
+  for (var i = 16; i >= 5; i--) {
     add(max(`${i}`))
     add(max(`>${i}.0.0 <${last()}`))
     add(max(`>${i}.0.0 <${last()}`))
   }
+  add(max('4'))
+  add(max(`>4.0.0 <${last()}`))
   add(max('4.3')) // special case for AWS Lambda
   add(max('0.12'))
   add(max('0.10'))
