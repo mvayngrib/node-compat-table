@@ -1,6 +1,6 @@
 {
-  "_version": "8.0.0-nightly201610245532a7adec--harmony",
-  "_v8": "5.4.500.31",
+  "_version": "8.0.0-nightly20161025e8eaaa7724--harmony",
+  "_v8": "5.4.500.36",
   "ES2017": {
     "_successful": 23,
     "_count": 36,
