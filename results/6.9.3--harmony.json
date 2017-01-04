@@ -1,6 +1,6 @@
 {
-  "_version": "6.9.2--es_staging",
-  "_v8": "5.1.281.88",
+  "_version": "6.9.3--harmony",
+  "_v8": "5.1.281.89",
   "ES2017": {
     "_successful": 15,
     "_count": 49,
